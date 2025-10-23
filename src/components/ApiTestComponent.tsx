@@ -37,15 +37,15 @@ const ApiTestComponent: React.FC<ApiTestComponentProps> = ({ symbol = 'NVDA' }) 
 
   useEffect(() => {
     let isCancelled = false;
-    
+
     const runTest = async () => {
       if (!isCancelled) {
         await testAPI(symbol);
       }
     };
-    
+
     runTest();
-    
+
     return () => {
       isCancelled = true;
     };

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Layout, Menu, Typography } from 'antd';
 import { StockOutlined, BarChartOutlined } from '@ant-design/icons';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useParams, Navigate } from 'react-router-dom';
 import StockNavigation from './components/StockNavigation';
 import StockInfo from './components/StockInfo';
 import NewsPanel from './components/NewsPanel';
@@ -15,9 +16,12 @@ import './App.css';
 const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
 
-const App: React.FC = () => {
+// 主布局组件
+const AppLayout: React.FC = () => {
   const stockSymbols = getAllStockSymbols();
-  const [selectedStock, setSelectedStock] = useState<string>(stockSymbols[0] || 'NVDA');
+  const navigate = useNavigate();
+  const { symbol = stockSymbols[0] || 'NVDA', page = 'overview' } = useParams<{ symbol: string; page: string }>();
+  
   const [collapsed, setCollapsed] = useState(false);
 
   const menuItems = [
@@ -58,27 +62,20 @@ const App: React.FC = () => {
     },
   ];
 
-  const [selectedMenu, setSelectedMenu] = useState('overview');
+  // 处理股票选择
+  const handleStockChange = (newSymbol: string) => {
+    navigate(`/stock/${newSymbol}/${page}`);
+  };
 
-  const renderContent = () => {
-    switch (selectedMenu) {
-      case 'overview':
-        return <StockInfo symbol={selectedStock} />;
-      case 'news':
-        return <NewsPanel symbol={selectedStock} />;
-      case 'analysis':
-        return <FundamentalAnalysis symbol={selectedStock} />;
-      case 'sector':
-        return <SectorInfo symbol={selectedStock} />;
-      case 'advice':
-        return <InvestmentAdvice symbol={selectedStock} />;
-      case 'related':
-        return <RelatedStocks symbol={selectedStock} />;
-      case 'api-test':
-        return <ApiTestComponent symbol={selectedStock} />;
-      default:
-        return <StockInfo symbol={selectedStock} />;
-    }
+  // 处理菜单选择
+  const handleMenuClick = ({ key }: { key: string }) => {
+    navigate(`/stock/${symbol}/${key}`);
+  };
+
+  // 获取当前页面的标题
+  const getPageTitle = () => {
+    const menuItem = menuItems.find(item => item.key === page);
+    return menuItem ? menuItem.label : '股票概览';
   };
 
   return (
@@ -100,17 +97,17 @@ const App: React.FC = () => {
         </div>
 
         <StockNavigation
-          selectedStock={selectedStock}
-          onStockChange={setSelectedStock}
+          selectedStock={symbol}
+          onStockChange={handleStockChange}
           collapsed={collapsed}
         />
 
         <Menu
           mode="inline"
-          selectedKeys={[selectedMenu]}
+          selectedKeys={[page]}
           style={{ borderRight: 0, marginTop: '16px' }}
           items={menuItems}
-          onClick={({ key }) => setSelectedMenu(key)}
+          onClick={handleMenuClick}
         />
       </Sider>
 
@@ -123,24 +120,50 @@ const App: React.FC = () => {
           alignItems: 'center',
           justifyContent: 'space-between'
         }}>
-          <Title level={3} style={{ margin: 0 }}>
-            {selectedStock} - {menuItems.find(item => item.key === selectedMenu)?.label}
-          </Title>
+              <Title level={3} style={{ margin: 0 }}>
+                {symbol} - {getPageTitle()}
+              </Title>
         </Header>
 
-        <Content style={{
-          margin: '24px',
-          padding: '24px',
-          background: '#fff',
-          borderRadius: '8px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-          minHeight: 'calc(100vh - 112px)',
-          overflow: 'auto'
-        }}>
-          {renderContent()}
-        </Content>
+            <Content style={{
+              margin: '24px',
+              padding: '24px',
+              background: '#fff',
+              borderRadius: '8px',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+              minHeight: 'calc(100vh - 112px)',
+              overflow: 'auto'
+            }}>
+              <Routes>
+                <Route path="/stock/:symbol/overview" element={<StockInfo symbol={symbol} />} />
+                <Route path="/stock/:symbol/news" element={<NewsPanel symbol={symbol} />} />
+                <Route path="/stock/:symbol/analysis" element={<FundamentalAnalysis symbol={symbol} />} />
+                <Route path="/stock/:symbol/sector" element={<SectorInfo symbol={symbol} />} />
+                <Route path="/stock/:symbol/advice" element={<InvestmentAdvice symbol={symbol} />} />
+                <Route path="/stock/:symbol/related" element={<RelatedStocks symbol={symbol} />} />
+                <Route path="/stock/:symbol/api-test" element={<ApiTestComponent symbol={symbol} />} />
+                <Route path="/stock/:symbol" element={<StockInfo symbol={symbol} />} />
+              </Routes>
+            </Content>
       </Layout>
     </Layout>
+  );
+};
+
+// 主App组件
+const App: React.FC = () => {
+  return (
+    <Router>
+      <Routes>
+        {/* 默认重定向到NVDA概览 */}
+        <Route path="/" element={<Navigate to="/stock/NVDA/overview" replace />} />
+        {/* 所有股票页面 */}
+        <Route path="/stock/:symbol/:page" element={<AppLayout />} />
+        <Route path="/stock/:symbol" element={<AppLayout />} />
+        {/* 404重定向 */}
+        <Route path="*" element={<Navigate to="/stock/NVDA/overview" replace />} />
+      </Routes>
+    </Router>
   );
 };
 

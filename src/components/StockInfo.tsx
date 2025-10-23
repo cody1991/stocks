@@ -17,13 +17,13 @@ const StockInfo: React.FC<StockInfoProps> = ({ symbol }) => {
 
   useEffect(() => {
     let isCancelled = false;
-    
+
     const fetchStockData = async () => {
       try {
         setLoading(true);
         setError(null);
         const data = await stockApi.getStockQuote(symbol);
-        
+
         // 只有在组件没有被取消时才更新状态
         if (!isCancelled) {
           setStockData(data);
@@ -41,7 +41,7 @@ const StockInfo: React.FC<StockInfoProps> = ({ symbol }) => {
     };
 
     fetchStockData();
-    
+
     // 清理函数，用于取消未完成的请求
     return () => {
       isCancelled = true;
