@@ -81,7 +81,12 @@ const RelatedStocks: React.FC<RelatedStocksProps> = ({ symbol }) => {
                 renderItem={(stock, index) => (
                   <List.Item
                     actions={[
-                      <Button type="link" size="small" icon={<LinkOutlined />}>
+                      <Button
+                        type="link"
+                        size="small"
+                        icon={<LinkOutlined />}
+                        onClick={() => window.open(`https://finance.yahoo.com/quote/${stock.symbol}`, '_blank')}
+                      >
                         查看详情
                       </Button>
                     ]}
