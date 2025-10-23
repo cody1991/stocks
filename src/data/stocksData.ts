@@ -146,32 +146,32 @@ export const STOCKS_DATA: Record<string, StockData> = {
       roa: 0.25 // 总资产收益率
     }
   },
-  TSLA: {
-    symbol: 'TSLA',
-    name: 'Tesla Inc.',
-    sector: 'Automotive',
-    industry: 'Electric Vehicles',
-    subsector: 'EV & Energy Storage',
-    description: 'Tesla是电动汽车和清洁能源公司，专注于电动汽车、能源存储和太阳能产品的设计、制造和销售。2024年Q4营收达252亿美元，Cybertruck开始交付，全球超级充电站网络持续扩展。',
-    founded: '2003',
-    headquarters: 'Austin, TX',
-    employees: '127,855+',
-    marketCap: '800B',
+  AMZN: {
+    symbol: 'AMZN',
+    name: 'Amazon.com Inc.',
+    sector: 'Technology',
+    industry: 'E-commerce & Cloud Computing',
+    subsector: 'Online Retail & AWS',
+    description: 'Amazon是全球最大的电子商务和云计算公司，业务涵盖在线零售、云计算服务、数字流媒体等。2024年Q4营收达1700亿美元，AWS云服务收入增长强劲，Prime会员服务持续扩张。',
+    founded: '1994',
+    headquarters: 'Seattle, WA',
+    employees: '1,500,000+',
+    marketCap: '1.8T',
     avatar: {
-      backgroundColor: '#ff4d4f',
-      text: 'T'
+      backgroundColor: '#ff9500',
+      text: 'A'
     },
     financialData: {
-      revenue: 252000000000, // 252亿美元
-      netIncome: 15000000000, // 150亿美元
-      eps: 4.73, // 每股收益
-      pe: 45.8, // 市盈率
-      pb: 8.2, // 市净率
-      debtToEquity: 0.17, // 债务股本比
-      roe: 0.19, // 净资产收益率
-      roa: 0.08 // 总资产收益率
+      revenue: 1700000000000, // 1700亿美元
+      netIncome: 42000000000, // 420亿美元
+      eps: 3.20, // 每股收益
+      pe: 45.2, // 市盈率
+      pb: 8.5, // 市净率
+      debtToEquity: 0.35, // 债务股本比
+      roe: 0.12, // 净资产收益率
+      roa: 0.05 // 总资产收益率
     }
-  }
+  },
 };
 
 // 板块数据
@@ -238,66 +238,35 @@ export const SECTOR_DATA: Record<string, SectorData> = {
       '临床试验失败风险'
     ]
   },
-  AAPL: {
+  AMZN: {
     sector: 'Technology',
-    industry: 'Consumer Electronics',
-    subsector: 'Smartphones & Computing',
-    marketCap: '3.0T',
-    description: 'Apple是全球领先的科技公司，专注于设计、开发和销售消费电子产品、计算机软件和在线服务。',
+    industry: 'E-commerce & Cloud Computing',
+    subsector: 'Online Retail & AWS',
+    marketCap: '1.8T',
+    description: 'Amazon是全球最大的电子商务和云计算公司，业务涵盖在线零售、云计算服务、数字流媒体等。',
     competitors: [
       { symbol: 'MSFT', name: 'Microsoft Corporation', marketCap: '3.1T', change: 0.8 },
       { symbol: 'GOOGL', name: 'Alphabet Inc.', marketCap: '1.8T', change: 1.2 },
-      { symbol: 'AMZN', name: 'Amazon.com Inc.', marketCap: '1.5T', change: 0.5 },
+      { symbol: 'AAPL', name: 'Apple Inc.', marketCap: '3.0T', change: 0.5 },
       { symbol: 'META', name: 'Meta Platforms Inc.', marketCap: '800B', change: 2.1 }
     ],
-    marketShare: 60,
-    growthRate: 8.5,
-    peRatio: 28.5,
+    marketShare: 40,
+    growthRate: 12.8,
+    peRatio: 45.2,
     sectorTrend: 'bullish',
     keyDrivers: [
-      'iPhone持续创新',
-      '服务业务增长',
-      '中国市场扩张',
-      'AR/VR技术发展',
-      '生态系统优势'
+      'AWS云服务增长',
+      'Prime会员服务扩张',
+      '国际业务发展',
+      '广告业务增长',
+      '物流网络优化'
     ],
     risks: [
-      '智能手机市场饱和',
       '监管压力增加',
-      '供应链风险',
       '竞争加剧',
+      '成本控制挑战',
+      '宏观经济影响',
       '地缘政治风险'
-    ]
-  },
-  TSLA: {
-    sector: 'Automotive',
-    industry: 'Electric Vehicles',
-    subsector: 'EV & Energy Storage',
-    marketCap: '800B',
-    description: 'Tesla是电动汽车和清洁能源公司，专注于电动汽车、能源存储和太阳能产品的设计、制造和销售。',
-    competitors: [
-      { symbol: 'BYD', name: 'BYD Company', marketCap: '90B', change: 3.2 },
-      { symbol: 'NIO', name: 'NIO Inc.', marketCap: '15B', change: 1.8 },
-      { symbol: 'LCID', name: 'Lucid Group', marketCap: '8B', change: -2.1 },
-      { symbol: 'RIVN', name: 'Rivian Automotive', marketCap: '12B', change: 0.5 }
-    ],
-    marketShare: 25,
-    growthRate: 15.2,
-    peRatio: 45.8,
-    sectorTrend: 'bullish',
-    keyDrivers: [
-      '电动汽车市场快速增长',
-      '自动驾驶技术',
-      '能源存储业务',
-      '全球工厂扩张',
-      '充电网络建设'
-    ],
-    risks: [
-      '竞争加剧',
-      '监管变化',
-      '供应链挑战',
-      '技术风险',
-      '市场波动'
     ]
   }
 };
@@ -336,36 +305,20 @@ export const NEWS_DATA: Record<string, NewsData[]> = {
       source: "FDA News"
     }
   ],
-  AAPL: [
+  AMZN: [
     {
-      title: "苹果发布iPhone 16系列，AI功能大幅升级",
-      summary: "苹果公司发布了最新的iPhone 16系列，搭载了全新的AI芯片和功能。",
-      url: "https://example.com/news5",
-      publishedAt: "2024-01-15T11:00:00Z",
-      source: "Apple News"
+      title: "Amazon AWS云服务收入创新高，同比增长20%",
+      summary: "Amazon公司宣布AWS云服务季度收入达到250亿美元，同比增长20%，继续领跑云计算市场。",
+      url: "https://example.com/news9",
+      publishedAt: "2024-01-15T13:00:00Z",
+      source: "TechNews"
     },
     {
-      title: "苹果服务业务收入创新高",
-      summary: "苹果公司服务业务季度收入达到历史新高，同比增长15%。",
-      url: "https://example.com/news6",
-      publishedAt: "2024-01-14T16:00:00Z",
-      source: "Financial News"
-    }
-  ],
-  TSLA: [
-    {
-      title: "特斯拉Cybertruck开始交付",
-      summary: "特斯拉开始向客户交付备受期待的Cybertruck电动皮卡。",
-      url: "https://example.com/news7",
-      publishedAt: "2024-01-15T12:00:00Z",
-      source: "EV News"
-    },
-    {
-      title: "特斯拉超级充电站网络扩展至全球",
-      summary: "特斯拉宣布其超级充电站网络已覆盖全球主要城市。",
-      url: "https://example.com/news8",
-      publishedAt: "2024-01-13T10:00:00Z",
-      source: "Tesla News"
+      title: "Amazon Prime会员服务全球用户突破2亿",
+      summary: "Amazon宣布Prime会员服务全球用户数突破2亿大关，会员服务收入持续增长。",
+      url: "https://example.com/news10",
+      publishedAt: "2024-01-14T17:30:00Z",
+      source: "Business News"
     }
   ]
 };
@@ -386,19 +339,12 @@ export const ANALYST_RATINGS: Record<string, AnalystRating[]> = {
     { rating: 'Hold', targetPrice: 42, analyst: 'Barclays', date: '2024-01-12' },
     { rating: 'Buy', targetPrice: 58, analyst: 'Citigroup', date: '2024-01-11' }
   ],
-  AAPL: [
-    { rating: 'Strong Buy', targetPrice: 220, analyst: 'Goldman Sachs', date: '2024-01-15' },
-    { rating: 'Buy', targetPrice: 210, analyst: 'Morgan Stanley', date: '2024-01-14' },
-    { rating: 'Buy', targetPrice: 205, analyst: 'JP Morgan', date: '2024-01-13' },
-    { rating: 'Hold', targetPrice: 190, analyst: 'Credit Suisse', date: '2024-01-12' },
-    { rating: 'Strong Buy', targetPrice: 230, analyst: 'Bank of America', date: '2024-01-11' }
-  ],
-  TSLA: [
-    { rating: 'Buy', targetPrice: 300, analyst: 'Wells Fargo', date: '2024-01-15' },
-    { rating: 'Hold', targetPrice: 250, analyst: 'Deutsche Bank', date: '2024-01-14' },
-    { rating: 'Buy', targetPrice: 320, analyst: 'UBS', date: '2024-01-13' },
-    { rating: 'Hold', targetPrice: 240, analyst: 'Barclays', date: '2024-01-12' },
-    { rating: 'Buy', targetPrice: 310, analyst: 'Citigroup', date: '2024-01-11' }
+  AMZN: [
+    { rating: 'Strong Buy', targetPrice: 180, analyst: 'Goldman Sachs', date: '2024-01-15' },
+    { rating: 'Buy', targetPrice: 175, analyst: 'Morgan Stanley', date: '2024-01-14' },
+    { rating: 'Buy', targetPrice: 170, analyst: 'JP Morgan', date: '2024-01-13' },
+    { rating: 'Hold', targetPrice: 160, analyst: 'Credit Suisse', date: '2024-01-12' },
+    { rating: 'Strong Buy', targetPrice: 185, analyst: 'Bank of America', date: '2024-01-11' }
   ]
 };
 
@@ -552,7 +498,7 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
       rating: 'Hold'
     }
   ],
-  AAPL: [
+  AMZN: [
     {
       symbol: 'MSFT',
       name: 'Microsoft Corporation',
@@ -562,7 +508,7 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
       marketCap: '3.1T',
       sector: 'Technology',
       correlation: 0.75,
-      reason: '科技巨头，生态系统竞争',
+      reason: '云计算竞争，Azure与AWS直接竞争',
       rating: 'Strong Buy'
     },
     {
@@ -574,19 +520,19 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
       marketCap: '1.8T',
       sector: 'Technology',
       correlation: 0.68,
-      reason: '移动操作系统竞争，广告业务',
+      reason: '云服务竞争，广告业务重叠',
       rating: 'Buy'
     },
     {
-      symbol: 'AMZN',
-      name: 'Amazon.com Inc.',
-      price: 155.20,
+      symbol: 'AAPL',
+      name: 'Apple Inc.',
+      price: 180.20,
       change: 0.75,
       changePercent: 0.49,
-      marketCap: '1.5T',
+      marketCap: '3.0T',
       sector: 'Technology',
       correlation: 0.55,
-      reason: '云服务竞争，电商业务',
+      reason: '科技巨头，生态系统竞争',
       rating: 'Buy'
     },
     {
@@ -598,58 +544,8 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
       marketCap: '800B',
       sector: 'Technology',
       correlation: 0.45,
-      reason: '社交媒体平台，AR/VR竞争',
+      reason: '广告业务竞争，云服务合作',
       rating: 'Buy'
-    }
-  ],
-  TSLA: [
-    {
-      symbol: 'BYD',
-      name: 'BYD Company',
-      price: 28.50,
-      change: 0.90,
-      changePercent: 3.26,
-      marketCap: '90B',
-      sector: 'Automotive',
-      correlation: 0.65,
-      reason: '电动汽车制造商，中国市场竞争',
-      rating: 'Buy'
-    },
-    {
-      symbol: 'NIO',
-      name: 'NIO Inc.',
-      price: 8.20,
-      change: 0.15,
-      changePercent: 1.86,
-      marketCap: '15B',
-      sector: 'Automotive',
-      correlation: 0.70,
-      reason: '中国电动汽车制造商，高端市场',
-      rating: 'Buy'
-    },
-    {
-      symbol: 'LCID',
-      name: 'Lucid Group',
-      price: 3.40,
-      change: -0.07,
-      changePercent: -2.02,
-      marketCap: '8B',
-      sector: 'Automotive',
-      correlation: 0.60,
-      reason: '豪华电动汽车制造商',
-      rating: 'Hold'
-    },
-    {
-      symbol: 'RIVN',
-      name: 'Rivian Automotive',
-      price: 12.80,
-      change: 0.06,
-      changePercent: 0.47,
-      marketCap: '12B',
-      sector: 'Automotive',
-      correlation: 0.55,
-      reason: '电动皮卡和商用车制造商',
-      rating: 'Hold'
     }
   ]
 };
@@ -682,18 +578,18 @@ export const getFinancialData = (symbol: string) => {
 
 // 生成模拟价格历史数据
 export const generatePriceHistory = (symbol: string, days: number = 30) => {
-  const basePrice = symbol === 'NVDA' ? 800 : symbol === 'AAPL' ? 180 : symbol === 'TSLA' ? 250 : 50;
+  const basePrice = symbol === 'NVDA' ? 800 : symbol === 'AMZN' ? 150 : symbol === 'NBIS' ? 50 : 100;
   const data = [];
-
+  
   for (let i = days; i >= 0; i--) {
     const date = new Date();
     date.setDate(date.getDate() - i);
-
+    
     // 生成随机波动
     const volatility = 0.02; // 2% 日波动
     const randomChange = (Math.random() - 0.5) * volatility;
     const price = basePrice * (1 + randomChange * (days - i) / days);
-
+    
     data.push({
       date: date.toISOString().split('T')[0],
       open: price * (1 + (Math.random() - 0.5) * 0.01),
@@ -703,7 +599,7 @@ export const generatePriceHistory = (symbol: string, days: number = 30) => {
       volume: Math.floor(Math.random() * 50000000) + 10000000
     });
   }
-
+  
   return data;
 };
 
