@@ -84,21 +84,21 @@ export const STOCKS_DATA: Record<string, StockData> = {
     sector: 'Technology',
     industry: 'Semiconductors',
     subsector: 'GPU & AI Computing',
-    description: 'NVIDIA是全球领先的GPU和AI计算公司，专注于游戏、数据中心和专业可视化市场。公司在AI芯片、自动驾驶、数据中心加速等领域具有技术领先优势。2024年Q3营收达206亿美元，同比增长206%，主要受益于AI芯片需求激增。',
+    description: 'NVIDIA是全球领先的GPU和AI计算公司，专注于游戏、数据中心和专业可视化市场。2025年Q3营收达609亿美元，AI芯片需求持续强劲，H200和H300系列产品供不应求。公司在AI芯片、自动驾驶、数据中心加速等领域具有技术领先优势。',
     founded: '1993',
     headquarters: 'Santa Clara, CA',
-    employees: '29,600+',
+    employees: '26,000+',
     marketCap: '2.15T',
     avatar: {
       backgroundColor: '#1890ff',
       text: 'N'
     },
     financialData: {
-      revenue: 206000000000, // 206亿美元
-      netIncome: 92400000000, // 924亿美元
-      eps: 37.32, // 每股收益
+      revenue: 609000000000, // 609亿美元 (2025年Q3)
+      netIncome: 297600000000, // 297.6亿美元
+      eps: 12.96, // 每股收益
       pe: 67.5, // 市盈率
-      pb: 45.2, // 市净率
+      pb: 65.8, // 市净率
       debtToEquity: 0.15, // 债务股本比
       roe: 0.89, // 净资产收益率
       roa: 0.45 // 总资产收益率
@@ -136,7 +136,7 @@ export const STOCKS_DATA: Record<string, StockData> = {
     sector: 'Technology',
     industry: 'E-commerce & Cloud Computing',
     subsector: 'Online Retail & AWS',
-    description: 'Amazon是全球最大的电子商务和云计算公司，业务涵盖在线零售、云计算服务、数字流媒体等。2024年Q4营收达1700亿美元，AWS云服务收入增长强劲，Prime会员服务持续扩张。',
+    description: 'Amazon是全球最大的电子商务和云计算公司，业务涵盖在线零售、云计算服务、数字流媒体等。2025年Q3营收达1700亿美元，AWS云服务收入增长强劲，Prime会员服务持续扩张，全球用户突破2.2亿。',
     founded: '1994',
     headquarters: 'Seattle, WA',
     employees: '1,500,000+',
@@ -146,7 +146,7 @@ export const STOCKS_DATA: Record<string, StockData> = {
       text: 'A'
     },
     financialData: {
-      revenue: 1700000000000, // 1700亿美元
+      revenue: 1700000000000, // 1700亿美元 (2025年Q3)
       netIncome: 42000000000, // 420亿美元
       eps: 3.20, // 每股收益
       pe: 45.2, // 市盈率
@@ -259,17 +259,17 @@ export const SECTOR_DATA: Record<string, SectorData> = {
 export const NEWS_DATA: Record<string, NewsData[]> = {
   NVDA: [
     {
-      title: "NVIDIA发布新一代AI芯片，性能提升40%",
-      summary: "NVIDIA公司今日发布了最新的H200 AI芯片，相比前代产品性能提升40%，功耗降低20%。",
+      title: "NVIDIA发布H300 AI芯片，性能较H200提升40%",
+      summary: "NVIDIA公司今日发布了最新的H300 AI芯片，相比H200产品性能提升40%，功耗降低20%，专为大规模AI训练和推理设计。",
       url: "https://example.com/news1",
-      publishedAt: "2024-01-15T10:00:00Z",
+      publishedAt: "2025-10-15T10:00:00Z",
       source: "TechNews"
     },
     {
-      title: "NVIDIA与多家车企达成自动驾驶合作",
-      summary: "NVIDIA宣布与特斯拉、比亚迪等多家车企达成自动驾驶技术合作协议。",
+      title: "NVIDIA与多家车企达成自动驾驶合作，订单价值超100亿美元",
+      summary: "NVIDIA宣布与特斯拉、比亚迪、理想汽车等多家车企达成自动驾驶技术合作协议，订单总价值超过100亿美元。",
       url: "https://example.com/news2",
-      publishedAt: "2024-01-14T15:30:00Z",
+      publishedAt: "2025-10-14T15:30:00Z",
       source: "AutoNews"
     }
   ],
@@ -291,17 +291,17 @@ export const NEWS_DATA: Record<string, NewsData[]> = {
   ],
   AMZN: [
     {
-      title: "Amazon AWS云服务收入创新高，同比增长20%",
-      summary: "Amazon公司宣布AWS云服务季度收入达到250亿美元，同比增长20%，继续领跑云计算市场。",
+      title: "Amazon AWS云服务收入创新高，同比增长25%",
+      summary: "Amazon公司宣布AWS云服务季度收入达到280亿美元，同比增长25%，继续领跑云计算市场，AI和机器学习服务需求激增。",
       url: "https://example.com/news9",
-      publishedAt: "2024-01-15T13:00:00Z",
+      publishedAt: "2025-10-15T13:00:00Z",
       source: "TechNews"
     },
     {
-      title: "Amazon Prime会员服务全球用户突破2亿",
-      summary: "Amazon宣布Prime会员服务全球用户数突破2亿大关，会员服务收入持续增长。",
+      title: "Amazon Prime会员服务全球用户突破2.2亿",
+      summary: "Amazon宣布Prime会员服务全球用户数突破2.2亿大关，会员服务收入持续增长，物流网络进一步优化。",
       url: "https://example.com/news10",
-      publishedAt: "2024-01-14T17:30:00Z",
+      publishedAt: "2025-10-14T17:30:00Z",
       source: "Business News"
     }
   ]
@@ -310,11 +310,11 @@ export const NEWS_DATA: Record<string, NewsData[]> = {
 // 分析师评级数据
 export const ANALYST_RATINGS: Record<string, AnalystRating[]> = {
   NVDA: [
-    { rating: 'Strong Buy', targetPrice: 950, analyst: 'Goldman Sachs', date: '2024-01-15' },
-    { rating: 'Buy', targetPrice: 900, analyst: 'Morgan Stanley', date: '2024-01-14' },
-    { rating: 'Buy', targetPrice: 875, analyst: 'JP Morgan', date: '2024-01-13' },
-    { rating: 'Hold', targetPrice: 800, analyst: 'Credit Suisse', date: '2024-01-12' },
-    { rating: 'Strong Buy', targetPrice: 1000, analyst: 'Bank of America', date: '2024-01-11' }
+    { rating: 'Strong Buy', targetPrice: 950, analyst: 'Goldman Sachs', date: '2025-10-20' },
+    { rating: 'Strong Buy', targetPrice: 900, analyst: 'Morgan Stanley', date: '2025-10-19' },
+    { rating: 'Buy', targetPrice: 875, analyst: 'JP Morgan', date: '2025-10-18' },
+    { rating: 'Buy', targetPrice: 850, analyst: 'Credit Suisse', date: '2025-10-17' },
+    { rating: 'Strong Buy', targetPrice: 1000, analyst: 'Bank of America', date: '2025-10-16' }
   ],
   NBIS: [
     { rating: 'Hold', targetPrice: 105, analyst: 'Goldman Sachs', date: '2025-10-15' },
@@ -324,11 +324,11 @@ export const ANALYST_RATINGS: Record<string, AnalystRating[]> = {
     { rating: 'Buy', targetPrice: 115, analyst: 'Bank of America', date: '2025-10-11' }
   ],
   AMZN: [
-    { rating: 'Strong Buy', targetPrice: 180, analyst: 'Goldman Sachs', date: '2024-01-15' },
-    { rating: 'Buy', targetPrice: 175, analyst: 'Morgan Stanley', date: '2024-01-14' },
-    { rating: 'Buy', targetPrice: 170, analyst: 'JP Morgan', date: '2024-01-13' },
-    { rating: 'Hold', targetPrice: 160, analyst: 'Credit Suisse', date: '2024-01-12' },
-    { rating: 'Strong Buy', targetPrice: 185, analyst: 'Bank of America', date: '2024-01-11' }
+    { rating: 'Strong Buy', targetPrice: 180, analyst: 'Goldman Sachs', date: '2025-10-20' },
+    { rating: 'Buy', targetPrice: 175, analyst: 'Morgan Stanley', date: '2025-10-19' },
+    { rating: 'Buy', targetPrice: 170, analyst: 'JP Morgan', date: '2025-10-18' },
+    { rating: 'Hold', targetPrice: 160, analyst: 'Credit Suisse', date: '2025-10-17' },
+    { rating: 'Strong Buy', targetPrice: 185, analyst: 'Bank of America', date: '2025-10-16' }
   ]
 };
 
