@@ -5,7 +5,6 @@ import StockNavigation from './components/StockNavigation';
 import StockInfo from './components/StockInfo';
 import NewsPanel from './components/NewsPanel';
 import FundamentalAnalysis from './components/FundamentalAnalysis';
-import PriceChart from './components/PriceChart';
 import SectorInfo from './components/SectorInfo';
 import InvestmentAdvice from './components/InvestmentAdvice';
 import RelatedStocks from './components/RelatedStocks';
@@ -36,11 +35,6 @@ const App: React.FC = () => {
       key: 'analysis',
       icon: <BarChartOutlined />,
       label: '基本面分析',
-    },
-    {
-      key: 'chart',
-      icon: <BarChartOutlined />,
-      label: '价格走势',
     },
     {
       key: 'sector',
@@ -74,8 +68,6 @@ const App: React.FC = () => {
         return <NewsPanel symbol={selectedStock} />;
       case 'analysis':
         return <FundamentalAnalysis symbol={selectedStock} />;
-      case 'chart':
-        return <PriceChart symbol={selectedStock} />;
       case 'sector':
         return <SectorInfo symbol={selectedStock} />;
       case 'advice':

@@ -684,16 +684,16 @@ export const getFinancialData = (symbol: string) => {
 export const generatePriceHistory = (symbol: string, days: number = 30) => {
   const basePrice = symbol === 'NVDA' ? 800 : symbol === 'AAPL' ? 180 : symbol === 'TSLA' ? 250 : 50;
   const data = [];
-  
+
   for (let i = days; i >= 0; i--) {
     const date = new Date();
     date.setDate(date.getDate() - i);
-    
+
     // 生成随机波动
     const volatility = 0.02; // 2% 日波动
     const randomChange = (Math.random() - 0.5) * volatility;
     const price = basePrice * (1 + randomChange * (days - i) / days);
-    
+
     data.push({
       date: date.toISOString().split('T')[0],
       open: price * (1 + (Math.random() - 0.5) * 0.01),
@@ -703,7 +703,7 @@ export const generatePriceHistory = (symbol: string, days: number = 30) => {
       volume: Math.floor(Math.random() * 50000000) + 10000000
     });
   }
-  
+
   return data;
 };
 
