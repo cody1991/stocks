@@ -442,6 +442,162 @@ export const STOCKS_DATA: Record<string, StockData> = {
       roa: 0 // ETF无ROA概念
     }
   },
+  VOR: {
+    symbol: 'VOR',
+    name: 'Vor Biopharma Inc.',
+    sector: 'Healthcare',
+    industry: 'Biotechnology',
+    subsector: 'Gene Therapy',
+    description: 'Vor Biopharma是一家专注于基因治疗的生物技术公司，开发治疗血液系统恶性肿瘤的创新疗法。',
+    founded: '2016',
+    headquarters: 'Cambridge, MA',
+    employees: '200+',
+    marketCap: '500M',
+    avatar: {
+      backgroundColor: '#00cc66',
+      text: 'V'
+    },
+    financialData: {
+      revenue: 0, // 临床阶段公司无营收
+      netIncome: -80000000, // -8000万美元 (研发投入期)
+      eps: -2.50, // 每股亏损
+      pe: -2.0, // 负市盈率
+      pb: 1.5, // 市净率
+      debtToEquity: 0.10, // 债务股本比
+      roe: -0.25, // 负净资产收益率
+      roa: -0.20 // 负总资产收益率
+    }
+  },
+  GEMI: {
+    symbol: 'GEMI',
+    name: 'Gemini Space Station Inc.',
+    sector: 'Industrials',
+    industry: 'Aerospace & Defense',
+    subsector: 'Space Technology',
+    description: 'Gemini Space Station是一家专注于太空探索和空间站技术的公司，致力于开发商业空间站和太空基础设施。',
+    founded: '2020',
+    headquarters: 'Houston, TX',
+    employees: '300+',
+    marketCap: '1.2B',
+    avatar: {
+      backgroundColor: '#0066cc',
+      text: 'G'
+    },
+    financialData: {
+      revenue: 50000000, // 5000万美元
+      netIncome: -30000000, // -3000万美元 (研发投入期)
+      eps: -1.20, // 每股亏损
+      pe: -64.4, // 负市盈率
+      pb: 2.8, // 市净率
+      debtToEquity: 0.30, // 债务股本比
+      roe: -0.15, // 负净资产收益率
+      roa: -0.10 // 负总资产收益率
+    }
+  },
+  SMMT: {
+    symbol: 'SMMT',
+    name: 'Summit Therapeutics Inc.',
+    sector: 'Healthcare',
+    industry: 'Biotechnology',
+    subsector: 'Drug Development',
+    description: 'Summit Therapeutics是一家专注于抗生素和抗感染药物开发的生物技术公司，致力于解决耐药性感染问题。',
+    founded: '2003',
+    headquarters: 'Oxford, UK',
+    employees: '150+',
+    marketCap: '800M',
+    avatar: {
+      backgroundColor: '#cc6600',
+      text: 'S'
+    },
+    financialData: {
+      revenue: 0, // 临床阶段公司无营收
+      netIncome: -60000000, // -6000万美元 (研发投入期)
+      eps: -1.80, // 每股亏损
+      pe: -4.5, // 负市盈率
+      pb: 2.2, // 市净率
+      debtToEquity: 0.20, // 债务股本比
+      roe: -0.30, // 负净资产收益率
+      roa: -0.25 // 负总资产收益率
+    }
+  },
+  ESPO: {
+    symbol: 'ESPO',
+    name: 'VanEck Video Gaming and eSports ETF',
+    sector: 'Financial Services',
+    industry: 'ETF',
+    subsector: 'Gaming & Entertainment',
+    description: 'VanEck Video Gaming and eSports ETF追踪视频游戏和电子竞技相关公司，为投资者提供对游戏行业的投资敞口。',
+    founded: '2018',
+    headquarters: 'New York, NY',
+    employees: 'N/A',
+    marketCap: '2B',
+    avatar: {
+      backgroundColor: '#ff0066',
+      text: 'E'
+    },
+    financialData: {
+      revenue: 0, // ETF无营收概念
+      netIncome: 0, // ETF无净利润概念
+      eps: 0, // ETF无EPS概念
+      pe: 0, // ETF无PE概念
+      pb: 1.3, // 市净率
+      debtToEquity: 0, // ETF无债务
+      roe: 0, // ETF无ROE概念
+      roa: 0 // ETF无ROA概念
+    }
+  },
+  RKLB: {
+    symbol: 'RKLB',
+    name: 'Rocket Lab USA Inc.',
+    sector: 'Industrials',
+    industry: 'Aerospace & Defense',
+    subsector: 'Space Launch Services',
+    description: 'Rocket Lab是一家商业航天公司，专注于小型卫星发射服务和航天器制造，为全球客户提供可靠的发射解决方案。',
+    founded: '2006',
+    headquarters: 'Long Beach, CA',
+    employees: '1,500+',
+    marketCap: '3B',
+    avatar: {
+      backgroundColor: '#6600cc',
+      text: 'R'
+    },
+    financialData: {
+      revenue: 200000000, // 2亿美元 (2024年)
+      netIncome: -100000000, // -1亿美元 (扩张期)
+      eps: -0.80, // 每股亏损
+      pe: -15.0, // 负市盈率
+      pb: 2.5, // 市净率
+      debtToEquity: 0.25, // 债务股本比
+      roe: -0.20, // 负净资产收益率
+      roa: -0.15 // 负总资产收益率
+    }
+  },
+  '1376.HK': {
+    symbol: '1376.HK',
+    name: 'Raffles Interior Limited',
+    sector: 'Industrials',
+    industry: 'Construction & Engineering',
+    subsector: 'Interior Design & Construction',
+    description: 'Raffles Interior是一家总部位于香港的室内设计和建筑公司，专注于高端商业和住宅项目的室内装修服务。',
+    founded: '2000',
+    headquarters: 'Hong Kong',
+    employees: '500+',
+    marketCap: '200M',
+    avatar: {
+      backgroundColor: '#ff6600',
+      text: 'R'
+    },
+    financialData: {
+      revenue: 150000000, // 1.5亿港元 (2024年)
+      netIncome: 8000000, // 800万港元
+      eps: 0.15, // 每股收益
+      pe: 8.5, // 市盈率
+      pb: 0.8, // 市净率
+      debtToEquity: 0.15, // 债务股本比
+      roe: 0.12, // 净资产收益率
+      roa: 0.08 // 总资产收益率
+    }
+  },
 };
 
 // 板块数据
@@ -692,6 +848,192 @@ export const SECTOR_DATA: Record<string, SectorData> = {
       '客户集中度',
       '供应链依赖',
       '宏观经济影响'
+    ]
+  },
+  VOR: {
+    sector: 'Healthcare',
+    industry: 'Biotechnology',
+    subsector: 'Gene Therapy',
+    marketCap: '500M',
+    description: 'Vor Biopharma是一家专注于基因治疗的生物技术公司，开发治疗血液系统恶性肿瘤的创新疗法。公司处于临床开发阶段，专注于CAR-T细胞治疗技术。',
+    competitors: [
+      { symbol: 'GILD', name: 'Gilead Sciences', marketCap: '100B', change: 0 },
+      { symbol: 'BMY', name: 'Bristol Myers Squibb', marketCap: '120B', change: 0 },
+      { symbol: 'JNJ', name: 'Johnson & Johnson', marketCap: '400B', change: 0 },
+      { symbol: 'PFE', name: 'Pfizer Inc.', marketCap: '200B', change: 0 }
+    ],
+    marketShare: 1,
+    growthRate: -20.0,
+    peRatio: -2.0,
+    sectorTrend: 'neutral',
+    keyDrivers: [
+      '基因治疗技术突破',
+      'CAR-T细胞治疗进展',
+      '血液肿瘤市场需求',
+      '监管政策支持',
+      '临床试验进展'
+    ],
+    risks: [
+      '临床开发风险',
+      '监管审批不确定性',
+      '竞争激烈',
+      '资金需求大',
+      '技术迭代风险'
+    ]
+  },
+  GEMI: {
+    sector: 'Industrials',
+    industry: 'Aerospace & Defense',
+    subsector: 'Space Technology',
+    marketCap: '1.2B',
+    description: 'Gemini Space Station是一家专注于太空探索和空间站技术的公司，致力于开发商业空间站和太空基础设施。公司在商业航天领域有重要布局。',
+    competitors: [
+      { symbol: 'BA', name: 'Boeing Company', marketCap: '100B', change: 0 },
+      { symbol: 'LMT', name: 'Lockheed Martin', marketCap: '120B', change: 0 },
+      { symbol: 'RTX', name: 'Raytheon Technologies', marketCap: '150B', change: 0 },
+      { symbol: 'RKLB', name: 'Rocket Lab USA', marketCap: '3B', change: 0 }
+    ],
+    marketShare: 2,
+    growthRate: -15.0,
+    peRatio: -64.4,
+    sectorTrend: 'neutral',
+    keyDrivers: [
+      '商业航天市场增长',
+      '空间站技术发展',
+      '政府合同支持',
+      '国际合作机会',
+      '太空旅游需求'
+    ],
+    risks: [
+      '技术开发风险',
+      '资金需求巨大',
+      '监管政策变化',
+      '竞争激烈',
+      '市场不确定性'
+    ]
+  },
+  SMMT: {
+    sector: 'Healthcare',
+    industry: 'Biotechnology',
+    subsector: 'Drug Development',
+    marketCap: '800M',
+    description: 'Summit Therapeutics是一家专注于抗生素和抗感染药物开发的生物技术公司，致力于解决耐药性感染问题。公司在抗感染药物领域有重要研究。',
+    competitors: [
+      { symbol: 'PFE', name: 'Pfizer Inc.', marketCap: '200B', change: 0 },
+      { symbol: 'JNJ', name: 'Johnson & Johnson', marketCap: '400B', change: 0 },
+      { symbol: 'MRK', name: 'Merck & Co.', marketCap: '300B', change: 0 },
+      { symbol: 'ABBV', name: 'AbbVie Inc.', marketCap: '250B', change: 0 }
+    ],
+    marketShare: 1,
+    growthRate: -25.0,
+    peRatio: -4.5,
+    sectorTrend: 'neutral',
+    keyDrivers: [
+      '耐药性感染问题严重',
+      '抗生素市场需求',
+      '监管政策支持',
+      '临床试验进展',
+      '国际合作机会'
+    ],
+    risks: [
+      '临床开发风险',
+      '监管审批不确定性',
+      '竞争激烈',
+      '资金需求大',
+      '技术挑战'
+    ]
+  },
+  ESPO: {
+    sector: 'Financial Services',
+    industry: 'ETF',
+    subsector: 'Gaming & Entertainment',
+    marketCap: '2B',
+    description: 'VanEck Video Gaming and eSports ETF追踪视频游戏和电子竞技相关公司，为投资者提供对游戏行业的投资敞口。',
+    competitors: [
+      { symbol: 'QQQ', name: 'Invesco QQQ Trust', marketCap: '200B', change: 0 },
+      { symbol: 'SPY', name: 'SPDR S&P 500 ETF', marketCap: '400B', change: 0 },
+      { symbol: 'VTI', name: 'Vanguard Total Stock Market ETF', marketCap: '300B', change: 0 },
+      { symbol: 'IWM', name: 'iShares Russell 2000 ETF', marketCap: '50B', change: 0 }
+    ],
+    marketShare: 5,
+    growthRate: 15.0,
+    peRatio: 0,
+    sectorTrend: 'bullish',
+    keyDrivers: [
+      '游戏行业增长',
+      '电子竞技发展',
+      '元宇宙概念',
+      '移动游戏普及',
+      '云游戏技术'
+    ],
+    risks: [
+      '市场波动',
+      '行业监管',
+      '技术变化',
+      '竞争加剧',
+      '宏观经济影响'
+    ]
+  },
+  RKLB: {
+    sector: 'Industrials',
+    industry: 'Aerospace & Defense',
+    subsector: 'Space Launch Services',
+    marketCap: '3B',
+    description: 'Rocket Lab是一家商业航天公司，专注于小型卫星发射服务和航天器制造，为全球客户提供可靠的发射解决方案。',
+    competitors: [
+      { symbol: 'BA', name: 'Boeing Company', marketCap: '100B', change: 0 },
+      { symbol: 'LMT', name: 'Lockheed Martin', marketCap: '120B', change: 0 },
+      { symbol: 'RTX', name: 'Raytheon Technologies', marketCap: '150B', change: 0 },
+      { symbol: 'GEMI', name: 'Gemini Space Station', marketCap: '1.2B', change: 0 }
+    ],
+    marketShare: 8,
+    growthRate: -10.0,
+    peRatio: -15.0,
+    sectorTrend: 'bullish',
+    keyDrivers: [
+      '小型卫星发射需求增长',
+      '商业航天市场扩张',
+      '政府合同支持',
+      '技术创新',
+      '国际合作机会'
+    ],
+    risks: [
+      '发射失败风险',
+      '竞争激烈',
+      '资金需求大',
+      '监管政策变化',
+      '技术挑战'
+    ]
+  },
+  '1376.HK': {
+    sector: 'Industrials',
+    industry: 'Construction & Engineering',
+    subsector: 'Interior Design & Construction',
+    marketCap: '200M',
+    description: 'Raffles Interior是一家总部位于香港的室内设计和建筑公司，专注于高端商业和住宅项目的室内装修服务。',
+    competitors: [
+      { symbol: 'CIMC', name: 'CIMC Enric Holdings', marketCap: '5B', change: 0 },
+      { symbol: 'CRCC', name: 'China Railway Construction', marketCap: '20B', change: 0 },
+      { symbol: 'CSCEC', name: 'China State Construction', marketCap: '30B', change: 0 },
+      { symbol: 'CCCC', name: 'China Communications Construction', marketCap: '15B', change: 0 }
+    ],
+    marketShare: 2,
+    growthRate: 8.0,
+    peRatio: 8.5,
+    sectorTrend: 'neutral',
+    keyDrivers: [
+      '香港房地产市场',
+      '高端装修需求',
+      '商业项目增长',
+      '品牌价值提升',
+      '技术升级'
+    ],
+    risks: [
+      '房地产市场波动',
+      '竞争激烈',
+      '成本控制挑战',
+      '宏观经济影响',
+      '政策变化'
     ]
   }
 };
@@ -990,6 +1332,144 @@ export const NEWS_DATA: Record<string, NewsData[]> = {
       publishedAt: "2025-10-21T16:20:00Z",
       source: "Hesai官方"
     }
+  ],
+  VOR: [
+    {
+      title: "Vor Biopharma基因治疗技术获得FDA快速通道认定",
+      summary: "Vor Biopharma宣布其CAR-T细胞治疗技术获得FDA快速通道认定，用于治疗血液系统恶性肿瘤。这一认定将加速药物开发和审批进程。",
+      url: "https://www.vorbiopharma.com/news/",
+      publishedAt: "2025-10-23T11:00:00Z",
+      source: "Vor Biopharma官方"
+    },
+    {
+      title: "Vor Biopharma完成C轮融资，获得1.5亿美元资金",
+      summary: "Vor Biopharma完成C轮融资，获得1.5亿美元资金，将用于推进CAR-T细胞治疗技术的临床试验和商业化进程。",
+      url: "https://www.vorbiopharma.com/news/",
+      publishedAt: "2025-10-22T16:30:00Z",
+      source: "Vor Biopharma官方"
+    },
+    {
+      title: "Vor Biopharma与主要医院达成临床试验合作协议",
+      summary: "Vor Biopharma与多家主要医院达成临床试验合作协议，将扩大CAR-T细胞治疗技术的临床试验规模，加速药物开发进程。",
+      url: "https://www.vorbiopharma.com/news/",
+      publishedAt: "2025-10-21T13:15:00Z",
+      source: "Vor Biopharma官方"
+    }
+  ],
+  GEMI: [
+    {
+      title: "Gemini Space Station获得NASA商业空间站合同",
+      summary: "Gemini Space Station获得NASA商业空间站开发合同，总价值超过5亿美元。公司将与NASA合作开发下一代商业空间站技术。",
+      url: "https://www.geminispacestation.com/news/",
+      publishedAt: "2025-10-23T12:00:00Z",
+      source: "Gemini Space Station官方"
+    },
+    {
+      title: "Gemini Space Station完成B轮融资，获得3亿美元资金",
+      summary: "Gemini Space Station完成B轮融资，获得3亿美元资金，将用于商业空间站技术开发和基础设施建设。",
+      url: "https://www.geminispacestation.com/news/",
+      publishedAt: "2025-10-22T17:00:00Z",
+      source: "Gemini Space Station官方"
+    },
+    {
+      title: "Gemini Space Station与SpaceX达成发射服务协议",
+      summary: "Gemini Space Station与SpaceX达成发射服务协议，将使用SpaceX的火箭进行空间站模块发射，确保项目按时推进。",
+      url: "https://www.geminispacestation.com/news/",
+      publishedAt: "2025-10-21T14:45:00Z",
+      source: "Gemini Space Station官方"
+    }
+  ],
+  SMMT: [
+    {
+      title: "Summit Therapeutics抗生素药物获得EMA孤儿药认定",
+      summary: "Summit Therapeutics宣布其抗生素药物获得EMA孤儿药认定，用于治疗耐药性感染。这一认定将加速药物在欧洲的开发和审批进程。",
+      url: "https://www.summittherapeutics.com/news/",
+      publishedAt: "2025-10-23T13:00:00Z",
+      source: "Summit Therapeutics官方"
+    },
+    {
+      title: "Summit Therapeutics完成II期临床试验，结果积极",
+      summary: "Summit Therapeutics完成II期临床试验，结果显示其抗生素药物在治疗耐药性感染方面效果显著，安全性良好。",
+      url: "https://www.summittherapeutics.com/news/",
+      publishedAt: "2025-10-22T18:30:00Z",
+      source: "Summit Therapeutics官方"
+    },
+    {
+      title: "Summit Therapeutics与制药巨头达成合作协议",
+      summary: "Summit Therapeutics与制药巨头达成合作协议，将共同开发新一代抗生素药物，解决全球耐药性感染问题。",
+      url: "https://www.summittherapeutics.com/news/",
+      publishedAt: "2025-10-21T15:20:00Z",
+      source: "Summit Therapeutics官方"
+    }
+  ],
+  ESPO: [
+    {
+      title: "ESPO ETF受益于游戏行业强劲增长，资金流入创新高",
+      summary: "VanEck Video Gaming and eSports ETF受益于游戏行业强劲增长，2025年第三季度资金流入创新高，投资者对游戏行业前景保持乐观。",
+      url: "https://www.vaneck.com/news/",
+      publishedAt: "2025-10-23T14:00:00Z",
+      source: "VanEck官方"
+    },
+    {
+      title: "ESPO ETF新增多家游戏公司，投资组合优化",
+      summary: "ESPO ETF新增多家游戏公司到投资组合中，包括新兴的云游戏和元宇宙相关公司，进一步优化投资组合结构。",
+      url: "https://www.vaneck.com/news/",
+      publishedAt: "2025-10-22T19:00:00Z",
+      source: "VanEck官方"
+    },
+    {
+      title: "电子竞技市场增长推动ESPO ETF表现强劲",
+      summary: "电子竞技市场快速增长推动ESPO ETF表现强劲，2025年第三季度收益率超过15%，跑赢大盘指数。",
+      url: "https://www.vaneck.com/news/",
+      publishedAt: "2025-10-21T16:30:00Z",
+      source: "VanEck官方"
+    }
+  ],
+  RKLB: [
+    {
+      title: "Rocket Lab成功发射第50次任务，创历史新高",
+      summary: "Rocket Lab成功发射第50次任务，创历史新高。公司的小型卫星发射服务获得更多客户认可，订单积压持续增长。",
+      url: "https://www.rocketlabusa.com/news/",
+      publishedAt: "2025-10-23T15:00:00Z",
+      source: "Rocket Lab官方"
+    },
+    {
+      title: "Rocket Lab获得美国军方1亿美元发射合同",
+      summary: "Rocket Lab获得美国军方1亿美元发射合同，将为军方提供小型卫星发射服务，进一步巩固在商业航天领域的地位。",
+      url: "https://www.rocketlabusa.com/news/",
+      publishedAt: "2025-10-22T20:00:00Z",
+      source: "Rocket Lab官方"
+    },
+    {
+      title: "Rocket Lab推出新一代火箭，运载能力提升50%",
+      summary: "Rocket Lab推出新一代火箭，运载能力提升50%，发射成本降低30%，为小型卫星发射市场带来更大竞争优势。",
+      url: "https://www.rocketlabusa.com/news/",
+      publishedAt: "2025-10-21T17:45:00Z",
+      source: "Rocket Lab官方"
+    }
+  ],
+  '1376.HK': [
+    {
+      title: "Raffles Interior获得香港大型商业项目合同",
+      summary: "Raffles Interior获得香港大型商业项目合同，总价值超过2亿港元。公司将负责高端商业空间的室内设计和装修服务。",
+      url: "https://www.rafflesinterior.com/news/",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "Raffles Interior官方"
+    },
+    {
+      title: "Raffles Interior在香港联交所表现稳健",
+      summary: "Raffles Interior在香港联交所表现稳健，2025年第三季度营收同比增长12%，净利润增长8%，显示出良好的经营状况。",
+      url: "https://www.rafflesinterior.com/news/",
+      publishedAt: "2025-10-22T21:00:00Z",
+      source: "Raffles Interior官方"
+    },
+    {
+      title: "Raffles Interior拓展内地市场，获得多个项目",
+      summary: "Raffles Interior拓展内地市场，获得多个高端住宅和商业项目，总价值超过1.5亿港元，进一步扩大业务规模。",
+      url: "https://www.rafflesinterior.com/news/",
+      publishedAt: "2025-10-21T18:30:00Z",
+      source: "Raffles Interior官方"
+    }
   ]
 };
 
@@ -1064,6 +1544,48 @@ export const ANALYST_RATINGS: Record<string, AnalystRating[]> = {
     { rating: 'Buy', targetPrice: 28, analyst: 'JP Morgan', date: '2025-10-21' },
     { rating: 'Hold', targetPrice: 20, analyst: 'Credit Suisse', date: '2025-10-20' },
     { rating: 'Buy', targetPrice: 30, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  VOR: [
+    { rating: 'Hold', targetPrice: 8, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Buy', targetPrice: 12, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Hold', targetPrice: 6, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 15, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Hold', targetPrice: 8, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  GEMI: [
+    { rating: 'Buy', targetPrice: 25, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Strong Buy', targetPrice: 30, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Buy', targetPrice: 22, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Hold', targetPrice: 18, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Buy', targetPrice: 28, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  SMMT: [
+    { rating: 'Hold', targetPrice: 3, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Buy', targetPrice: 5, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Hold', targetPrice: 2.5, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 6, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Hold', targetPrice: 3, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  ESPO: [
+    { rating: 'Buy', targetPrice: 45, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Strong Buy', targetPrice: 50, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Buy', targetPrice: 42, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 48, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Strong Buy', targetPrice: 52, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  RKLB: [
+    { rating: 'Buy', targetPrice: 8, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Strong Buy', targetPrice: 12, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Buy', targetPrice: 10, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Hold', targetPrice: 6, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Buy', targetPrice: 14, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  '1376.HK': [
+    { rating: 'Buy', targetPrice: 1.8, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Hold', targetPrice: 1.5, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Buy', targetPrice: 2.0, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 1.9, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Hold', targetPrice: 1.6, analyst: 'Bank of America', date: '2025-10-19' }
   ]
 };
 
@@ -1590,6 +2112,306 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
       sector: 'Technology',
       correlation: 0.60,
       reason: '自动驾驶技术客户',
+      rating: 'Buy'
+    }
+  ],
+  VOR: [
+    {
+      symbol: 'GILD',
+      name: 'Gilead Sciences',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '100B',
+      sector: 'Healthcare',
+      correlation: 0.75,
+      reason: '基因治疗和细胞治疗技术竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'BMY',
+      name: 'Bristol Myers Squibb',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '120B',
+      sector: 'Healthcare',
+      correlation: 0.70,
+      reason: 'CAR-T细胞治疗技术竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'JNJ',
+      name: 'Johnson & Johnson',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '400B',
+      sector: 'Healthcare',
+      correlation: 0.65,
+      reason: '生物制药和基因治疗竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'PFE',
+      name: 'Pfizer Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '200B',
+      sector: 'Healthcare',
+      correlation: 0.60,
+      reason: '制药和生物技术竞争',
+      rating: 'Buy'
+    }
+  ],
+  GEMI: [
+    {
+      symbol: 'BA',
+      name: 'Boeing Company',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '100B',
+      sector: 'Industrials',
+      correlation: 0.80,
+      reason: '航空航天和空间技术竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'LMT',
+      name: 'Lockheed Martin',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '120B',
+      sector: 'Industrials',
+      correlation: 0.75,
+      reason: '国防和空间技术竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'RTX',
+      name: 'Raytheon Technologies',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '150B',
+      sector: 'Industrials',
+      correlation: 0.70,
+      reason: '航空航天和国防技术竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'RKLB',
+      name: 'Rocket Lab USA',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '3B',
+      sector: 'Industrials',
+      correlation: 0.85,
+      reason: '商业航天和空间技术合作',
+      rating: 'Buy'
+    }
+  ],
+  SMMT: [
+    {
+      symbol: 'PFE',
+      name: 'Pfizer Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '200B',
+      sector: 'Healthcare',
+      correlation: 0.75,
+      reason: '抗生素和抗感染药物竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'JNJ',
+      name: 'Johnson & Johnson',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '400B',
+      sector: 'Healthcare',
+      correlation: 0.70,
+      reason: '制药和抗感染药物竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'MRK',
+      name: 'Merck & Co.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '300B',
+      sector: 'Healthcare',
+      correlation: 0.65,
+      reason: '制药和抗生素竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'ABBV',
+      name: 'AbbVie Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '250B',
+      sector: 'Healthcare',
+      correlation: 0.60,
+      reason: '生物制药和药物开发竞争',
+      rating: 'Buy'
+    }
+  ],
+  ESPO: [
+    {
+      symbol: 'QQQ',
+      name: 'Invesco QQQ Trust',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '200B',
+      sector: 'Financial Services',
+      correlation: 0.70,
+      reason: '科技股ETF竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'SPY',
+      name: 'SPDR S&P 500 ETF',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '400B',
+      sector: 'Financial Services',
+      correlation: 0.60,
+      reason: '大盘ETF竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'VTI',
+      name: 'Vanguard Total Stock Market ETF',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '300B',
+      sector: 'Financial Services',
+      correlation: 0.55,
+      reason: '全市场ETF竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'IWM',
+      name: 'iShares Russell 2000 ETF',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '50B',
+      sector: 'Financial Services',
+      correlation: 0.45,
+      reason: '小盘股ETF竞争',
+      rating: 'Buy'
+    }
+  ],
+  RKLB: [
+    {
+      symbol: 'BA',
+      name: 'Boeing Company',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '100B',
+      sector: 'Industrials',
+      correlation: 0.75,
+      reason: '航空航天和发射服务竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'LMT',
+      name: 'Lockheed Martin',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '120B',
+      sector: 'Industrials',
+      correlation: 0.70,
+      reason: '国防和空间技术竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'RTX',
+      name: 'Raytheon Technologies',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '150B',
+      sector: 'Industrials',
+      correlation: 0.65,
+      reason: '航空航天技术竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'GEMI',
+      name: 'Gemini Space Station',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '1.2B',
+      sector: 'Industrials',
+      correlation: 0.85,
+      reason: '商业航天和空间技术合作',
+      rating: 'Buy'
+    }
+  ],
+  '1376.HK': [
+    {
+      symbol: 'CIMC',
+      name: 'CIMC Enric Holdings',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '5B',
+      sector: 'Industrials',
+      correlation: 0.60,
+      reason: '工程和建筑服务竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'CRCC',
+      name: 'China Railway Construction',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '20B',
+      sector: 'Industrials',
+      correlation: 0.55,
+      reason: '建筑工程和基础设施竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'CSCEC',
+      name: 'China State Construction',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '30B',
+      sector: 'Industrials',
+      correlation: 0.50,
+      reason: '建筑和工程服务竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'CCCC',
+      name: 'China Communications Construction',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '15B',
+      sector: 'Industrials',
+      correlation: 0.45,
+      reason: '基础设施和建筑工程竞争',
       rating: 'Buy'
     }
   ]
