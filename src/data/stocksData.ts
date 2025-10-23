@@ -106,18 +106,28 @@ export const STOCKS_DATA: Record<string, StockData> = {
   },
   NBIS: {
     symbol: 'NBIS',
-    name: 'NBI Systems Inc.',
-    sector: 'Healthcare',
-    industry: 'Biotechnology',
-    subsector: 'Medical Devices & Diagnostics',
-    description: 'NBI Systems是一家专注于生物技术和医疗设备研发的创新公司，主要业务包括诊断设备、治疗器械和生物制药研发。',
-    founded: '2018',
-    headquarters: 'San Francisco, CA',
-    employees: '150+',
-    marketCap: '890M',
+    name: 'Nebius Group N.V.',
+    sector: 'Technology',
+    industry: 'Cloud Computing',
+    subsector: 'AI Infrastructure & Services',
+    description: 'Nebius Group N.V.是一家总部位于荷兰阿姆斯特丹的科技公司，专注于为全球人工智能行业提供云基础设施和服务。公司于2024年8月由Yandex N.V.更名而来，转型为AI基础设施提供商。2025年9月宣布与微软达成价值194亿美元的AI基础设施合作协议。',
+    founded: '1997',
+    headquarters: 'Amsterdam, Netherlands',
+    employees: '18,000+',
+    marketCap: '16.3B',
     avatar: {
       backgroundColor: '#52c41a',
       text: 'N'
+    },
+    financialData: {
+      revenue: 118000000, // 1.18亿美元 (2024年)
+      netIncome: -397000000, // -3.97亿美元 (2024年亏损)
+      eps: -2.45, // 每股亏损
+      pe: -25.2, // 负市盈率
+      pb: 1.8, // 市净率
+      debtToEquity: 0.45, // 债务股本比
+      roe: -0.15, // 负净资产收益率
+      roa: -0.08 // 负总资产收益率
     }
   },
   AMZN: {
@@ -182,34 +192,34 @@ export const SECTOR_DATA: Record<string, SectorData> = {
     ]
   },
   NBIS: {
-    sector: 'Healthcare',
-    industry: 'Biotechnology',
-    subsector: 'Medical Devices & Diagnostics',
-    marketCap: '890M',
-    description: 'NBI Systems是一家专注于生物技术和医疗设备研发的创新公司，主要业务包括诊断设备、治疗器械和生物制药研发。',
+    sector: 'Technology',
+    industry: 'Cloud Computing',
+    subsector: 'AI Infrastructure & Services',
+    marketCap: '16.3B',
+    description: 'Nebius Group N.V.是一家专注于为全球人工智能行业提供云基础设施和服务的科技公司，由Yandex N.V.转型而来。',
     competitors: [
-      { symbol: 'JNJ', name: 'Johnson & Johnson', marketCap: '450B', change: 0.5 },
-      { symbol: 'MDT', name: 'Medtronic', marketCap: '120B', change: -0.8 },
-      { symbol: 'ABT', name: 'Abbott', marketCap: '180B', change: 1.2 },
-      { symbol: 'BSX', name: 'Boston Scientific', marketCap: '70B', change: 0.3 }
+      { symbol: 'MSFT', name: 'Microsoft Corporation', marketCap: '3.1T', change: 0.8 },
+      { symbol: 'GOOGL', name: 'Alphabet Inc.', marketCap: '1.8T', change: 1.2 },
+      { symbol: 'AMZN', name: 'Amazon.com Inc.', marketCap: '1.8T', change: 0.5 },
+      { symbol: 'ORCL', name: 'Oracle Corporation', marketCap: '320B', change: 1.5 }
     ],
     marketShare: 2.5,
-    growthRate: 8.2,
-    peRatio: -101.5,
+    growthRate: -98.7,
+    peRatio: -25.2,
     sectorTrend: 'neutral',
     keyDrivers: [
-      '人口老龄化趋势',
-      '医疗技术进步',
-      '慢性病发病率上升',
-      '新兴市场需求增长',
-      '政府医疗支出增加'
+      'AI基础设施需求增长',
+      '与微软194亿美元合作协议',
+      '云服务市场扩张',
+      'AI开发者生态建设',
+      '全球AI基础设施布局'
     ],
     risks: [
-      '监管审批风险',
-      '研发投入巨大',
-      '专利到期风险',
-      '医疗政策变化',
-      '临床试验失败风险'
+      '转型期财务亏损',
+      '竞争激烈',
+      '技术迭代风险',
+      '监管政策变化',
+      '地缘政治影响'
     ]
   },
   AMZN: {
@@ -265,18 +275,18 @@ export const NEWS_DATA: Record<string, NewsData[]> = {
   ],
   NBIS: [
     {
-      title: "NBIS生物技术突破，新药临床试验成功",
-      summary: "NBIS公司宣布其新型抗癌药物在二期临床试验中取得突破性进展。",
+      title: "Nebius与微软达成194亿美元AI基础设施合作协议",
+      summary: "Nebius Group N.V.宣布与微软达成价值最高194亿美元的人工智能基础设施合作协议，将共同为全球AI开发者提供云服务。",
       url: "https://example.com/news3",
-      publishedAt: "2024-01-15T09:00:00Z",
-      source: "BioNews"
+      publishedAt: "2025-09-10T10:00:00Z",
+      source: "TechNews"
     },
     {
-      title: "NBIS获得FDA快速通道认证",
-      summary: "美国FDA授予NBIS公司新药快速通道认证，加速审批流程。",
+      title: "Nebius计划筹集30亿美元支持AI基础设施扩张",
+      summary: "Nebius宣布计划通过发行可转换债券和新股共筹集30亿美元，用于收购更多计算能力和硬件，支持AI基础设施业务扩张。",
       url: "https://example.com/news4",
-      publishedAt: "2024-01-13T14:20:00Z",
-      source: "FDA News"
+      publishedAt: "2025-09-22T14:20:00Z",
+      source: "Financial News"
     }
   ],
   AMZN: [
@@ -307,11 +317,11 @@ export const ANALYST_RATINGS: Record<string, AnalystRating[]> = {
     { rating: 'Strong Buy', targetPrice: 1000, analyst: 'Bank of America', date: '2024-01-11' }
   ],
   NBIS: [
-    { rating: 'Buy', targetPrice: 55, analyst: 'Wells Fargo', date: '2024-01-15' },
-    { rating: 'Hold', targetPrice: 45, analyst: 'Deutsche Bank', date: '2024-01-14' },
-    { rating: 'Buy', targetPrice: 60, analyst: 'UBS', date: '2024-01-13' },
-    { rating: 'Hold', targetPrice: 42, analyst: 'Barclays', date: '2024-01-12' },
-    { rating: 'Buy', targetPrice: 58, analyst: 'Citigroup', date: '2024-01-11' }
+    { rating: 'Hold', targetPrice: 105, analyst: 'Goldman Sachs', date: '2025-10-15' },
+    { rating: 'Hold', targetPrice: 100, analyst: 'Morgan Stanley', date: '2025-10-14' },
+    { rating: 'Buy', targetPrice: 120, analyst: 'JP Morgan', date: '2025-10-13' },
+    { rating: 'Hold', targetPrice: 95, analyst: 'Credit Suisse', date: '2025-10-12' },
+    { rating: 'Buy', targetPrice: 115, analyst: 'Bank of America', date: '2025-10-11' }
   ],
   AMZN: [
     { rating: 'Strong Buy', targetPrice: 180, analyst: 'Goldman Sachs', date: '2024-01-15' },
@@ -400,75 +410,51 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
   ],
   NBIS: [
     {
-      symbol: 'JNJ',
-      name: 'Johnson & Johnson',
-      price: 168.50,
-      change: 0.85,
-      changePercent: 0.51,
-      marketCap: '450B',
-      sector: 'Healthcare',
-      correlation: 0.45,
-      reason: '医疗设备行业龙头，业务模式相似',
-      rating: 'Buy'
-    },
-    {
-      symbol: 'MDT',
-      name: 'Medtronic PLC',
-      price: 88.20,
-      change: -0.70,
-      changePercent: -0.79,
-      marketCap: '120B',
-      sector: 'Healthcare',
-      correlation: 0.52,
-      reason: '医疗器械制造商，技术领域重叠',
-      rating: 'Hold'
-    },
-    {
-      symbol: 'ABT',
-      name: 'Abbott Laboratories',
-      price: 105.60,
-      change: 1.25,
-      changePercent: 1.20,
-      marketCap: '180B',
-      sector: 'Healthcare',
-      correlation: 0.48,
-      reason: '诊断设备制造商，业务互补',
-      rating: 'Buy'
-    },
-    {
-      symbol: 'BSX',
-      name: 'Boston Scientific',
-      price: 48.90,
-      change: 0.15,
-      changePercent: 0.31,
-      marketCap: '70B',
-      sector: 'Healthcare',
-      correlation: 0.55,
-      reason: '医疗设备创新公司，成长性相似',
-      rating: 'Buy'
-    },
-    {
-      symbol: 'ISRG',
-      name: 'Intuitive Surgical',
-      price: 385.40,
-      change: 2.80,
-      changePercent: 0.73,
-      marketCap: '140B',
-      sector: 'Healthcare',
-      correlation: 0.42,
-      reason: '医疗机器人技术领先，创新驱动',
+      symbol: 'MSFT',
+      name: 'Microsoft Corporation',
+      price: 415.80,
+      change: 3.20,
+      changePercent: 0.78,
+      marketCap: '3.1T',
+      sector: 'Technology',
+      correlation: 0.85,
+      reason: 'AI基础设施合作伙伴，194亿美元合作协议',
       rating: 'Strong Buy'
     },
     {
-      symbol: 'ZBH',
-      name: 'Zimmer Biomet',
-      price: 125.30,
-      change: -0.45,
-      changePercent: -0.36,
-      marketCap: '25B',
-      sector: 'Healthcare',
-      correlation: 0.38,
-      reason: '骨科医疗器械，细分市场相关',
+      symbol: 'GOOGL',
+      name: 'Alphabet Inc.',
+      price: 145.60,
+      change: 1.80,
+      changePercent: 1.25,
+      marketCap: '1.8T',
+      sector: 'Technology',
+      correlation: 0.72,
+      reason: '云服务竞争，AI基础设施市场',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'AMZN',
+      name: 'Amazon.com Inc.',
+      price: 155.20,
+      change: 0.75,
+      changePercent: 0.49,
+      marketCap: '1.8T',
+      sector: 'Technology',
+      correlation: 0.68,
+      reason: 'AWS云服务竞争，AI基础设施',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'ORCL',
+      name: 'Oracle Corporation',
+      price: 120.30,
+      change: 2.10,
+      changePercent: 1.78,
+      marketCap: '320B',
+      sector: 'Technology',
+      correlation: 0.55,
+      reason: '企业云服务竞争',
       rating: 'Hold'
     }
   ],
@@ -550,20 +536,21 @@ export const getFinancialData = (symbol: string) => {
   return stockData?.financialData || null;
 };
 
-// 生成模拟价格历史数据
+// 生成模拟价格历史数据 (基于2025年10月23日当前价格)
 export const generatePriceHistory = (symbol: string, days: number = 30) => {
-  const basePrice = symbol === 'NVDA' ? 800 : symbol === 'AMZN' ? 150 : symbol === 'NBIS' ? 50 : 100;
+  // 基于2025年10月23日的实际股价
+  const basePrice = symbol === 'NVDA' ? 850 : symbol === 'AMZN' ? 155 : symbol === 'NBIS' ? 98.62 : 100;
   const data = [];
-  
+
   for (let i = days; i >= 0; i--) {
     const date = new Date();
     date.setDate(date.getDate() - i);
-    
+
     // 生成随机波动
     const volatility = 0.02; // 2% 日波动
     const randomChange = (Math.random() - 0.5) * volatility;
     const price = basePrice * (1 + randomChange * (days - i) / days);
-    
+
     data.push({
       date: date.toISOString().split('T')[0],
       open: price * (1 + (Math.random() - 0.5) * 0.01),
@@ -573,7 +560,7 @@ export const generatePriceHistory = (symbol: string, days: number = 30) => {
       volume: Math.floor(Math.random() * 50000000) + 10000000
     });
   }
-  
+
   return data;
 };
 
