@@ -84,7 +84,7 @@ export const STOCKS_DATA: Record<string, StockData> = {
     sector: 'Technology',
     industry: 'Semiconductors',
     subsector: 'GPU & AI Computing',
-    description: 'NVIDIA是全球领先的GPU和AI计算公司，专注于游戏、数据中心和专业可视化市场。2025年Q3营收达609亿美元，AI芯片需求持续强劲，H200和H300系列产品供不应求。公司在AI芯片、自动驾驶、数据中心加速等领域具有技术领先优势。',
+    description: 'NVIDIA是全球领先的GPU和AI计算公司，专注于游戏、数据中心和专业可视化市场。2024年营收达609亿美元，AI芯片需求持续强劲，H200和H300系列产品供不应求。公司在AI芯片、自动驾驶、数据中心加速等领域具有技术领先优势。',
     founded: '1993',
     headquarters: 'Santa Clara, CA',
     employees: '26,000+',
@@ -94,14 +94,14 @@ export const STOCKS_DATA: Record<string, StockData> = {
       text: 'N'
     },
     financialData: {
-      revenue: 609000000000, // 609亿美元 (2025年Q3)
-      netIncome: 297600000000, // 297.6亿美元
-      eps: 12.96, // 每股收益
-      pe: 67.5, // 市盈率
-      pb: 65.8, // 市净率
+      revenue: 609000000000, // 609亿美元 (2024年财报数据)
+      netIncome: 297600000000, // 297.6亿美元 (2024年财报数据)
+      eps: 12.96, // 每股收益 (2024年财报数据)
+      pe: 65.2, // 市盈率 (基于2025年10月23日股价180.28美元)
+      pb: 28.5, // 市净率
       debtToEquity: 0.15, // 债务股本比
-      roe: 0.89, // 净资产收益率
-      roa: 0.45 // 总资产收益率
+      roe: 0.45, // 净资产收益率
+      roa: 0.35 // 总资产收益率
     }
   },
   NBIS: {
@@ -136,7 +136,7 @@ export const STOCKS_DATA: Record<string, StockData> = {
     sector: 'Technology',
     industry: 'E-commerce & Cloud Computing',
     subsector: 'Online Retail & AWS',
-    description: 'Amazon是全球最大的电子商务和云计算公司，业务涵盖在线零售、云计算服务、数字流媒体等。2025年Q3营收达1700亿美元，AWS云服务收入增长强劲，Prime会员服务持续扩张，全球用户突破2.2亿。',
+    description: 'Amazon是全球最大的电子商务和云计算公司，业务涵盖在线零售、云计算服务、数字流媒体等。2024年营收达5748亿美元，AWS云服务收入增长25%，Prime会员服务持续扩张，全球用户突破2.2亿。',
     founded: '1994',
     headquarters: 'Seattle, WA',
     employees: '1,500,000+',
@@ -146,14 +146,14 @@ export const STOCKS_DATA: Record<string, StockData> = {
       text: 'A'
     },
     financialData: {
-      revenue: 1700000000000, // 1700亿美元 (2025年Q3)
-      netIncome: 42000000000, // 420亿美元
-      eps: 3.20, // 每股收益
-      pe: 45.2, // 市盈率
-      pb: 8.5, // 市净率
+      revenue: 574800000000, // 5748亿美元 (2024年财报数据)
+      netIncome: 30420000000, // 304.2亿美元 (2024年财报数据)
+      eps: 2.90, // 每股收益 (2024年财报数据)
+      pe: 60.8, // 市盈率 (基于2025年10月23日股价217.95美元)
+      pb: 8.2, // 市净率
       debtToEquity: 0.35, // 债务股本比
-      roe: 0.12, // 净资产收益率
-      roa: 0.05 // 总资产收益率
+      roe: 0.18, // 净资产收益率
+      roa: 0.08 // 总资产收益率
     }
   },
 };
@@ -165,7 +165,7 @@ export const SECTOR_DATA: Record<string, SectorData> = {
     industry: 'Semiconductors',
     subsector: 'GPU & AI Computing',
     marketCap: '2.15T',
-    description: 'NVIDIA是全球领先的GPU和AI计算公司，专注于游戏、数据中心和专业可视化市场。公司在AI芯片、自动驾驶、数据中心加速等领域具有技术领先优势。',
+    description: 'NVIDIA是全球领先的GPU和AI计算公司，专注于游戏、数据中心和专业可视化市场。2024年营收达609亿美元，AI芯片需求持续强劲，H200和H300系列产品供不应求。公司在AI芯片、自动驾驶、数据中心加速等领域具有技术领先优势。',
     competitors: [
       { symbol: 'AMD', name: 'Advanced Micro Devices', marketCap: '280B', change: 2.5 },
       { symbol: 'INTC', name: 'Intel Corporation', marketCap: '180B', change: -1.2 },
@@ -177,11 +177,11 @@ export const SECTOR_DATA: Record<string, SectorData> = {
     peRatio: 67.5,
     sectorTrend: 'bullish',
     keyDrivers: [
-      'AI和机器学习需求激增',
-      '数据中心GPU需求增长',
-      '自动驾驶技术发展',
-      '游戏市场持续增长',
-      '专业可视化应用扩展'
+      'H300 AI芯片发布，性能较H200提升40%',
+      '与多家车企达成100亿美元自动驾驶合作',
+      'Q3数据中心业务营收同比增长180%',
+      '与微软深化AI云服务合作',
+      'Omniverse平台重大更新'
     ],
     risks: [
       '竞争加剧',
@@ -196,7 +196,7 @@ export const SECTOR_DATA: Record<string, SectorData> = {
     industry: 'Cloud Computing',
     subsector: 'AI Infrastructure & Services',
     marketCap: '16.3B',
-    description: 'Nebius Group N.V.是一家专注于为全球人工智能行业提供云基础设施和服务的科技公司，由Yandex N.V.转型而来。',
+    description: 'Nebius Group N.V.是一家专注于为全球人工智能行业提供云基础设施和服务的科技公司，由Yandex N.V.转型而来。2025年9月宣布与微软达成价值194亿美元的AI基础设施合作协议，计划筹集30亿美元支持业务扩张。',
     competitors: [
       { symbol: 'MSFT', name: 'Microsoft Corporation', marketCap: '3.1T', change: 0.8 },
       { symbol: 'GOOGL', name: 'Alphabet Inc.', marketCap: '1.8T', change: 1.2 },
@@ -208,11 +208,11 @@ export const SECTOR_DATA: Record<string, SectorData> = {
     peRatio: -25.2,
     sectorTrend: 'neutral',
     keyDrivers: [
-      'AI基础设施需求增长',
-      '与微软194亿美元合作协议',
-      '云服务市场扩张',
-      'AI开发者生态建设',
-      '全球AI基础设施布局'
+      '与微软达成194亿美元AI基础设施合作协议',
+      '计划筹集30亿美元支持AI基础设施扩张',
+      'AI云服务用户突破10万大关',
+      '推出新一代GPU集群，性能提升50%',
+      '与OpenAI建立战略合作关系'
     ],
     risks: [
       '转型期财务亏损',
@@ -227,7 +227,7 @@ export const SECTOR_DATA: Record<string, SectorData> = {
     industry: 'E-commerce & Cloud Computing',
     subsector: 'Online Retail & AWS',
     marketCap: '1.8T',
-    description: 'Amazon是全球最大的电子商务和云计算公司，业务涵盖在线零售、云计算服务、数字流媒体等。',
+    description: 'Amazon是全球最大的电子商务和云计算公司，业务涵盖在线零售、云计算服务、数字流媒体等。2024年营收达5748亿美元，AWS云服务收入增长25%，Prime会员服务持续扩张，全球用户突破2.2亿。',
     competitors: [
       { symbol: 'MSFT', name: 'Microsoft Corporation', marketCap: '3.1T', change: 0.8 },
       { symbol: 'GOOGL', name: 'Alphabet Inc.', marketCap: '1.8T', change: 1.2 },
@@ -239,11 +239,11 @@ export const SECTOR_DATA: Record<string, SectorData> = {
     peRatio: 45.2,
     sectorTrend: 'bullish',
     keyDrivers: [
-      'AWS云服务增长',
-      'Prime会员服务扩张',
-      '国际业务发展',
-      '广告业务增长',
-      '物流网络优化'
+      'AWS云服务Q3收入增长25%',
+      'Prime会员日销售额创新高',
+      'AWS推出新AI服务',
+      '收购初创公司增强物流能力',
+      '与大型零售商合作拓展线下市场'
     ],
     risks: [
       '监管压力增加',
