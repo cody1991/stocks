@@ -5,18 +5,22 @@ import stockApi from '../services/stockApi';
 
 const { Text } = Typography;
 
-const ApiTestComponent: React.FC = () => {
+interface ApiTestComponentProps {
+  symbol?: string;
+}
+
+const ApiTestComponent: React.FC<ApiTestComponentProps> = ({ symbol = 'NVDA' }) => {
   const [testResult, setTestResult] = useState<{
     status: 'loading' | 'success' | 'error' | 'idle';
     message: string;
     data?: any;
   }>({ status: 'idle', message: '' });
 
-  const testAPI = async () => {
+  const testAPI = async (currentSymbol: string) => {
     setTestResult({ status: 'loading', message: '正在测试API连接...' });
 
     try {
-      const data = await stockApi.getStockQuote('NVDA');
+      const data = await stockApi.getStockQuote(currentSymbol);
       setTestResult({
         status: 'success',
         message: 'API连接成功！',
@@ -32,8 +36,20 @@ const ApiTestComponent: React.FC = () => {
   };
 
   useEffect(() => {
-    testAPI();
-  }, []);
+    let isCancelled = false;
+    
+    const runTest = async () => {
+      if (!isCancelled) {
+        await testAPI(symbol);
+      }
+    };
+    
+    runTest();
+    
+    return () => {
+      isCancelled = true;
+    };
+  }, [symbol]);
 
   const getStatusIcon = () => {
     switch (testResult.status) {
@@ -87,7 +103,7 @@ const ApiTestComponent: React.FC = () => {
           <Button
             type="primary"
             icon={<ReloadOutlined />}
-            onClick={testAPI}
+            onClick={() => testAPI(symbol)}
             loading={testResult.status === 'loading'}
           >
             重新测试

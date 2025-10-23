@@ -16,21 +16,36 @@ const StockInfo: React.FC<StockInfoProps> = ({ symbol }) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    let isCancelled = false;
+    
     const fetchStockData = async () => {
       try {
         setLoading(true);
         setError(null);
         const data = await stockApi.getStockQuote(symbol);
-        setStockData(data);
+        
+        // 只有在组件没有被取消时才更新状态
+        if (!isCancelled) {
+          setStockData(data);
+        }
       } catch (err) {
-        setError('获取股票数据失败');
-        console.error('Error fetching stock data:', err);
+        if (!isCancelled) {
+          setError('获取股票数据失败');
+          console.error('Error fetching stock data:', err);
+        }
       } finally {
-        setLoading(false);
+        if (!isCancelled) {
+          setLoading(false);
+        }
       }
     };
 
     fetchStockData();
+    
+    // 清理函数，用于取消未完成的请求
+    return () => {
+      isCancelled = true;
+    };
   }, [symbol]);
 
   if (loading) {

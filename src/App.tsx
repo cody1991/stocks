@@ -75,7 +75,7 @@ const App: React.FC = () => {
       case 'related':
         return <RelatedStocks symbol={selectedStock} />;
       case 'api-test':
-        return <ApiTestComponent />;
+        return <ApiTestComponent symbol={selectedStock} />;
       default:
         return <StockInfo symbol={selectedStock} />;
     }
