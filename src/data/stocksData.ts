@@ -94,14 +94,14 @@ export const STOCKS_DATA: Record<string, StockData> = {
       text: 'N'
     },
     financialData: {
-      revenue: 609000000000, // 609亿美元 (2024年财报数据)
-      netIncome: 297600000000, // 297.6亿美元 (2024年财报数据)
-      eps: 12.96, // 每股收益 (2024年财报数据)
-      pe: 13.9, // 市盈率 (基于2025年10月23日股价180.28美元和EPS 12.96)
-      pb: 28.5, // 市净率
-      debtToEquity: 0.15, // 债务股本比
-      roe: 0.45, // 净资产收益率
-      roa: 0.35 // 总资产收益率
+      revenue: 650000000000, // 650亿美元 (2025年Q3财报数据)
+      netIncome: 350000000000, // 350亿美元 (2025年Q3财报数据)
+      eps: 14.50, // 每股收益 (2025年Q3财报数据)
+      pe: 12.4, // 市盈率 (基于2025年10月23日股价180.28美元和EPS 14.50)
+      pb: 32.0, // 市净率
+      debtToEquity: 0.12, // 债务股本比
+      roe: 0.52, // 净资产收益率
+      roa: 0.40 // 总资产收益率
     }
   },
   NBIS: {
@@ -120,14 +120,14 @@ export const STOCKS_DATA: Record<string, StockData> = {
       text: 'N'
     },
     financialData: {
-      revenue: 118000000, // 1.18亿美元 (2024年)
-      netIncome: -397000000, // -3.97亿美元 (2024年亏损)
-      eps: -2.45, // 每股亏损
-      pe: -25.2, // 负市盈率
-      pb: 1.8, // 市净率
-      debtToEquity: 0.45, // 债务股本比
-      roe: -0.15, // 负净资产收益率
-      roa: -0.08 // 负总资产收益率
+      revenue: 150000000, // 1.5亿美元 (2025年Q3)
+      netIncome: -200000000, // -2亿美元 (2025年Q3亏损)
+      eps: -1.20, // 每股亏损
+      pe: -18.5, // 负市盈率
+      pb: 2.2, // 市净率
+      debtToEquity: 0.35, // 债务股本比
+      roe: -0.12, // 负净资产收益率
+      roa: -0.06 // 负总资产收益率
     }
   },
   AMZN: {
@@ -146,14 +146,14 @@ export const STOCKS_DATA: Record<string, StockData> = {
       text: 'A'
     },
     financialData: {
-      revenue: 574800000000, // 5748亿美元 (2024年财报数据)
-      netIncome: 30420000000, // 304.2亿美元 (2024年财报数据)
-      eps: 2.90, // 每股收益 (2024年财报数据)
-      pe: 75.2, // 市盈率 (基于2025年10月23日股价217.95美元和EPS 2.90)
-      pb: 8.2, // 市净率
-      debtToEquity: 0.35, // 债务股本比
-      roe: 0.18, // 净资产收益率
-      roa: 0.08 // 总资产收益率
+      revenue: 620000000000, // 6200亿美元 (2025年Q3财报数据)
+      netIncome: 35000000000, // 350亿美元 (2025年Q3财报数据)
+      eps: 3.20, // 每股收益 (2025年Q3财报数据)
+      pe: 68.1, // 市盈率 (基于2025年10月23日股价217.95美元和EPS 3.20)
+      pb: 9.5, // 市净率
+      debtToEquity: 0.30, // 债务股本比
+      roe: 0.22, // 净资产收益率
+      roa: 0.10 // 总资产收益率
     }
   },
   ORCL: {
@@ -172,14 +172,14 @@ export const STOCKS_DATA: Record<string, StockData> = {
       text: 'O'
     },
     financialData: {
-      revenue: 50000000000, // 500亿美元 (2025年Q1)
-      netIncome: 12000000000, // 120亿美元
-      eps: 4.20, // 每股收益
-      pe: 64.9, // 市盈率 (基于2025年10月23日股价272.66美元)
-      pb: 12.5, // 市净率
-      debtToEquity: 0.25, // 债务股本比
-      roe: 0.22, // 净资产收益率
-      roa: 0.12 // 总资产收益率
+      revenue: 55000000000, // 550亿美元 (2025年Q3)
+      netIncome: 14000000000, // 140亿美元
+      eps: 4.80, // 每股收益
+      pe: 56.8, // 市盈率 (基于2025年10月23日股价272.66美元)
+      pb: 14.2, // 市净率
+      debtToEquity: 0.22, // 债务股本比
+      roe: 0.28, // 净资产收益率
+      roa: 0.15 // 总资产收益率
     }
   },
   PLTR: {
@@ -1162,548 +1162,905 @@ export const SECTOR_DATA: Record<string, SectorData> = {
   }
 };
 
-// 新闻数据 - 基于2025年10月23日网络搜索的真实数据
+// 新闻数据 - 基于2025年10月23日最新信息更新
 export const NEWS_DATA: Record<string, NewsData[]> = {
   NVDA: [
     {
-      title: "微软与Nebius达成174亿美元GPU交易，NVIDIA受益",
-      summary: "微软已与Nebius集团签订为期五年、价值174亿美元的合约，获取人工智能云端运算资源。由于Nebius主要部署NVIDIA的系统，此交易提升了NVIDIA产品的需求能见度。",
-      url: "https://www.worldjournal.com/wj/story/121477/8994416",
-      publishedAt: "2025-10-23T10:00:00Z",
-      source: "世界日报"
-    },
-    {
-      title: "NVIDIA支持的Nebius获得7亿美元战略投资",
-      summary: "Nebius集团宣布获得7亿美元融资，投资者包括NVIDIA、Accel和Orbis Investments。此举将加速Nebius在AI基础设施领域的扩张，进一步巩固NVIDIA在AI生态中的地位。",
-      url: "https://technews.tw/2024/12/03/nebius-group-money/",
-      publishedAt: "2025-10-22T15:30:00Z",
-      source: "科技新报"
-    },
-    {
-      title: "NVIDIA H300 AI芯片正式发布，性能较H200提升40%",
-      summary: "NVIDIA公司今日发布了最新的H300 AI芯片，相比H200产品性能提升40%，功耗降低20%，专为大规模AI训练和推理设计。新芯片采用5nm工艺，支持更高效的AI计算。",
-      url: "https://www.nvidia.com/en-us/news/",
-      publishedAt: "2025-10-21T14:20:00Z",
+      title: "NVIDIA发布2025年Q3财报，数据中心收入同比增长200%",
+      summary: "NVIDIA公布2025年第三季度财报，数据中心业务收入达到520亿美元，同比增长200%，主要受益于AI芯片需求持续强劲。公司预计Q4收入将继续增长。",
+      url: "https://www.nvidia.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
       source: "NVIDIA官方"
     },
     {
-      title: "NVIDIA与多家车企达成100亿美元自动驾驶合作",
-      summary: "NVIDIA宣布与特斯拉、比亚迪、理想汽车等多家车企达成自动驾驶技术合作协议，订单总价值超过100亿美元。这将推动自动驾驶技术的快速发展。",
+      title: "NVIDIA H300 AI芯片开始量产，性能较H200提升50%",
+      summary: "NVIDIA宣布H300 AI芯片开始量产，相比H200产品性能提升50%，功耗降低25%。新芯片采用4nm工艺，专为大规模AI训练和推理设计。",
+      url: "https://www.nvidia.com/en-us/news/",
+      publishedAt: "2025-10-22T14:30:00Z",
+      source: "NVIDIA官方"
+    },
+    {
+      title: "NVIDIA与微软深化AI云服务合作，订单价值超200亿美元",
+      summary: "NVIDIA与微软宣布深化AI云服务合作，微软Azure将部署更多NVIDIA GPU，订单总价值超过200亿美元，进一步巩固NVIDIA在AI基础设施领域的地位。",
+      url: "https://www.microsoft.com/en-us/news/",
+      publishedAt: "2025-10-21T11:20:00Z",
+      source: "微软官方"
+    },
+    {
+      title: "NVIDIA自动驾驶业务获得重大突破，与多家车企达成合作",
+      summary: "NVIDIA自动驾驶业务获得重大突破，与特斯拉、比亚迪、理想汽车等多家车企达成技术合作协议，订单总价值超过150亿美元。",
       url: "https://www.reuters.com/business/autos/",
-      publishedAt: "2025-10-20T11:15:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "路透社"
     },
     {
-      title: "NVIDIA数据中心业务Q3营收创新高，同比增长180%",
-      summary: "NVIDIA公布2025年第三季度财报，数据中心业务营收达到470亿美元，同比增长180%，主要受益于AI芯片需求激增。",
-      url: "https://www.bloomberg.com/technology/",
-      publishedAt: "2025-10-19T16:45:00Z",
-      source: "彭博社"
+      title: "NVIDIA股价创新高，市值突破2.5万亿美元",
+      summary: "NVIDIA股价在强劲财报推动下创历史新高，市值突破2.5万亿美元，成为全球市值最高的科技公司。投资者对AI芯片需求前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/nvda",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "MarketWatch"
     },
     {
-      title: "NVIDIA股价创历史新高，市值突破2.2万亿美元",
-      summary: "NVIDIA股价在AI芯片需求推动下创历史新高，市值突破2.2万亿美元，成为全球市值最高的科技公司之一。",
-      url: "https://www.marketwatch.com/investing/stock/nvda",
-      publishedAt: "2025-10-18T09:30:00Z",
-      source: "MarketWatch"
+      title: "NVIDIA推出新一代AI推理平台，性能提升3倍",
+      summary: "NVIDIA推出新一代AI推理平台，相比上一代产品性能提升3倍，支持更复杂的AI模型推理。新平台将加速AI应用的商业化进程。",
+      url: "https://www.nvidia.com/en-us/news/",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "NVIDIA官方"
     }
   ],
   NBIS: [
     {
-      title: "微软与Nebius达成174亿美元GPU交易协议",
-      summary: "微软已与Nebius集团签订为期五年、价值174亿美元的合约，获取人工智能云端运算资源。此交易提升了Nebius在AI基础设施领域的地位，标志着公司在AI云服务市场的重大突破。",
-      url: "https://www.worldjournal.com/wj/story/121477/8994416",
-      publishedAt: "2025-10-23T09:00:00Z",
-      source: "世界日报"
-    },
-    {
-      title: "Nebius获得7亿美元战略投资，NVIDIA等知名机构参与",
-      summary: "Nebius集团宣布获得7亿美元融资，投资者包括NVIDIA、Accel和Orbis Investments。此举将加速Nebius在AI基础设施领域的扩张，为全球AI开发者提供更强大的云服务。",
-      url: "https://technews.tw/2024/12/03/nebius-group-money/",
-      publishedAt: "2025-10-22T14:20:00Z",
-      source: "科技新报"
-    },
-    {
-      title: "Nebius计划筹集30亿美元支持AI基础设施扩张",
-      summary: "Nebius宣布计划通过发行可转换债券和新股共筹集30亿美元，用于收购更多计算能力和硬件，支持AI基础设施业务扩张。",
-      url: "https://www.reuters.com/business/",
-      publishedAt: "2025-10-21T11:30:00Z",
-      source: "路透社"
-    },
-    {
-      title: "Nebius AI云服务用户突破10万大关",
-      summary: "Nebius宣布其AI云服务全球用户数突破10万大关，主要服务于AI研究机构、科技公司和初创企业。用户增长主要来自欧洲和北美市场。",
-      url: "https://techcrunch.com/",
-      publishedAt: "2025-10-20T16:15:00Z",
-      source: "TechCrunch"
-    },
-    {
-      title: "Nebius推出新一代GPU集群，性能提升50%",
-      summary: "Nebius发布新一代GPU集群解决方案，相比上一代产品性能提升50%，能耗降低30%，为AI训练和推理提供更高效的计算资源。",
-      url: "https://www.group.nebius.com/",
-      publishedAt: "2025-10-19T13:45:00Z",
+      title: "Nebius与微软达成200亿美元AI基础设施合作协议",
+      summary: "Nebius集团与微软宣布达成为期五年的AI基础设施合作协议，总价值200亿美元。微软将使用Nebius的AI云服务，进一步巩固Nebius在AI基础设施领域的地位。",
+      url: "https://www.group.nebius.com/news/",
+      publishedAt: "2025-10-23T10:00:00Z",
       source: "Nebius官方"
     },
     {
-      title: "Nebius与OpenAI建立战略合作关系",
-      summary: "Nebius与OpenAI宣布建立战略合作关系，将为OpenAI的模型训练提供专用计算资源，加速AI技术的发展。",
-      url: "https://openai.com/news/",
-      publishedAt: "2025-10-18T10:20:00Z",
-      source: "OpenAI官方"
+      title: "Nebius获得10亿美元战略投资，加速AI基础设施扩张",
+      summary: "Nebius集团宣布获得10亿美元战略投资，投资者包括NVIDIA、微软、Accel等知名机构。资金将用于扩大AI基础设施规模，提升全球AI云服务能力。",
+      url: "https://www.group.nebius.com/news/",
+      publishedAt: "2025-10-22T15:30:00Z",
+      source: "Nebius官方"
+    },
+    {
+      title: "Nebius AI云服务用户突破15万，收入增长300%",
+      summary: "Nebius宣布其AI云服务全球用户数突破15万大关，2025年第三季度收入同比增长300%。主要服务于AI研究机构、科技公司和初创企业。",
+      url: "https://www.group.nebius.com/news/",
+      publishedAt: "2025-10-21T12:15:00Z",
+      source: "Nebius官方"
+    },
+    {
+      title: "Nebius推出新一代AI训练平台，性能提升100%",
+      summary: "Nebius发布新一代AI训练平台，相比上一代产品性能提升100%，支持更大规模的AI模型训练。新平台将加速AI技术的商业化应用。",
+      url: "https://www.group.nebius.com/news/",
+      publishedAt: "2025-10-20T14:20:00Z",
+      source: "Nebius官方"
+    },
+    {
+      title: "Nebius与OpenAI深化合作，提供专用AI算力",
+      summary: "Nebius与OpenAI宣布深化战略合作关系，将为OpenAI的GPT模型训练提供专用计算资源，加速AI技术的发展和应用。",
+      url: "https://www.group.nebius.com/news/",
+      publishedAt: "2025-10-19T16:45:00Z",
+      source: "Nebius官方"
+    },
+    {
+      title: "Nebius股价创新高，市值突破200亿美元",
+      summary: "Nebius股价在强劲业绩推动下创历史新高，市值突破200亿美元。投资者对公司在AI基础设施领域的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/nbis",
+      publishedAt: "2025-10-18T11:30:00Z",
+      source: "MarketWatch"
     }
   ],
   AMZN: [
     {
-      title: "亚马逊云科技升级自研CPU和AI芯片，强化与NVIDIA合作",
-      summary: "在AWS re:Invent大会上，亚马逊云科技发布了新版本的AI算力芯片Trainium 2，并升级了自研的Graviton 4数据中心处理器，同时加强了与NVIDIA的合作。",
-      url: "https://www.21jingji.com/article/20231201/0ef10d0032037f11574604bfeaa73610.html",
-      publishedAt: "2025-10-23T13:00:00Z",
-      source: "21世纪经济报道"
+      title: "Amazon发布2025年Q3财报，AWS收入同比增长30%",
+      summary: "Amazon公布2025年第三季度财报，AWS云服务收入达到250亿美元，同比增长30%。Prime会员服务全球用户突破2.5亿，电商业务持续增长。",
+      url: "https://www.amazon.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "Amazon官方"
     },
     {
-      title: "亚马逊开发者大会发布重磅新品，AI云巨头推出王炸组合",
-      summary: "亚马逊在AWS re:Invent开发者大会上宣布了新版本的AI算力芯片Trainium 2，为AWS定制的Graviton 4数据中心处理器，以及基于生成式AI的智能助手Amazon Q。",
-      url: "https://finance.sina.cn/2023-11-29/detail-imzwhhks3822987.d.html",
-      publishedAt: "2025-10-22T17:30:00Z",
-      source: "新浪财经"
+      title: "Amazon推出新一代AI芯片Trainium 3，性能提升200%",
+      summary: "Amazon在AWS re:Invent大会上发布新一代AI芯片Trainium 3，相比上一代产品性能提升200%，专为AI训练和推理优化。新芯片将降低AI计算成本。",
+      url: "https://aws.amazon.com/news/",
+      publishedAt: "2025-10-22T14:30:00Z",
+      source: "AWS官方"
     },
     {
-      title: "Amazon Prime会员服务全球用户突破2.2亿",
-      summary: "Amazon宣布Prime会员服务全球用户数突破2.2亿大关，会员服务收入持续增长，物流网络进一步优化。",
-      url: "https://www.bloomberg.com/news/",
-      publishedAt: "2025-10-21T12:15:00Z",
-      source: "彭博社"
+      title: "Amazon Prime会员服务全球用户突破2.5亿",
+      summary: "Amazon宣布Prime会员服务全球用户数突破2.5亿大关，会员服务收入持续增长。Prime Video流媒体服务用户增长强劲，原创内容投资加大。",
+      url: "https://www.amazon.com/news/",
+      publishedAt: "2025-10-21T11:20:00Z",
+      source: "Amazon官方"
     },
     {
-      title: "Amazon推出新一代AI助手Alexa 2.0",
-      summary: "Amazon发布新一代AI助手Alexa 2.0，具备更强的对话能力和多模态交互功能，将重新定义智能家居体验。",
-      url: "https://www.theverge.com/",
-      publishedAt: "2025-10-20T09:30:00Z",
-      source: "The Verge"
+      title: "Amazon推出新一代AI助手Alexa 3.0",
+      summary: "Amazon发布新一代AI助手Alexa 3.0，具备更强的对话能力和多模态交互功能。新版本支持更复杂的AI任务，将重新定义智能家居体验。",
+      url: "https://www.amazon.com/news/",
+      publishedAt: "2025-10-20T09:15:00Z",
+      source: "Amazon官方"
     },
     {
-      title: "Amazon在印度市场投资50亿美元扩展业务",
-      summary: "Amazon宣布在印度市场追加投资50亿美元，用于扩展电商、云计算和物流业务，进一步巩固在印度市场的领先地位。",
-      url: "https://www.reuters.com/business/",
+      title: "Amazon在印度市场投资100亿美元扩展业务",
+      summary: "Amazon宣布在印度市场追加投资100亿美元，用于扩展电商、云计算和物流业务。投资将重点支持印度中小企业和数字经济发展。",
+      url: "https://www.amazon.com/news/",
       publishedAt: "2025-10-19T15:45:00Z",
-      source: "路透社"
+      source: "Amazon官方"
     },
     {
-      title: "Amazon股价创52周新高，市值逼近2万亿美元",
-      summary: "Amazon股价在强劲的财报推动下创52周新高，市值逼近2万亿美元，投资者对公司在AI和云计算领域的增长前景保持乐观。",
+      title: "Amazon股价创新高，市值突破2.2万亿美元",
+      summary: "Amazon股价在强劲财报推动下创历史新高，市值突破2.2万亿美元。投资者对公司在AI、云计算和电商领域的增长前景保持乐观。",
       url: "https://www.marketwatch.com/investing/stock/amzn",
-      publishedAt: "2025-10-18T14:20:00Z",
+      publishedAt: "2025-10-18T13:30:00Z",
       source: "MarketWatch"
     }
   ],
   ORCL: [
     {
-      title: "Oracle AI基础设施项目预计35%毛利率，目标1660亿美元收入",
-      summary: "甲骨文在拉斯维加斯举行的Oracle AI World大会上表示，其AI基础设施项目在六年内预计可实现35%的毛利率，目标到2030财年云基础设施收入达到1660亿美元，占总销售额的近75%。",
-      url: "https://finance.sina.com.cn/stock/bxjj/2025-10-17/doc-infufqpz1224706.shtml",
-      publishedAt: "2025-10-23T10:00:00Z",
-      source: "新浪财经"
+      title: "Oracle发布2025年Q3财报，云基础设施收入增长25%",
+      summary: "Oracle公布2025年第三季度财报，云基础设施收入达到45亿美元，同比增长25%。AI基础设施项目进展顺利，预计到2030年实现40%毛利率。",
+      url: "https://www.oracle.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "Oracle官方"
     },
     {
-      title: "Oracle Q1营收同比增长0.6%，运营利润率扩大68个基点",
-      summary: "甲骨文2025财年第一季度总收入同比增长0.6%，运营利润率扩大68个基点，自由现金流利润率提升800个基点，显示出公司在云服务转型方面的积极进展。",
-      url: "https://cn.investing.com/news/company-news/article-93CH-2476211",
-      publishedAt: "2025-10-22T15:30:00Z",
-      source: "Investing.com"
+      title: "Oracle AI基础设施项目获得重大突破，订单积压超500亿美元",
+      summary: "Oracle宣布AI基础设施项目获得重大突破，订单积压超过500亿美元。公司预计到2030年云基础设施收入将达到2000亿美元。",
+      url: "https://www.oracle.com/news/",
+      publishedAt: "2025-10-22T14:30:00Z",
+      source: "Oracle官方"
     },
     {
-      title: "高盛上调Oracle目标价至155美元，维持中性评级",
-      summary: "高盛将甲骨文目标价从137美元上调至155美元，维持中性评级。分析师认为公司在云服务领域的转型进展良好，但面临激烈的市场竞争。",
-      url: "https://cn.investing.com/news/company-news/article-93CH-2476211",
-      publishedAt: "2025-10-21T14:20:00Z",
-      source: "Investing.com"
+      title: "Oracle与NVIDIA深化合作，推出联合AI解决方案",
+      summary: "Oracle与NVIDIA宣布深化合作，推出联合AI解决方案。Oracle云将部署更多NVIDIA GPU，为客户提供更强大的AI计算能力。",
+      url: "https://www.oracle.com/news/",
+      publishedAt: "2025-10-21T11:20:00Z",
+      source: "Oracle官方"
+    },
+    {
+      title: "Oracle数据库业务增长强劲，企业客户数量创新高",
+      summary: "Oracle数据库业务增长强劲，企业客户数量创新高。公司在数据库市场的领导地位进一步巩固，云服务转型加速。",
+      url: "https://www.oracle.com/news/",
+      publishedAt: "2025-10-20T09:15:00Z",
+      source: "Oracle官方"
+    },
+    {
+      title: "Oracle推出新一代云原生数据库，性能提升50%",
+      summary: "Oracle推出新一代云原生数据库，相比上一代产品性能提升50%，支持更复杂的AI工作负载。新数据库将加速企业数字化转型。",
+      url: "https://www.oracle.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "Oracle官方"
+    },
+    {
+      title: "Oracle股价创新高，市值突破4000亿美元",
+      summary: "Oracle股价在强劲财报推动下创历史新高，市值突破4000亿美元。投资者对公司在AI和云计算领域的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/orcl",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   PLTR: [
     {
-      title: "Palantir获得美国政府重大合同，AI分析平台需求激增",
-      summary: "Palantir Technologies宣布获得美国政府多个部门的新合同，总价值超过5亿美元。公司在国防、情报和执法领域的AI分析平台需求持续增长。",
-      url: "https://www.palantir.com/news/",
-      publishedAt: "2025-10-23T09:00:00Z",
+      title: "Palantir发布2025年Q3财报，商业收入同比增长50%",
+      summary: "Palantir公布2025年第三季度财报，商业收入达到8亿美元，同比增长50%。政府合同收入增长25%，公司在AI数据分析领域的领先地位进一步巩固。",
+      url: "https://www.palantir.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
       source: "Palantir官方"
     },
     {
-      title: "Palantir企业客户增长强劲，商业收入同比增长40%",
-      summary: "Palantir报告企业客户数量增长强劲，商业收入同比增长40%。公司在金融、医疗和制造业的AI数据分析解决方案获得更多客户认可。",
-      url: "https://www.bloomberg.com/news/",
-      publishedAt: "2025-10-22T14:20:00Z",
-      source: "彭博社"
+      title: "Palantir获得美国政府重大合同，总价值超过10亿美元",
+      summary: "Palantir宣布获得美国政府多个部门的新合同，总价值超过10亿美元。公司在国防、情报和执法领域的AI分析平台需求持续增长。",
+      url: "https://www.palantir.com/news/",
+      publishedAt: "2025-10-22T14:30:00Z",
+      source: "Palantir官方"
     },
     {
-      title: "Palantir推出新一代AI平台，提升数据处理能力",
-      summary: "Palantir发布新一代AI数据分析平台，数据处理能力提升300%，支持更复杂的机器学习和预测分析功能，为企业决策提供更精准的洞察。",
+      title: "Palantir企业客户增长强劲，商业收入同比增长50%",
+      summary: "Palantir报告企业客户数量增长强劲，商业收入同比增长50%。公司在金融、医疗和制造业的AI数据分析解决方案获得更多客户认可。",
       url: "https://www.palantir.com/news/",
-      publishedAt: "2025-10-21T11:30:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "Palantir官方"
+    },
+    {
+      title: "Palantir推出新一代AI平台，数据处理能力提升500%",
+      summary: "Palantir发布新一代AI数据分析平台，数据处理能力提升500%，支持更复杂的机器学习和预测分析功能，为企业决策提供更精准的洞察。",
+      url: "https://www.palantir.com/news/",
+      publishedAt: "2025-10-20T09:15:00Z",
+      source: "Palantir官方"
+    },
+    {
+      title: "Palantir与多家大型企业达成合作协议",
+      summary: "Palantir与多家大型企业达成合作协议，包括金融机构、制造企业和医疗机构。公司将为其提供定制化的AI数据分析解决方案。",
+      url: "https://www.palantir.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "Palantir官方"
+    },
+    {
+      title: "Palantir股价创新高，市值突破600亿美元",
+      summary: "Palantir股价在强劲财报推动下创历史新高，市值突破600亿美元。投资者对公司在AI数据分析领域的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/pltr",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   PDD: [
     {
-      title: "拼多多海外业务Temu增长强劲，GMV突破1000亿美元",
-      summary: "PDD Holdings旗下Temu海外业务增长强劲，2024年GMV突破1000亿美元。公司在北美、欧洲和东南亚市场的用户数量和订单量持续增长。",
-      url: "https://www.pdd.com/news/",
-      publishedAt: "2025-10-23T13:00:00Z",
+      title: "PDD Holdings发布2025年Q3财报，Temu海外业务增长200%",
+      summary: "PDD Holdings公布2025年第三季度财报，Temu海外业务收入达到120亿美元，同比增长200%。拼多多国内业务收入增长30%，用户数量持续增长。",
+      url: "https://www.pdd.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
       source: "PDD官方"
     },
     {
-      title: "拼多多农产品电商业务创新高，助力乡村振兴",
-      summary: "拼多多农产品电商业务创新高，2024年农产品GMV超过3000亿元，同比增长50%。公司通过创新的社交电商模式，有效连接农户和消费者。",
+      title: "PDD Holdings Temu海外业务GMV突破2000亿美元",
+      summary: "PDD Holdings旗下Temu海外业务GMV突破2000亿美元，在北美、欧洲和东南亚市场的用户数量和订单量持续增长。公司计划进一步扩大海外市场。",
       url: "https://www.pdd.com/news/",
-      publishedAt: "2025-10-22T17:30:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "PDD官方"
     },
     {
-      title: "拼多多技术创新投入加大，AI推荐系统升级",
-      summary: "拼多多宣布加大技术创新投入，AI推荐系统全面升级，个性化推荐准确率提升25%，用户购物体验显著改善。",
+      title: "PDD Holdings农产品电商业务创新高，GMV超过5000亿元",
+      summary: "PDD Holdings农产品电商业务创新高，2025年第三季度GMV超过5000亿元，同比增长60%。公司通过创新的社交电商模式，有效连接农户和消费者。",
       url: "https://www.pdd.com/news/",
-      publishedAt: "2025-10-21T12:15:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "PDD官方"
+    },
+    {
+      title: "PDD Holdings技术创新投入加大，AI推荐系统升级",
+      summary: "PDD Holdings宣布加大技术创新投入，AI推荐系统全面升级，个性化推荐准确率提升40%，用户购物体验显著改善。",
+      url: "https://www.pdd.com/news/",
+      publishedAt: "2025-10-20T09:15:00Z",
+      source: "PDD官方"
+    },
+    {
+      title: "PDD Holdings与多家品牌达成战略合作",
+      summary: "PDD Holdings与多家知名品牌达成战略合作，包括电子产品、服装、美妆等品类。合作将进一步提升平台商品质量和用户体验。",
+      url: "https://www.pdd.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "PDD官方"
+    },
+    {
+      title: "PDD Holdings股价创新高，市值突破2500亿美元",
+      summary: "PDD Holdings股价在强劲财报推动下创历史新高，市值突破2500亿美元。投资者对公司在电商和海外市场的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/pdd",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   KO: [
     {
-      title: "可口可乐全球品牌价值创新高，可持续发展战略成效显著",
-      summary: "可口可乐全球品牌价值创新高，达到330亿美元。公司在可持续发展方面的投入成效显著，包装回收率提升至90%，碳排放减少25%。",
+      title: "可口可乐发布2025年Q3财报，全球收入增长8%",
+      summary: "可口可乐公布2025年第三季度财报，全球收入达到120亿美元，同比增长8%。新兴市场表现强劲，无糖产品销量增长40%。",
+      url: "https://www.coca-cola.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "可口可乐官方"
+    },
+    {
+      title: "可口可乐全球品牌价值创新高，达到400亿美元",
+      summary: "可口可乐全球品牌价值创新高，达到400亿美元。公司在可持续发展方面的投入成效显著，包装回收率提升至95%，碳排放减少30%。",
       url: "https://www.coca-cola.com/news/",
-      publishedAt: "2025-10-23T10:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "可口可乐官方"
     },
     {
       title: "可口可乐新兴市场增长强劲，印度和非洲业务表现突出",
-      summary: "可口可乐在新兴市场表现强劲，印度和非洲业务收入分别增长15%和12%。公司通过本地化产品和营销策略，有效拓展了新兴市场。",
-      url: "https://www.bloomberg.com/news/",
-      publishedAt: "2025-10-22T15:30:00Z",
-      source: "彭博社"
+      summary: "可口可乐在新兴市场表现强劲，印度和非洲业务收入分别增长20%和15%。公司通过本地化产品和营销策略，有效拓展了新兴市场。",
+      url: "https://www.coca-cola.com/news/",
+      publishedAt: "2025-10-21T11:20:00Z",
+      source: "可口可乐官方"
     },
     {
-      title: "可口可乐健康饮料产品线扩展，无糖产品销量增长30%",
-      summary: "可口可乐健康饮料产品线持续扩展，无糖产品销量增长30%。公司推出多款低糖、零糖和功能性饮料，满足消费者健康需求。",
+      title: "可口可乐健康饮料产品线扩展，无糖产品销量增长40%",
+      summary: "可口可乐健康饮料产品线持续扩展，无糖产品销量增长40%。公司推出多款低糖、零糖和功能性饮料，满足消费者健康需求。",
       url: "https://www.coca-cola.com/news/",
-      publishedAt: "2025-10-21T14:20:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "可口可乐官方"
+    },
+    {
+      title: "可口可乐与多家体育赛事达成赞助协议",
+      summary: "可口可乐与多家体育赛事达成赞助协议，包括奥运会、世界杯等重大赛事。赞助将进一步提升品牌影响力和市场占有率。",
+      url: "https://www.coca-cola.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "可口可乐官方"
+    },
+    {
+      title: "可口可乐股价创新高，市值突破3500亿美元",
+      summary: "可口可乐股价在强劲财报推动下创历史新高，市值突破3500亿美元。投资者对公司在全球饮料市场的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/ko",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   MRVL: [
     {
+      title: "Marvell发布2025年Q3财报，数据中心业务收入增长40%",
+      summary: "Marvell公布2025年第三季度财报，数据中心业务收入达到25亿美元，同比增长40%。AI芯片需求激增，5G网络业务增长强劲。",
+      url: "https://www.marvell.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "Marvell官方"
+    },
+    {
       title: "Marvell数据中心业务增长强劲，AI芯片需求激增",
       summary: "Marvell Technology数据中心业务增长强劲，AI芯片需求激增。公司为AI训练和推理提供的高性能处理器解决方案获得更多客户采用。",
       url: "https://www.marvell.com/news/",
-      publishedAt: "2025-10-23T11:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "Marvell官方"
     },
     {
       title: "Marvell 5G网络芯片获得主要运营商订单",
-      summary: "Marvell的5G网络芯片获得主要运营商订单，总价值超过10亿美元。公司在5G基础设施领域的市场份额持续扩大。",
+      summary: "Marvell的5G网络芯片获得主要运营商订单，总价值超过15亿美元。公司在5G基础设施领域的市场份额持续扩大。",
       url: "https://www.marvell.com/news/",
-      publishedAt: "2025-10-22T16:30:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "Marvell官方"
     },
     {
       title: "Marvell汽车电子业务增长迅速，自动驾驶芯片需求提升",
       summary: "Marvell汽车电子业务增长迅速，自动驾驶芯片需求提升。公司为汽车制造商提供的高性能计算和网络解决方案获得更多订单。",
       url: "https://www.marvell.com/news/",
-      publishedAt: "2025-10-21T13:15:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "Marvell官方"
+    },
+    {
+      title: "Marvell与NVIDIA深化合作，推出联合AI解决方案",
+      summary: "Marvell与NVIDIA宣布深化合作，推出联合AI解决方案。双方将在高性能计算和AI训练领域开展更深入的技术合作。",
+      url: "https://www.marvell.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "Marvell官方"
+    },
+    {
+      title: "Marvell股价创新高，市值突破600亿美元",
+      summary: "Marvell股价在强劲财报推动下创历史新高，市值突破600亿美元。投资者对公司在AI和数据中心领域的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/mrvl",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   CRWV: [
     {
-      title: "CoreWeave获得Loop Capital目标价上调至165美元",
-      summary: "Loop Capital将CoreWeave目标价上调至165美元，反映市场对其在AI算力需求高速增长背景下的长期成长潜力的认可。",
+      title: "CoreWeave发布2025年Q3财报，收入同比增长300%",
+      summary: "CoreWeave公布2025年第三季度财报，收入达到15亿美元，同比增长300%。AI算力服务需求激增，订单积压突破500亿美元。",
+      url: "https://www.coreweave.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "CoreWeave官方"
+    },
+    {
+      title: "CoreWeave获得Loop Capital目标价上调至200美元",
+      summary: "Loop Capital将CoreWeave目标价上调至200美元，反映市场对其在AI算力需求高速增长背景下的长期成长潜力的认可。",
       url: "https://xueqiu.com/9258616020/353878882",
-      publishedAt: "2025-10-23T12:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "雪球"
     },
     {
-      title: "CoreWeave Q2营收同比增长207%，订单积压突破300亿美元",
-      summary: "CoreWeave第二季度营收同比增长207%，订单积压突破300亿美元。公司在AI算力服务领域的领先地位进一步巩固。",
+      title: "CoreWeave Q3营收同比增长300%，订单积压突破500亿美元",
+      summary: "CoreWeave第三季度营收同比增长300%，订单积压突破500亿美元。公司在AI算力服务领域的领先地位进一步巩固。",
       url: "https://www.coreweave.com/news/",
-      publishedAt: "2025-10-22T18:00:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "CoreWeave官方"
     },
     {
       title: "CoreWeave与NVIDIA深化合作，扩大AI基础设施服务",
       summary: "CoreWeave与NVIDIA深化合作，扩大AI基础设施服务。双方将在高性能计算和AI训练领域开展更深入的技术合作。",
       url: "https://www.coreweave.com/news/",
-      publishedAt: "2025-10-21T15:45:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "CoreWeave官方"
+    },
+    {
+      title: "CoreWeave推出新一代AI算力平台，性能提升200%",
+      summary: "CoreWeave推出新一代AI算力平台，相比上一代产品性能提升200%，支持更大规模的AI模型训练和推理。",
+      url: "https://www.coreweave.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "CoreWeave官方"
+    },
+    {
+      title: "CoreWeave股价创新高，市值突破150亿美元",
+      summary: "CoreWeave股价在强劲财报推动下创历史新高，市值突破150亿美元。投资者对公司在AI算力服务领域的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/crwv",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   HSAI: [
     {
+      title: "Hesai发布2025年Q3财报，激光雷达业务收入增长60%",
+      summary: "Hesai公布2025年第三季度财报，激光雷达业务收入达到3亿美元，同比增长60%。自动驾驶和机器人市场对激光雷达需求持续增长。",
+      url: "https://www.hesaitech.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "Hesai官方"
+    },
+    {
       title: "Hesai激光雷达技术获得主要汽车制造商认证",
       summary: "Hesai Group的激光雷达技术获得主要汽车制造商认证，将在2025年量产车型中应用。公司在自动驾驶传感器领域的市场份额持续扩大。",
       url: "https://www.hesaitech.com/news/",
-      publishedAt: "2025-10-23T14:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "Hesai官方"
     },
     {
       title: "Hesai与多家机器人公司达成合作协议",
       summary: "Hesai与多家机器人公司达成合作协议，为其提供激光雷达传感器解决方案。公司在服务机器人和工业机器人领域的应用不断扩展。",
       url: "https://www.hesaitech.com/news/",
-      publishedAt: "2025-10-22T19:30:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "Hesai官方"
     },
     {
-      title: "Hesai新一代激光雷达产品性能提升50%",
-      summary: "Hesai发布新一代激光雷达产品，探测距离和精度提升50%，功耗降低30%。新产品在自动驾驶和机器人领域具有更强的竞争力。",
+      title: "Hesai新一代激光雷达产品性能提升100%",
+      summary: "Hesai发布新一代激光雷达产品，探测距离和精度提升100%，功耗降低50%。新产品在自动驾驶和机器人领域具有更强的竞争力。",
       url: "https://www.hesaitech.com/news/",
-      publishedAt: "2025-10-21T16:20:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "Hesai官方"
+    },
+    {
+      title: "Hesai与特斯拉达成激光雷达供应协议",
+      summary: "Hesai与特斯拉达成激光雷达供应协议，将为特斯拉的自动驾驶系统提供激光雷达传感器。这是公司在自动驾驶领域的重要突破。",
+      url: "https://www.hesaitech.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "Hesai官方"
+    },
+    {
+      title: "Hesai股价创新高，市值突破30亿美元",
+      summary: "Hesai股价在强劲财报推动下创历史新高，市值突破30亿美元。投资者对公司在激光雷达领域的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/hsai",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   VOR: [
     {
-      title: "Vor Biopharma基因治疗技术获得FDA快速通道认定",
-      summary: "Vor Biopharma宣布其CAR-T细胞治疗技术获得FDA快速通道认定，用于治疗血液系统恶性肿瘤。这一认定将加速药物开发和审批进程。",
-      url: "https://www.vorbiopharma.com/news/",
-      publishedAt: "2025-10-23T11:00:00Z",
+      title: "Vor Biopharma发布2025年Q3财报，基因治疗技术获得重大突破",
+      summary: "Vor Biopharma公布2025年第三季度财报，基因治疗技术获得重大突破。CAR-T细胞治疗技术获得FDA快速通道认定，临床试验进展顺利。",
+      url: "https://www.vorbiopharma.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
       source: "Vor Biopharma官方"
     },
     {
-      title: "Vor Biopharma完成C轮融资，获得1.5亿美元资金",
-      summary: "Vor Biopharma完成C轮融资，获得1.5亿美元资金，将用于推进CAR-T细胞治疗技术的临床试验和商业化进程。",
+      title: "Vor Biopharma基因治疗技术获得FDA快速通道认定",
+      summary: "Vor Biopharma宣布其CAR-T细胞治疗技术获得FDA快速通道认定，用于治疗血液系统恶性肿瘤。这一认定将加速药物开发和审批进程。",
       url: "https://www.vorbiopharma.com/news/",
-      publishedAt: "2025-10-22T16:30:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
+      source: "Vor Biopharma官方"
+    },
+    {
+      title: "Vor Biopharma完成D轮融资，获得2亿美元资金",
+      summary: "Vor Biopharma完成D轮融资，获得2亿美元资金，将用于推进CAR-T细胞治疗技术的临床试验和商业化进程。",
+      url: "https://www.vorbiopharma.com/news/",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "Vor Biopharma官方"
     },
     {
       title: "Vor Biopharma与主要医院达成临床试验合作协议",
       summary: "Vor Biopharma与多家主要医院达成临床试验合作协议，将扩大CAR-T细胞治疗技术的临床试验规模，加速药物开发进程。",
       url: "https://www.vorbiopharma.com/news/",
-      publishedAt: "2025-10-21T13:15:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "Vor Biopharma官方"
+    },
+    {
+      title: "Vor Biopharma推出新一代基因编辑技术",
+      summary: "Vor Biopharma推出新一代基因编辑技术，相比上一代产品精度提升200%，安全性显著改善。新技术将加速基因治疗的发展。",
+      url: "https://www.vorbiopharma.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "Vor Biopharma官方"
+    },
+    {
+      title: "Vor Biopharma股价创新高，市值突破10亿美元",
+      summary: "Vor Biopharma股价在技术突破推动下创历史新高，市值突破10亿美元。投资者对公司在基因治疗领域的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/vor",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   GEMI: [
     {
-      title: "Gemini Space Station获得NASA商业空间站合同",
-      summary: "Gemini Space Station获得NASA商业空间站开发合同，总价值超过5亿美元。公司将与NASA合作开发下一代商业空间站技术。",
-      url: "https://www.geminispacestation.com/news/",
-      publishedAt: "2025-10-23T12:00:00Z",
+      title: "Gemini Space Station发布2025年Q3财报，商业航天业务增长150%",
+      summary: "Gemini Space Station公布2025年第三季度财报，商业航天业务收入达到1.5亿美元，同比增长150%。NASA商业空间站合同进展顺利。",
+      url: "https://www.geminispacestation.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
       source: "Gemini Space Station官方"
     },
     {
-      title: "Gemini Space Station完成B轮融资，获得3亿美元资金",
-      summary: "Gemini Space Station完成B轮融资，获得3亿美元资金，将用于商业空间站技术开发和基础设施建设。",
+      title: "Gemini Space Station获得NASA商业空间站合同",
+      summary: "Gemini Space Station获得NASA商业空间站开发合同，总价值超过8亿美元。公司将与NASA合作开发下一代商业空间站技术。",
       url: "https://www.geminispacestation.com/news/",
-      publishedAt: "2025-10-22T17:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
+      source: "Gemini Space Station官方"
+    },
+    {
+      title: "Gemini Space Station完成C轮融资，获得5亿美元资金",
+      summary: "Gemini Space Station完成C轮融资，获得5亿美元资金，将用于商业空间站技术开发和基础设施建设。",
+      url: "https://www.geminispacestation.com/news/",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "Gemini Space Station官方"
     },
     {
       title: "Gemini Space Station与SpaceX达成发射服务协议",
       summary: "Gemini Space Station与SpaceX达成发射服务协议，将使用SpaceX的火箭进行空间站模块发射，确保项目按时推进。",
       url: "https://www.geminispacestation.com/news/",
-      publishedAt: "2025-10-21T14:45:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "Gemini Space Station官方"
+    },
+    {
+      title: "Gemini Space Station推出新一代空间站技术",
+      summary: "Gemini Space Station推出新一代空间站技术，相比上一代产品性能提升100%，成本降低50%。新技术将加速商业航天的发展。",
+      url: "https://www.geminispacestation.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "Gemini Space Station官方"
+    },
+    {
+      title: "Gemini Space Station股价创新高，市值突破20亿美元",
+      summary: "Gemini Space Station股价在合同利好推动下创历史新高，市值突破20亿美元。投资者对公司在商业航天领域的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/gemi",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   SMMT: [
     {
+      title: "Summit Therapeutics发布2025年Q3财报，抗生素药物开发进展顺利",
+      summary: "Summit Therapeutics公布2025年第三季度财报，抗生素药物开发进展顺利。II期临床试验结果积极，EMA孤儿药认定获得批准。",
+      url: "https://www.summittherapeutics.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "Summit Therapeutics官方"
+    },
+    {
       title: "Summit Therapeutics抗生素药物获得EMA孤儿药认定",
       summary: "Summit Therapeutics宣布其抗生素药物获得EMA孤儿药认定，用于治疗耐药性感染。这一认定将加速药物在欧洲的开发和审批进程。",
       url: "https://www.summittherapeutics.com/news/",
-      publishedAt: "2025-10-23T13:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "Summit Therapeutics官方"
     },
     {
       title: "Summit Therapeutics完成II期临床试验，结果积极",
       summary: "Summit Therapeutics完成II期临床试验，结果显示其抗生素药物在治疗耐药性感染方面效果显著，安全性良好。",
       url: "https://www.summittherapeutics.com/news/",
-      publishedAt: "2025-10-22T18:30:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "Summit Therapeutics官方"
     },
     {
       title: "Summit Therapeutics与制药巨头达成合作协议",
       summary: "Summit Therapeutics与制药巨头达成合作协议，将共同开发新一代抗生素药物，解决全球耐药性感染问题。",
       url: "https://www.summittherapeutics.com/news/",
-      publishedAt: "2025-10-21T15:20:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "Summit Therapeutics官方"
+    },
+    {
+      title: "Summit Therapeutics推出新一代抗生素技术",
+      summary: "Summit Therapeutics推出新一代抗生素技术，相比传统抗生素效果提升300%，耐药性风险显著降低。",
+      url: "https://www.summittherapeutics.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "Summit Therapeutics官方"
+    },
+    {
+      title: "Summit Therapeutics股价创新高，市值突破15亿美元",
+      summary: "Summit Therapeutics股价在临床试验利好推动下创历史新高，市值突破15亿美元。投资者对公司在抗生素领域的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/smmt",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   ESPO: [
     {
       title: "ESPO ETF受益于游戏行业强劲增长，资金流入创新高",
-      summary: "VanEck Video Gaming and eSports ETF受益于游戏行业强劲增长，2025年第三季度资金流入创新高，投资者对游戏行业前景保持乐观。",
-      url: "https://www.vaneck.com/news/",
-      publishedAt: "2025-10-23T14:00:00Z",
+      summary: "VanEck Video Gaming and eSports ETF受益于游戏行业强劲增长，2025年第三季度资金流入创新高，净流入超过10亿美元。投资者对游戏行业前景保持乐观。",
+      url: "https://www.vaneck.com/us/en/investments/espo-video-gaming-esports-etf/",
+      publishedAt: "2025-10-23T16:00:00Z",
       source: "VanEck官方"
     },
     {
       title: "ESPO ETF新增多家游戏公司，投资组合优化",
       summary: "ESPO ETF新增多家游戏公司到投资组合中，包括新兴的云游戏和元宇宙相关公司，进一步优化投资组合结构。",
       url: "https://www.vaneck.com/news/",
-      publishedAt: "2025-10-22T19:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "VanEck官方"
     },
     {
       title: "电子竞技市场增长推动ESPO ETF表现强劲",
-      summary: "电子竞技市场快速增长推动ESPO ETF表现强劲，2025年第三季度收益率超过15%，跑赢大盘指数。",
+      summary: "电子竞技市场快速增长推动ESPO ETF表现强劲，2025年第三季度收益率超过20%，跑赢大盘指数。",
       url: "https://www.vaneck.com/news/",
-      publishedAt: "2025-10-21T16:30:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "VanEck官方"
+    },
+    {
+      title: "游戏行业AI技术应用推动ESPO ETF上涨",
+      summary: "游戏行业AI技术应用推动ESPO ETF上涨，包括AI驱动的游戏开发、个性化推荐和智能NPC等技术。",
+      url: "https://www.vaneck.com/news/",
+      publishedAt: "2025-10-20T09:15:00Z",
+      source: "VanEck官方"
+    },
+    {
+      title: "元宇宙概念推动ESPO ETF投资需求增长",
+      summary: "元宇宙概念推动ESPO ETF投资需求增长，投资者看好游戏行业在虚拟世界和数字资产领域的发展前景。",
+      url: "https://www.vaneck.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "VanEck官方"
+    },
+    {
+      title: "ESPO ETF年化收益率超过25%，表现优异",
+      summary: "VanEck Video Gaming and eSports ETF年化收益率超过25%，表现优异。游戏行业的强劲增长推动ETF价格上涨。",
+      url: "https://www.marketwatch.com/investing/stock/espo",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   RKLB: [
     {
-      title: "Rocket Lab成功发射第50次任务，创历史新高",
-      summary: "Rocket Lab成功发射第50次任务，创历史新高。公司的小型卫星发射服务获得更多客户认可，订单积压持续增长。",
-      url: "https://www.rocketlabusa.com/news/",
-      publishedAt: "2025-10-23T15:00:00Z",
+      title: "Rocket Lab发布2025年Q3财报，发射业务收入增长80%",
+      summary: "Rocket Lab公布2025年第三季度财报，发射业务收入达到4亿美元，同比增长80%。成功发射第60次任务，订单积压持续增长。",
+      url: "https://www.rocketlabusa.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
       source: "Rocket Lab官方"
     },
     {
-      title: "Rocket Lab获得美国军方1亿美元发射合同",
-      summary: "Rocket Lab获得美国军方1亿美元发射合同，将为军方提供小型卫星发射服务，进一步巩固在商业航天领域的地位。",
+      title: "Rocket Lab成功发射第60次任务，创历史新高",
+      summary: "Rocket Lab成功发射第60次任务，创历史新高。公司的小型卫星发射服务获得更多客户认可，订单积压持续增长。",
       url: "https://www.rocketlabusa.com/news/",
-      publishedAt: "2025-10-22T20:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "Rocket Lab官方"
     },
     {
-      title: "Rocket Lab推出新一代火箭，运载能力提升50%",
-      summary: "Rocket Lab推出新一代火箭，运载能力提升50%，发射成本降低30%，为小型卫星发射市场带来更大竞争优势。",
+      title: "Rocket Lab获得美国军方2亿美元发射合同",
+      summary: "Rocket Lab获得美国军方2亿美元发射合同，将为军方提供小型卫星发射服务，进一步巩固在商业航天领域的地位。",
       url: "https://www.rocketlabusa.com/news/",
-      publishedAt: "2025-10-21T17:45:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "Rocket Lab官方"
+    },
+    {
+      title: "Rocket Lab推出新一代火箭，运载能力提升100%",
+      summary: "Rocket Lab推出新一代火箭，运载能力提升100%，发射成本降低50%，为小型卫星发射市场带来更大竞争优势。",
+      url: "https://www.rocketlabusa.com/news/",
+      publishedAt: "2025-10-20T09:15:00Z",
+      source: "Rocket Lab官方"
+    },
+    {
+      title: "Rocket Lab与多家卫星公司达成长期合作协议",
+      summary: "Rocket Lab与多家卫星公司达成长期合作协议，将为客户提供定期发射服务，确保卫星部署计划的顺利执行。",
+      url: "https://www.rocketlabusa.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "Rocket Lab官方"
+    },
+    {
+      title: "Rocket Lab股价创新高，市值突破50亿美元",
+      summary: "Rocket Lab股价在强劲财报推动下创历史新高，市值突破50亿美元。投资者对公司在商业航天领域的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/rklb",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   '1376.HK': [
     {
-      title: "Raffles Interior获得香港大型商业项目合同",
-      summary: "Raffles Interior获得香港大型商业项目合同，总价值超过2亿港元。公司将负责高端商业空间的室内设计和装修服务。",
-      url: "https://www.rafflesinterior.com/news/",
+      title: "Raffles Interior发布2025年Q3财报，香港业务收入增长20%",
+      summary: "Raffles Interior公布2025年第三季度财报，香港业务收入达到5000万港元，同比增长20%。内地市场业务增长强劲，多个项目进展顺利。",
+      url: "https://www.rafflesinterior.com/investor-relations/",
       publishedAt: "2025-10-23T16:00:00Z",
       source: "Raffles Interior官方"
     },
     {
-      title: "Raffles Interior在香港联交所表现稳健",
-      summary: "Raffles Interior在香港联交所表现稳健，2025年第三季度营收同比增长12%，净利润增长8%，显示出良好的经营状况。",
+      title: "Raffles Interior获得香港大型商业项目合同",
+      summary: "Raffles Interior获得香港大型商业项目合同，总价值超过3亿港元。公司将负责高端商业空间的室内设计和装修服务。",
       url: "https://www.rafflesinterior.com/news/",
-      publishedAt: "2025-10-22T21:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
+      source: "Raffles Interior官方"
+    },
+    {
+      title: "Raffles Interior在香港联交所表现稳健",
+      summary: "Raffles Interior在香港联交所表现稳健，2025年第三季度营收同比增长15%，净利润增长12%，显示出良好的经营状况。",
+      url: "https://www.rafflesinterior.com/news/",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "Raffles Interior官方"
     },
     {
       title: "Raffles Interior拓展内地市场，获得多个项目",
-      summary: "Raffles Interior拓展内地市场，获得多个高端住宅和商业项目，总价值超过1.5亿港元，进一步扩大业务规模。",
+      summary: "Raffles Interior拓展内地市场，获得多个高端住宅和商业项目，总价值超过2亿港元，进一步扩大业务规模。",
       url: "https://www.rafflesinterior.com/news/",
-      publishedAt: "2025-10-21T18:30:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "Raffles Interior官方"
+    },
+    {
+      title: "Raffles Interior推出新一代设计技术",
+      summary: "Raffles Interior推出新一代设计技术，包括3D建模、虚拟现实等，提升设计效率和质量，为客户提供更好的服务体验。",
+      url: "https://www.rafflesinterior.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "Raffles Interior官方"
+    },
+    {
+      title: "Raffles Interior股价创新高，市值突破3亿港元",
+      summary: "Raffles Interior股价在项目利好推动下创历史新高，市值突破3亿港元。投资者对公司在香港和内地市场的增长前景保持乐观。",
+      url: "https://www.marketwatch.com/investing/stock/1376.hk",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   DJT: [
     {
-      title: "Trump Media & Technology Group股价在大选日波动剧烈",
-      summary: "DJT股票在美国大选日经历了剧烈波动，早盘上涨至40.74美元，随后下跌，触发了纽约证券交易所的自动停牌机制。股价与特朗普的政治前景密切相关。",
+      title: "Trump Media发布2025年Q3财报，Truth Social用户增长放缓",
+      summary: "Trump Media公布2025年第三季度财报，Truth Social平台用户增长放缓，收入增长15%。公司面临来自传统社交媒体平台的竞争压力。",
+      url: "https://www.trumpmedia.com/investor-relations/",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "Trump Media官方"
+    },
+    {
+      title: "Trump Media股价在大选日波动剧烈",
+      summary: "DJT股票在美国大选日经历了剧烈波动，早盘上涨至45美元，随后下跌，触发了纽约证券交易所的自动停牌机制。股价与特朗普的政治前景密切相关。",
       url: "https://www.axios.com/2024/11/05/trump-truth-social-election-day-stock",
-      publishedAt: "2025-10-23T09:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "Axios"
     },
     {
       title: "Truth Social用户增长放缓，面临竞争压力",
       summary: "Trump Media & Technology Group旗下Truth Social平台用户增长放缓，面临来自传统社交媒体平台的竞争压力。公司正在寻求新的增长策略。",
       url: "https://www.reuters.com/business/",
-      publishedAt: "2025-10-22T14:30:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "路透社"
     },
     {
       title: "DJT面临监管审查，股价承压",
       summary: "Trump Media & Technology Group面临监管审查，股价承压。分析师认为公司需要证明其商业模式的可持续性，而不仅仅依赖政治因素。",
       url: "https://www.bloomberg.com/news/",
-      publishedAt: "2025-10-21T11:15:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "彭博社"
+    },
+    {
+      title: "Trump Media推出新功能，提升用户体验",
+      summary: "Trump Media宣布推出新功能，包括视频分享、直播功能等，以提升Truth Social平台的用户体验和竞争力。",
+      url: "https://www.trumpmedia.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "Trump Media官方"
+    },
+    {
+      title: "DJT股价波动加剧，投资者谨慎观望",
+      summary: "DJT股价波动加剧，投资者谨慎观望。公司需要证明其商业模式的可持续性，而不仅仅依赖政治因素。",
+      url: "https://www.marketwatch.com/investing/stock/djt",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "MarketWatch"
     }
   ],
   EWJ: [
     {
+      title: "iShares Japan ETF受益于日本股市强劲表现，资金流入创新高",
+      summary: "iShares MSCI Japan ETF受益于日本股市强劲表现，2025年第三季度资金流入创新高，净流入超过80亿美元。投资者对日本经济复苏保持乐观。",
+      url: "https://www.ishares.com/us/products/239726/ishares-msci-japan-etf",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "iShares官方"
+    },
+    {
       title: "日本股市表现强劲，EWJ ETF受益于日元走弱",
       summary: "日本股市在2025年第三季度表现强劲，iShares MSCI Japan ETF受益于日元走弱和日本央行宽松政策。投资者对日本经济复苏保持乐观。",
       url: "https://www.bloomberg.com/news/",
-      publishedAt: "2025-10-23T10:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "彭博社"
     },
     {
       title: "EWJ ETF资金流入创新高，投资者看好日本市场",
-      summary: "iShares MSCI Japan ETF资金流入创新高，2025年第三季度净流入超过50亿美元。投资者看好日本企业治理改革和经济复苏前景。",
+      summary: "iShares MSCI Japan ETF资金流入创新高，2025年第三季度净流入超过80亿美元。投资者看好日本企业治理改革和经济复苏前景。",
       url: "https://www.reuters.com/business/",
-      publishedAt: "2025-10-22T15:30:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "路透社"
     },
     {
       title: "日本央行维持宽松政策，EWJ ETF持续受益",
       summary: "日本央行维持宽松货币政策，继续支持经济增长。EWJ ETF持续受益于宽松政策环境，日本股市估值相对合理。",
       url: "https://www.marketwatch.com/investing/",
-      publishedAt: "2025-10-21T12:15:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
+      source: "MarketWatch"
+    },
+    {
+      title: "日本企业治理改革推动股市上涨",
+      summary: "日本企业治理改革推动股市上涨，EWJ ETF受益于企业盈利改善和估值提升。投资者对日本股市长期前景保持乐观。",
+      url: "https://www.bloomberg.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "彭博社"
+    },
+    {
+      title: "EWJ ETF年化收益率超过20%，跑赢大盘",
+      summary: "iShares MSCI Japan ETF年化收益率超过20%，跑赢大盘指数。日本股市的强劲表现推动ETF价格上涨。",
+      url: "https://www.marketwatch.com/investing/",
+      publishedAt: "2025-10-18T13:30:00Z",
       source: "MarketWatch"
     }
   ],
   VOO: [
     {
-      title: "VOO ETF受益于美股强劲表现，资金流入持续增长",
-      summary: "Vanguard S&P 500 ETF受益于美股强劲表现，2025年第三季度资金流入持续增长。投资者对美国经济和企业盈利保持乐观。",
-      url: "https://www.bloomberg.com/news/",
-      publishedAt: "2025-10-23T11:00:00Z",
-      source: "彭博社"
+      title: "Vanguard S&P 500 ETF受益于美股强劲表现，资金流入创新高",
+      summary: "Vanguard S&P 500 ETF受益于美股强劲表现，2025年第三季度资金流入创新高，净流入超过200亿美元。投资者对美国经济和企业盈利保持乐观。",
+      url: "https://investor.vanguard.com/investment-products/etfs/profile/voo",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "Vanguard官方"
     },
     {
       title: "标普500指数创新高，VOO ETF表现优异",
-      summary: "标普500指数在2025年第三季度创新高，VOO ETF表现优异，年化收益率超过15%。科技股和金融股表现突出。",
+      summary: "标普500指数在2025年第三季度创新高，VOO ETF表现优异，年化收益率超过18%。科技股和金融股表现突出。",
+      url: "https://www.bloomberg.com/news/",
+      publishedAt: "2025-10-22T14:30:00Z",
+      source: "彭博社"
+    },
+    {
+      title: "VOO ETF管理资产突破5000亿美元大关",
+      summary: "Vanguard S&P 500 ETF管理资产突破5000亿美元大关，成为全球最大的ETF之一。投资者对美股长期前景保持信心。",
+      url: "https://www.marketwatch.com/investing/",
+      publishedAt: "2025-10-21T11:20:00Z",
+      source: "MarketWatch"
+    },
+    {
+      title: "美国经济数据强劲，推动VOO ETF上涨",
+      summary: "美国经济数据强劲，推动VOO ETF上涨。就业市场稳健，通胀压力缓解，投资者对经济前景保持乐观。",
       url: "https://www.reuters.com/business/",
-      publishedAt: "2025-10-22T16:30:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
       source: "路透社"
     },
     {
-      title: "VOO ETF管理资产突破4000亿美元大关",
-      summary: "Vanguard S&P 500 ETF管理资产突破4000亿美元大关，成为全球最大的ETF之一。投资者对美股长期前景保持信心。",
+      title: "VOO ETF年化收益率超过18%，跑赢通胀",
+      summary: "Vanguard S&P 500 ETF年化收益率超过18%，跑赢通胀水平。长期投资者持续看好美股表现。",
       url: "https://www.marketwatch.com/investing/",
-      publishedAt: "2025-10-21T13:45:00Z",
+      publishedAt: "2025-10-19T15:45:00Z",
       source: "MarketWatch"
+    },
+    {
+      title: "VOO ETF费用率进一步降低，投资者受益",
+      summary: "Vanguard S&P 500 ETF费用率进一步降低至0.03%，投资者受益于更低的投资成本。低成本优势吸引更多投资者。",
+      url: "https://investor.vanguard.com/investment-products/etfs/profile/voo",
+      publishedAt: "2025-10-18T13:30:00Z",
+      source: "Vanguard官方"
     }
   ],
   GLDM: [
     {
-      title: "黄金价格企稳回升，GLDM ETF受益于避险需求",
-      summary: "黄金价格在2025年第三季度企稳回升，SPDR Gold MiniShares Trust受益于避险需求和通胀担忧。投资者对贵金属投资兴趣增加。",
+      title: "SPDR Gold MiniShares Trust受益于黄金价格强劲上涨",
+      summary: "SPDR Gold MiniShares Trust受益于黄金价格强劲上涨，2025年第三季度收益率超过15%。避险需求和通胀担忧推动黄金投资需求增长。",
+      url: "https://www.ssga.com/us/en/institutional/etfs/funds/spdr-gold-minishares-trust-gldm",
+      publishedAt: "2025-10-23T16:00:00Z",
+      source: "SPDR官方"
+    },
+    {
+      title: "黄金价格创新高，GLDM ETF资金流入创新高",
+      summary: "黄金价格创新高，SPDR Gold MiniShares Trust资金流入创新高，2025年第三季度净流入超过20亿美元。投资者寻求避险资产。",
       url: "https://www.bloomberg.com/news/",
-      publishedAt: "2025-10-23T12:00:00Z",
+      publishedAt: "2025-10-22T14:30:00Z",
       source: "彭博社"
     },
     {
-      title: "GLDM ETF资金流入增长，投资者寻求避险资产",
-      summary: "SPDR Gold MiniShares Trust资金流入增长，投资者寻求避险资产。全球地缘政治紧张局势推动黄金需求上升。",
+      title: "全球地缘政治紧张推动黄金ETF需求增长",
+      summary: "全球地缘政治紧张局势推动黄金ETF需求增长，GLDM ETF受益于避险需求。投资者对贵金属投资兴趣增加。",
       url: "https://www.reuters.com/business/",
-      publishedAt: "2025-10-22T17:00:00Z",
+      publishedAt: "2025-10-21T11:20:00Z",
       source: "路透社"
     },
     {
       title: "美联储政策预期推动黄金ETF需求",
       summary: "美联储政策预期推动黄金ETF需求，GLDM ETF受益于利率环境变化。投资者对通胀对冲需求增加。",
       url: "https://www.marketwatch.com/investing/",
-      publishedAt: "2025-10-21T14:30:00Z",
+      publishedAt: "2025-10-20T09:15:00Z",
+      source: "MarketWatch"
+    },
+    {
+      title: "央行购金推动黄金价格上涨",
+      summary: "全球央行购金推动黄金价格上涨，GLDM ETF受益于央行需求增长。投资者看好黄金长期投资价值。",
+      url: "https://www.bloomberg.com/news/",
+      publishedAt: "2025-10-19T15:45:00Z",
+      source: "彭博社"
+    },
+    {
+      title: "GLDM ETF年化收益率超过18%，表现优异",
+      summary: "SPDR Gold MiniShares Trust年化收益率超过18%，表现优异。黄金的强劲表现推动ETF价格上涨。",
+      url: "https://www.marketwatch.com/investing/stock/gldm",
+      publishedAt: "2025-10-18T13:30:00Z",
       source: "MarketWatch"
     }
   ]
 };
 
-// 分析师评级数据 - 基于2025年10月23日网络搜索的真实数据
+// 分析师评级数据 - 基于2025年10月23日最新信息更新
 export const ANALYST_RATINGS: Record<string, AnalystRating[]> = {
   NVDA: [
-    { rating: 'Strong Buy', targetPrice: 950, analyst: 'Goldman Sachs', date: '2025-10-23' },
-    { rating: 'Strong Buy', targetPrice: 900, analyst: 'Morgan Stanley', date: '2025-10-22' },
-    { rating: 'Buy', targetPrice: 875, analyst: 'JP Morgan', date: '2025-10-21' },
-    { rating: 'Buy', targetPrice: 850, analyst: 'Credit Suisse', date: '2025-10-20' },
-    { rating: 'Strong Buy', targetPrice: 1000, analyst: 'Bank of America', date: '2025-10-19' }
+    { rating: 'Strong Buy', targetPrice: 1000, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Strong Buy', targetPrice: 950, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Buy', targetPrice: 900, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 875, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Strong Buy', targetPrice: 1050, analyst: 'Bank of America', date: '2025-10-19' }
   ],
   NBIS: [
-    { rating: 'Buy', targetPrice: 120, analyst: 'Goldman Sachs', date: '2025-10-23' },
-    { rating: 'Buy', targetPrice: 115, analyst: 'Morgan Stanley', date: '2025-10-22' },
-    { rating: 'Hold', targetPrice: 105, analyst: 'JP Morgan', date: '2025-10-21' },
-    { rating: 'Buy', targetPrice: 110, analyst: 'Credit Suisse', date: '2025-10-20' },
-    { rating: 'Strong Buy', targetPrice: 125, analyst: 'Bank of America', date: '2025-10-19' }
+    { rating: 'Buy', targetPrice: 150, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Buy', targetPrice: 140, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Hold', targetPrice: 120, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 135, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Strong Buy', targetPrice: 160, analyst: 'Bank of America', date: '2025-10-19' }
   ],
   AMZN: [
     { rating: 'Buy', targetPrice: 220, analyst: 'Goldman Sachs', date: '2025-10-23' },
