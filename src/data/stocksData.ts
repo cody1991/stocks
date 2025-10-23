@@ -338,9 +338,9 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
     {
       symbol: 'AMD',
       name: 'Advanced Micro Devices',
-      price: 185.50,
-      change: 4.20,
-      changePercent: 2.32,
+      price: 0, // 不显示虚假价格
+      change: 0,
+      changePercent: 0,
       marketCap: '280B',
       sector: 'Semiconductors',
       correlation: 0.85,
@@ -350,9 +350,9 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
     {
       symbol: 'INTC',
       name: 'Intel Corporation',
-      price: 45.80,
-      change: -0.65,
-      changePercent: -1.40,
+      price: 0,
+      change: 0,
+      changePercent: 0,
       marketCap: '180B',
       sector: 'Semiconductors',
       correlation: 0.72,
@@ -536,33 +536,9 @@ export const getFinancialData = (symbol: string) => {
   return stockData?.financialData || null;
 };
 
-// 生成模拟价格历史数据 (基于2025年10月23日当前价格)
-export const generatePriceHistory = (symbol: string, days: number = 30) => {
-  // 基于2025年10月23日的实际股价
-  const basePrice = symbol === 'NVDA' ? 850 : symbol === 'AMZN' ? 155 : symbol === 'NBIS' ? 98.62 : 100;
-  const data = [];
-
-  for (let i = days; i >= 0; i--) {
-    const date = new Date();
-    date.setDate(date.getDate() - i);
-
-    // 生成随机波动
-    const volatility = 0.02; // 2% 日波动
-    const randomChange = (Math.random() - 0.5) * volatility;
-    const price = basePrice * (1 + randomChange * (days - i) / days);
-
-    data.push({
-      date: date.toISOString().split('T')[0],
-      open: price * (1 + (Math.random() - 0.5) * 0.01),
-      high: price * (1 + Math.random() * 0.02),
-      low: price * (1 - Math.random() * 0.02),
-      close: price,
-      volume: Math.floor(Math.random() * 50000000) + 10000000
-    });
-  }
-
-  return data;
-};
+// 价格历史数据生成函数已移除
+// 由于无法获取真实的历史价格数据，此功能暂时禁用
+// 如需显示价格图表，需要集成专业的金融数据API
 
 export const getAllStockSymbols = (): string[] => {
   return Object.keys(STOCKS_DATA);

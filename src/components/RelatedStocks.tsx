@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Row, Col, Typography, Tag, List, Avatar, Button, Space } from 'antd';
-import { LinkOutlined, RiseOutlined, FallOutlined, TeamOutlined } from '@ant-design/icons';
+import { LinkOutlined, TeamOutlined } from '@ant-design/icons';
 import { getRelatedStocks } from '../data/stocksData';
 
 const { Title, Text } = Typography;
@@ -111,12 +111,8 @@ const RelatedStocks: React.FC<RelatedStocksProps> = ({ symbol }) => {
                         <div>
                           <div style={{ marginBottom: '4px' }}>
                             <Space size="small">
-                              <Text strong style={{ color: stock.change >= 0 ? '#52c41a' : '#ff4d4f' }}>
-                                ${stock.price.toFixed(2)}
-                              </Text>
-                              <Text style={{ color: stock.change >= 0 ? '#52c41a' : '#ff4d4f' }}>
-                                {stock.change >= 0 ? <RiseOutlined /> : <FallOutlined />}
-                                {stock.change >= 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change >= 0 ? '+' : ''}{stock.changePercent.toFixed(2)}%)
+                              <Text type="secondary" style={{ fontSize: '12px' }}>
+                                实时股价数据需要专业API支持
                               </Text>
                             </Space>
                           </div>

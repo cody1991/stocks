@@ -193,11 +193,11 @@ const InvestmentAdvice: React.FC<InvestmentAdviceProps> = ({ symbol }) => {
             />
             <div style={{ marginTop: '8px' }}>
               <Text type="secondary">
-                当前价格: ${estimatedPrice.toFixed(2)}
+                价格数据需要实时API支持
               </Text>
               <br />
               <Text type={averageTargetPrice > estimatedPrice ? 'success' : 'danger'}>
-                上涨空间: {averageTargetPrice > 0 ? ((averageTargetPrice - estimatedPrice) / estimatedPrice * 100).toFixed(1) : 0}%
+                目标价: ${averageTargetPrice.toFixed(2)}
               </Text>
             </div>
           </Card>
@@ -330,12 +330,12 @@ const InvestmentAdvice: React.FC<InvestmentAdviceProps> = ({ symbol }) => {
               <Text>
                 <strong>当前建议：</strong>
                 <br />
-                • <strong>买入时机</strong>：{investmentScore.score >= 70 ? '当前价格相对合理，可考虑分批买入' :
-                  investmentScore.score >= 50 ? '等待回调至支撑位再考虑买入' : '建议观望，等待更好的买入时机'}
+                • <strong>买入时机</strong>：{investmentScore.score >= 70 ? '基本面良好，可考虑分批买入' :
+                  investmentScore.score >= 50 ? '基本面一般，建议谨慎买入' : '基本面较差，建议观望'}
                 <br />
-                • <strong>止损位</strong>：建议设置在${(estimatedPrice * 0.85).toFixed(2)}附近
+                • <strong>止损位</strong>：建议根据技术分析设置止损位
                 <br />
-                • <strong>止盈位</strong>：建议设置在${averageTargetPrice.toFixed(2)}附近
+                • <strong>止盈位</strong>：建议设置在目标价${averageTargetPrice.toFixed(2)}附近
                 <br />
                 • <strong>仓位管理</strong>：建议配置{strategy.allocation}的仓位
                 <br />

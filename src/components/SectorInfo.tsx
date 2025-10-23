@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Row, Col, Typography, Tag, Progress, List, Avatar, Statistic, Alert } from 'antd';
-import { BankOutlined, TrophyOutlined, RiseOutlined, FallOutlined } from '@ant-design/icons';
+import { BankOutlined, TrophyOutlined } from '@ant-design/icons';
 import { getSectorData } from '../data/stocksData';
 
 const { Title, Text, Paragraph } = Typography;
@@ -128,10 +128,9 @@ const SectorInfo: React.FC<SectorInfoProps> = ({ symbol }) => {
                       <div>
                         <Text type="secondary">市值: {competitor.marketCap}</Text>
                         <div style={{ marginTop: '4px' }}>
-                          <Tag color={competitor.change >= 0 ? 'green' : 'red'}>
-                            {competitor.change >= 0 ? <RiseOutlined /> : <FallOutlined />}
-                            {competitor.change >= 0 ? '+' : ''}{competitor.change}%
-                          </Tag>
+                          <Text type="secondary">
+                            涨跌幅数据需要实时API支持
+                          </Text>
                         </div>
                       </div>
                     }
