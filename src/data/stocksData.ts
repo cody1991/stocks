@@ -120,32 +120,6 @@ export const STOCKS_DATA: Record<string, StockData> = {
       text: 'N'
     }
   },
-  AAPL: {
-    symbol: 'AAPL',
-    name: 'Apple Inc.',
-    sector: 'Technology',
-    industry: 'Consumer Electronics',
-    subsector: 'Smartphones & Computing',
-    description: 'Apple是全球领先的科技公司，专注于设计、开发和销售消费电子产品、计算机软件和在线服务。2024年Q4营收达948亿美元，iPhone销量强劲，服务业务收入创新高，同比增长15%。',
-    founded: '1976',
-    headquarters: 'Cupertino, CA',
-    employees: '164,000+',
-    marketCap: '3.0T',
-    avatar: {
-      backgroundColor: '#52c41a',
-      text: 'A'
-    },
-    financialData: {
-      revenue: 948000000000, // 948亿美元
-      netIncome: 236000000000, // 236亿美元
-      eps: 6.13, // 每股收益
-      pe: 28.5, // 市盈率
-      pb: 39.8, // 市净率
-      debtToEquity: 1.73, // 债务股本比
-      roe: 1.47, // 净资产收益率
-      roa: 0.25 // 总资产收益率
-    }
-  },
   AMZN: {
     symbol: 'AMZN',
     name: 'Amazon.com Inc.',
@@ -247,8 +221,8 @@ export const SECTOR_DATA: Record<string, SectorData> = {
     competitors: [
       { symbol: 'MSFT', name: 'Microsoft Corporation', marketCap: '3.1T', change: 0.8 },
       { symbol: 'GOOGL', name: 'Alphabet Inc.', marketCap: '1.8T', change: 1.2 },
-      { symbol: 'AAPL', name: 'Apple Inc.', marketCap: '3.0T', change: 0.5 },
-      { symbol: 'META', name: 'Meta Platforms Inc.', marketCap: '800B', change: 2.1 }
+      { symbol: 'META', name: 'Meta Platforms Inc.', marketCap: '800B', change: 2.1 },
+      { symbol: 'ORCL', name: 'Oracle Corporation', marketCap: '320B', change: 1.5 }
     ],
     marketShare: 40,
     growthRate: 12.8,
@@ -524,18 +498,6 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
       rating: 'Buy'
     },
     {
-      symbol: 'AAPL',
-      name: 'Apple Inc.',
-      price: 180.20,
-      change: 0.75,
-      changePercent: 0.49,
-      marketCap: '3.0T',
-      sector: 'Technology',
-      correlation: 0.55,
-      reason: '科技巨头，生态系统竞争',
-      rating: 'Buy'
-    },
-    {
       symbol: 'META',
       name: 'Meta Platforms Inc.',
       price: 385.40,
@@ -546,6 +508,18 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
       correlation: 0.45,
       reason: '广告业务竞争，云服务合作',
       rating: 'Buy'
+    },
+    {
+      symbol: 'ORCL',
+      name: 'Oracle Corporation',
+      price: 120.30,
+      change: 2.10,
+      changePercent: 1.78,
+      marketCap: '320B',
+      sector: 'Technology',
+      correlation: 0.35,
+      reason: '企业云服务竞争',
+      rating: 'Hold'
     }
   ]
 };
