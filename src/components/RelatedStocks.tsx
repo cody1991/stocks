@@ -192,6 +192,10 @@ const RelatedStocks: React.FC<RelatedStocksProps> = ({ symbol }) => {
             ) : (
               <div style={{ textAlign: 'center', padding: '20px', color: '#999' }}>
                 <Text>暂无相关性数据</Text>
+                <br />
+                <Text type="secondary" style={{ fontSize: '12px' }}>
+                  需要集成真实的金融数据API来获取股票相关性分析
+                </Text>
               </div>
             )}
           </Card>

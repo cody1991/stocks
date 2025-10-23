@@ -21,7 +21,7 @@ const NewsPanel: React.FC<NewsPanelProps> = ({ symbol }) => {
     try {
       // 模拟API调用延迟
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // 重新获取新闻数据
       const refreshedNews = getNewsData(symbol);
       setNews(refreshedNews);

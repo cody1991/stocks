@@ -278,7 +278,7 @@ const InvestmentAdvice: React.FC<InvestmentAdviceProps> = ({ symbol }) => {
                 <Text>暂无分析师评级数据</Text>
                 <br />
                 <Text type="secondary" style={{ fontSize: '12px' }}>
-                  目标价基于技术分析估算: ${averageTargetPrice.toFixed(2)}
+                  需要集成真实的金融数据API来获取分析师评级
                 </Text>
               </div>
             )}
