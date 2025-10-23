@@ -46,12 +46,12 @@ const StockNavigation: React.FC<StockNavigationProps> = ({
           key: stock!.key,
           icon: stock!.icon,
           label: (
-            <div style={{ 
+            <div style={{
               width: '100%',
               overflow: 'hidden',
               textOverflow: 'ellipsis'
             }}>
-              <div style={{ 
+              <div style={{
                 fontWeight: 'bold',
                 fontSize: '14px',
                 lineHeight: '1.4',
@@ -63,8 +63,8 @@ const StockNavigation: React.FC<StockNavigationProps> = ({
                 {stock!.label}
               </div>
               {!collapsed && (
-                <div style={{ 
-                  fontSize: '11px', 
+                <div style={{
+                  fontSize: '11px',
                   color: '#999',
                   lineHeight: '1.3',
                   overflow: 'hidden',

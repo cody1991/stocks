@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Card, Row, Col, Typography, Tag, Progress, Alert, Timeline, Statistic } from 'antd';
-import stockApi, { StockQuote, FinancialData } from '../services/stockApi';
+import { getFinancialData, getAnalystRatings } from '../data/stocksData';
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -8,49 +8,23 @@ interface InvestmentAdviceProps {
   symbol: string;
 }
 
-interface AnalystRating {
-  rating: 'Strong Buy' | 'Buy' | 'Hold' | 'Sell' | 'Strong Sell';
-  targetPrice: number;
-  analyst: string;
-  date: string;
-}
-
 const InvestmentAdvice: React.FC<InvestmentAdviceProps> = ({ symbol }) => {
-  const [stockData, setStockData] = useState<StockQuote | null>(null);
-  const [financialData, setFinancialData] = useState<FinancialData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const financialData = getFinancialData(symbol);
+  const analystRatings = getAnalystRatings(symbol);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const [quote, financial] = await Promise.all([
-          stockApi.getStockQuote(symbol),
-          stockApi.getFinancialData(symbol)
-        ]);
-        setStockData(quote);
-        setFinancialData(financial);
-      } catch (err) {
-        setError('获取投资建议数据失败');
-        console.error('Error fetching investment advice data:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [symbol]);
-
-  const getAnalystRatings = (symbol: string): AnalystRating[] => {
-    // 由于Yahoo Finance API不提供分析师评级，我们返回空数组
-    // 在实际应用中，可以集成其他提供分析师评级的API
-    return [];
-  };
+  if (!financialData) {
+    return (
+      <Alert
+        message="数据加载失败"
+        description="无法获取投资建议数据"
+        type="error"
+        showIcon
+      />
+    );
+  }
 
   const calculateInvestmentScore = () => {
-    if (!stockData || !financialData) return { score: 0, level: 'N/A', color: 'gray' };
+    if (!financialData) return { score: 0, level: 'N/A', color: 'gray' };
 
     let score = 50; // 基础分
 
@@ -73,12 +47,6 @@ const InvestmentAdvice: React.FC<InvestmentAdviceProps> = ({ symbol }) => {
     // 债务水平评分
     if (financialData.debtToEquity < 0.3) score += 10;
     else if (financialData.debtToEquity < 0.5) score += 5;
-    else score -= 5;
-
-    // 价格趋势评分
-    if (stockData.changePercent > 5) score += 10;
-    else if (stockData.changePercent > 0) score += 5;
-    else if (stockData.changePercent < -5) score -= 10;
     else score -= 5;
 
     score = Math.max(0, Math.min(100, score));
@@ -114,8 +82,8 @@ const InvestmentAdvice: React.FC<InvestmentAdviceProps> = ({ symbol }) => {
     else if (financialData.roe < 0.1) riskScore += 15;
 
     // 波动性风险（基于价格变化）
-    if (stockData && Math.abs(stockData.changePercent) > 10) riskScore += 15;
-    else if (stockData && Math.abs(stockData.changePercent) > 5) riskScore += 10;
+    // 由于我们不再有实时价格数据，这里使用财务数据来评估风险
+    if (financialData.pe > 50) riskScore += 15;
 
     let level, color;
     if (riskScore >= 70) { level = '高风险'; color = 'red'; }
@@ -162,32 +130,15 @@ const InvestmentAdvice: React.FC<InvestmentAdviceProps> = ({ symbol }) => {
     }
   };
 
-  if (loading) {
-    return (
-      <div style={{ textAlign: 'center', padding: '50px' }}>
-        <div>正在分析投资建议...</div>
-      </div>
-    );
-  }
-
-  if (error || !stockData || !financialData) {
-    return (
-      <Alert
-        message="数据加载失败"
-        description={error || '无法获取投资建议数据'}
-        type="error"
-        showIcon
-      />
-    );
-  }
-
   const investmentScore = calculateInvestmentScore();
   const riskLevel = getRiskLevel();
   const strategy = getInvestmentStrategy();
-  const analystRatings = getAnalystRatings(symbol);
   const averageTargetPrice = analystRatings.length > 0
     ? analystRatings.reduce((sum, rating) => sum + rating.targetPrice, 0) / analystRatings.length
-    : stockData.price * 1.1; // 如果没有分析师评级，使用当前价格的110%作为默认目标价
+    : 0; // 如果没有分析师评级，使用0作为默认目标价
+
+  // 估算当前价格（基于财务数据）
+  const estimatedPrice = financialData.pe > 0 ? financialData.eps * financialData.pe : 0;
 
   return (
     <div>
@@ -242,11 +193,11 @@ const InvestmentAdvice: React.FC<InvestmentAdviceProps> = ({ symbol }) => {
             />
             <div style={{ marginTop: '8px' }}>
               <Text type="secondary">
-                当前价格: ${stockData.price.toFixed(2)}
+                当前价格: ${estimatedPrice.toFixed(2)}
               </Text>
               <br />
-              <Text type={averageTargetPrice > stockData.price ? 'success' : 'danger'}>
-                上涨空间: {((averageTargetPrice - stockData.price) / stockData.price * 100).toFixed(1)}%
+              <Text type={averageTargetPrice > estimatedPrice ? 'success' : 'danger'}>
+                上涨空间: {averageTargetPrice > 0 ? ((averageTargetPrice - estimatedPrice) / estimatedPrice * 100).toFixed(1) : 0}%
               </Text>
             </div>
           </Card>
@@ -382,7 +333,7 @@ const InvestmentAdvice: React.FC<InvestmentAdviceProps> = ({ symbol }) => {
                 • <strong>买入时机</strong>：{investmentScore.score >= 70 ? '当前价格相对合理，可考虑分批买入' :
                   investmentScore.score >= 50 ? '等待回调至支撑位再考虑买入' : '建议观望，等待更好的买入时机'}
                 <br />
-                • <strong>止损位</strong>：建议设置在${(stockData.price * 0.85).toFixed(2)}附近
+                • <strong>止损位</strong>：建议设置在${(estimatedPrice * 0.85).toFixed(2)}附近
                 <br />
                 • <strong>止盈位</strong>：建议设置在${averageTargetPrice.toFixed(2)}附近
                 <br />

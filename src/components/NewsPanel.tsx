@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Card, List, Spin, Alert, Typography, Tag, Button, Space, Divider } from 'antd';
+import React from 'react';
+import { Card, List, Alert, Typography, Tag, Button, Space, Divider } from 'antd';
 import { CalendarOutlined, LinkOutlined, GlobalOutlined, ClockCircleOutlined } from '@ant-design/icons';
-import stockApi, { StockNews } from '../services/stockApi';
+import { getNewsData } from '../data/stocksData';
 import moment from 'moment';
 
 const { Title, Text, Paragraph } = Typography;
@@ -11,27 +11,7 @@ interface NewsPanelProps {
 }
 
 const NewsPanel: React.FC<NewsPanelProps> = ({ symbol }) => {
-  const [news, setNews] = useState<StockNews[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const newsData = await stockApi.getStockNews(symbol);
-        setNews(newsData);
-      } catch (err) {
-        setError('获取新闻数据失败');
-        console.error('Error fetching news:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchNews();
-  }, [symbol]);
+  const news = getNewsData(symbol);
 
   const formatDate = (dateString: string) => {
     return moment(dateString).format('YYYY-MM-DD HH:mm');
@@ -54,21 +34,12 @@ const NewsPanel: React.FC<NewsPanelProps> = ({ symbol }) => {
     }
   };
 
-  if (loading) {
-    return (
-      <div style={{ textAlign: 'center', padding: '50px' }}>
-        <Spin size="large" />
-        <div style={{ marginTop: '16px' }}>正在加载新闻数据...</div>
-      </div>
-    );
-  }
-
-  if (error) {
+  if (!news || news.length === 0) {
     return (
       <Alert
-        message="新闻加载失败"
-        description={error}
-        type="error"
+        message="暂无新闻数据"
+        description="当前没有可用的新闻信息"
+        type="info"
         showIcon
       />
     );

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Card, Row, Col, Select, Spin, Alert, Typography, Statistic } from 'antd';
+import React, { useState } from 'react';
+import { Card, Row, Col, Select, Typography, Statistic } from 'antd';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { BarChartOutlined } from '@ant-design/icons';
-import stockApi, { PriceData } from '../services/stockApi';
+import { generatePriceHistory } from '../data/stocksData';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -12,29 +12,11 @@ interface PriceChartProps {
 }
 
 const PriceChart: React.FC<PriceChartProps> = ({ symbol }) => {
-  const [priceData, setPriceData] = useState<PriceData[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [chartType, setChartType] = useState<'line' | 'area'>('line');
   const [timeRange, setTimeRange] = useState<'7d' | '30d' | '90d'>('30d');
-
-  useEffect(() => {
-    const fetchPriceData = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const data = await stockApi.getPriceHistory(symbol);
-        setPriceData(data);
-      } catch (err) {
-        setError('获取价格数据失败');
-        console.error('Error fetching price data:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPriceData();
-  }, [symbol]);
+  
+  const days = timeRange === '7d' ? 7 : timeRange === '30d' ? 30 : 90;
+  const priceData = generatePriceHistory(symbol, days);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('zh-CN', {
@@ -105,26 +87,6 @@ const PriceChart: React.FC<PriceChartProps> = ({ symbol }) => {
     }
     return null;
   };
-
-  if (loading) {
-    return (
-      <div style={{ textAlign: 'center', padding: '50px' }}>
-        <Spin size="large" />
-        <div style={{ marginTop: '16px' }}>正在加载价格数据...</div>
-      </div>
-    );
-  }
-
-  if (error || !priceData.length) {
-    return (
-      <Alert
-        message="数据加载失败"
-        description={error || '无法获取价格数据'}
-        type="error"
-        showIcon
-      />
-    );
-  }
 
   const { change, changePercent } = calculateChange();
   const totalVolume = calculateVolume();

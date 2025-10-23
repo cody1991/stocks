@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Card, Row, Col, Statistic, Spin, Alert, Progress, Typography, Table, Tag } from 'antd';
+import React from 'react';
+import { Card, Row, Col, Statistic, Alert, Progress, Typography, Table, Tag } from 'antd';
 import { DollarOutlined, TrophyOutlined } from '@ant-design/icons';
-import stockApi, { FinancialData } from '../services/stockApi';
+import { getFinancialData } from '../data/stocksData';
 
 const { Text } = Typography;
 
@@ -10,27 +10,18 @@ interface FundamentalAnalysisProps {
 }
 
 const FundamentalAnalysis: React.FC<FundamentalAnalysisProps> = ({ symbol }) => {
-  const [financialData, setFinancialData] = useState<FinancialData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const financialData = getFinancialData(symbol);
 
-  useEffect(() => {
-    const fetchFinancialData = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const data = await stockApi.getFinancialData(symbol);
-        setFinancialData(data);
-      } catch (err) {
-        setError('获取财务数据失败');
-        console.error('Error fetching financial data:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchFinancialData();
-  }, [symbol]);
+  if (!financialData) {
+    return (
+      <Alert
+        message="数据加载失败"
+        description="无法获取财务数据"
+        type="error"
+        showIcon
+      />
+    );
+  }
 
   const formatCurrency = (value: number) => {
     if (value >= 1e9) {
@@ -56,26 +47,6 @@ const FundamentalAnalysis: React.FC<FundamentalAnalysisProps> = ({ symbol }) => 
     if (pe <= 40) return { analysis: '高估值', color: 'orange' };
     return { analysis: '严重高估', color: 'red' };
   };
-
-  if (loading) {
-    return (
-      <div style={{ textAlign: 'center', padding: '50px' }}>
-        <Spin size="large" />
-        <div style={{ marginTop: '16px' }}>正在加载财务数据...</div>
-      </div>
-    );
-  }
-
-  if (error || !financialData) {
-    return (
-      <Alert
-        message="数据加载失败"
-        description={error || '无法获取财务数据'}
-        type="error"
-        showIcon
-      />
-    );
-  }
 
   const profitabilityRating = getRating(financialData.roe, { excellent: 0.2, good: 0.15, fair: 0.1 });
   const efficiencyRating = getRating(financialData.roa, { excellent: 0.15, good: 0.1, fair: 0.05 });

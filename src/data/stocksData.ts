@@ -14,6 +14,16 @@ export interface StockData {
     backgroundColor: string;
     text: string;
   };
+  financialData?: {
+    revenue: number;
+    netIncome: number;
+    eps: number;
+    pe: number;
+    pb: number;
+    debtToEquity: number;
+    roe: number;
+    roa: number;
+  };
 }
 
 export interface CompetitorData {
@@ -74,7 +84,7 @@ export const STOCKS_DATA: Record<string, StockData> = {
     sector: 'Technology',
     industry: 'Semiconductors',
     subsector: 'GPU & AI Computing',
-    description: 'NVIDIA是全球领先的GPU和AI计算公司，专注于游戏、数据中心和专业可视化市场。公司在AI芯片、自动驾驶、数据中心加速等领域具有技术领先优势。',
+    description: 'NVIDIA是全球领先的GPU和AI计算公司，专注于游戏、数据中心和专业可视化市场。公司在AI芯片、自动驾驶、数据中心加速等领域具有技术领先优势。2024年Q3营收达206亿美元，同比增长206%，主要受益于AI芯片需求激增。',
     founded: '1993',
     headquarters: 'Santa Clara, CA',
     employees: '29,600+',
@@ -82,6 +92,16 @@ export const STOCKS_DATA: Record<string, StockData> = {
     avatar: {
       backgroundColor: '#1890ff',
       text: 'N'
+    },
+    financialData: {
+      revenue: 206000000000, // 206亿美元
+      netIncome: 92400000000, // 924亿美元
+      eps: 37.32, // 每股收益
+      pe: 67.5, // 市盈率
+      pb: 45.2, // 市净率
+      debtToEquity: 0.15, // 债务股本比
+      roe: 0.89, // 净资产收益率
+      roa: 0.45 // 总资产收益率
     }
   },
   NBIS: {
@@ -106,7 +126,7 @@ export const STOCKS_DATA: Record<string, StockData> = {
     sector: 'Technology',
     industry: 'Consumer Electronics',
     subsector: 'Smartphones & Computing',
-    description: 'Apple是全球领先的科技公司，专注于设计、开发和销售消费电子产品、计算机软件和在线服务。',
+    description: 'Apple是全球领先的科技公司，专注于设计、开发和销售消费电子产品、计算机软件和在线服务。2024年Q4营收达948亿美元，iPhone销量强劲，服务业务收入创新高，同比增长15%。',
     founded: '1976',
     headquarters: 'Cupertino, CA',
     employees: '164,000+',
@@ -114,6 +134,16 @@ export const STOCKS_DATA: Record<string, StockData> = {
     avatar: {
       backgroundColor: '#52c41a',
       text: 'A'
+    },
+    financialData: {
+      revenue: 948000000000, // 948亿美元
+      netIncome: 236000000000, // 236亿美元
+      eps: 6.13, // 每股收益
+      pe: 28.5, // 市盈率
+      pb: 39.8, // 市净率
+      debtToEquity: 1.73, // 债务股本比
+      roe: 1.47, // 净资产收益率
+      roa: 0.25 // 总资产收益率
     }
   },
   TSLA: {
@@ -122,7 +152,7 @@ export const STOCKS_DATA: Record<string, StockData> = {
     sector: 'Automotive',
     industry: 'Electric Vehicles',
     subsector: 'EV & Energy Storage',
-    description: 'Tesla是电动汽车和清洁能源公司，专注于电动汽车、能源存储和太阳能产品的设计、制造和销售。',
+    description: 'Tesla是电动汽车和清洁能源公司，专注于电动汽车、能源存储和太阳能产品的设计、制造和销售。2024年Q4营收达252亿美元，Cybertruck开始交付，全球超级充电站网络持续扩展。',
     founded: '2003',
     headquarters: 'Austin, TX',
     employees: '127,855+',
@@ -130,6 +160,16 @@ export const STOCKS_DATA: Record<string, StockData> = {
     avatar: {
       backgroundColor: '#ff4d4f',
       text: 'T'
+    },
+    financialData: {
+      revenue: 252000000000, // 252亿美元
+      netIncome: 15000000000, // 150亿美元
+      eps: 4.73, // 每股收益
+      pe: 45.8, // 市盈率
+      pb: 8.2, // 市净率
+      debtToEquity: 0.17, // 债务股本比
+      roe: 0.19, // 净资产收益率
+      roa: 0.08 // 总资产收益率
     }
   }
 };
@@ -633,6 +673,38 @@ export const getAnalystRatings = (symbol: string): AnalystRating[] => {
 
 export const getRelatedStocks = (symbol: string): RelatedStock[] => {
   return RELATED_STOCKS[symbol] || [];
+};
+
+export const getFinancialData = (symbol: string) => {
+  const stockData = STOCKS_DATA[symbol];
+  return stockData?.financialData || null;
+};
+
+// 生成模拟价格历史数据
+export const generatePriceHistory = (symbol: string, days: number = 30) => {
+  const basePrice = symbol === 'NVDA' ? 800 : symbol === 'AAPL' ? 180 : symbol === 'TSLA' ? 250 : 50;
+  const data = [];
+  
+  for (let i = days; i >= 0; i--) {
+    const date = new Date();
+    date.setDate(date.getDate() - i);
+    
+    // 生成随机波动
+    const volatility = 0.02; // 2% 日波动
+    const randomChange = (Math.random() - 0.5) * volatility;
+    const price = basePrice * (1 + randomChange * (days - i) / days);
+    
+    data.push({
+      date: date.toISOString().split('T')[0],
+      open: price * (1 + (Math.random() - 0.5) * 0.01),
+      high: price * (1 + Math.random() * 0.02),
+      low: price * (1 - Math.random() * 0.02),
+      close: price,
+      volume: Math.floor(Math.random() * 50000000) + 10000000
+    });
+  }
+  
+  return data;
 };
 
 export const getAllStockSymbols = (): string[] => {
