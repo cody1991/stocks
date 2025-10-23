@@ -64,12 +64,12 @@ const AppLayout: React.FC = () => {
 
   // 处理股票选择
   const handleStockChange = (newSymbol: string) => {
-    navigate(`/stock/${newSymbol}/${page}`);
+    navigate(`/stocks/${newSymbol}/${page}`);
   };
 
   // 处理菜单选择
   const handleMenuClick = ({ key }: { key: string }) => {
-    navigate(`/stock/${symbol}/${key}`);
+    navigate(`/stocks/${symbol}/${key}`);
   };
 
   // 获取当前页面的标题
@@ -169,12 +169,12 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         {/* 默认重定向到NVDA概览 */}
-        <Route path="/" element={<Navigate to="/stock/NVDA/overview" replace />} />
+        <Route path="/" element={<Navigate to="/stocks/NVDA/overview" replace />} />
         {/* 所有股票页面 */}
-        <Route path="/stock/:symbol/:page" element={<AppLayout />} />
-        <Route path="/stock/:symbol" element={<AppLayout />} />
+        <Route path="/stocks/:symbol/:page" element={<AppLayout />} />
+        <Route path="/stocks/:symbol" element={<AppLayout />} />
         {/* 404重定向 */}
-        <Route path="*" element={<Navigate to="/stock/NVDA/overview" replace />} />
+        <Route path="*" element={<Navigate to="/stocks/NVDA/overview" replace />} />
       </Routes>
     </Router>
   );
