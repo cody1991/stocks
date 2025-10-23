@@ -1035,6 +1035,130 @@ export const SECTOR_DATA: Record<string, SectorData> = {
       '宏观经济影响',
       '政策变化'
     ]
+  },
+  DJT: {
+    sector: 'Communication Services',
+    industry: 'Media & Entertainment',
+    subsector: 'Social Media',
+    marketCap: '2B',
+    description: 'Trump Media & Technology Group是一家专注于媒体和社交平台业务的科技公司，运营Truth Social等社交媒体平台。公司面临监管审查和竞争压力。',
+    competitors: [
+      { symbol: 'META', name: 'Meta Platforms Inc.', marketCap: '800B', change: 0 },
+      { symbol: 'TWTR', name: 'Twitter Inc.', marketCap: '40B', change: 0 },
+      { symbol: 'SNAP', name: 'Snap Inc.', marketCap: '20B', change: 0 },
+      { symbol: 'PINS', name: 'Pinterest Inc.', marketCap: '15B', change: 0 }
+    ],
+    marketShare: 1,
+    growthRate: -10.0,
+    peRatio: -31.3,
+    sectorTrend: 'bearish',
+    keyDrivers: [
+      '政治因素影响',
+      '社交媒体竞争',
+      '用户增长挑战',
+      '监管政策变化',
+      '商业模式验证'
+    ],
+    risks: [
+      '政治依赖度高',
+      '竞争激烈',
+      '监管风险',
+      '用户增长放缓',
+      '商业模式不确定性'
+    ]
+  },
+  EWJ: {
+    sector: 'Financial Services',
+    industry: 'ETF',
+    subsector: 'International Equity',
+    marketCap: '15B',
+    description: 'iShares MSCI Japan ETF追踪MSCI日本指数，为投资者提供对日本股票市场的广泛敞口，持有多家日本大型公司股票。',
+    competitors: [
+      { symbol: 'VTI', name: 'Vanguard Total Stock Market ETF', marketCap: '300B', change: 0 },
+      { symbol: 'SPY', name: 'SPDR S&P 500 ETF', marketCap: '400B', change: 0 },
+      { symbol: 'QQQ', name: 'Invesco QQQ Trust', marketCap: '200B', change: 0 },
+      { symbol: 'IEFA', name: 'iShares Core MSCI EAFE ETF', marketCap: '80B', change: 0 }
+    ],
+    marketShare: 8,
+    growthRate: 12.0,
+    peRatio: 0,
+    sectorTrend: 'bullish',
+    keyDrivers: [
+      '日本经济复苏',
+      '企业治理改革',
+      '日元走弱',
+      '央行宽松政策',
+      '估值相对合理'
+    ],
+    risks: [
+      '汇率波动',
+      '地缘政治风险',
+      '人口老龄化',
+      '经济增长放缓',
+      '政策变化'
+    ]
+  },
+  VOO: {
+    sector: 'Financial Services',
+    industry: 'ETF',
+    subsector: 'Large Cap Equity',
+    marketCap: '400B',
+    description: 'Vanguard S&P 500 ETF追踪标普500指数，为投资者提供对美国500家大型公司股票的广泛敞口，是投资美国股市的主要工具。',
+    competitors: [
+      { symbol: 'SPY', name: 'SPDR S&P 500 ETF', marketCap: '400B', change: 0 },
+      { symbol: 'IVV', name: 'iShares Core S&P 500 ETF', marketCap: '300B', change: 0 },
+      { symbol: 'QQQ', name: 'Invesco QQQ Trust', marketCap: '200B', change: 0 },
+      { symbol: 'VTI', name: 'Vanguard Total Stock Market ETF', marketCap: '300B', change: 0 }
+    ],
+    marketShare: 25,
+    growthRate: 15.0,
+    peRatio: 0,
+    sectorTrend: 'bullish',
+    keyDrivers: [
+      '美股强劲表现',
+      '企业盈利增长',
+      '低费用优势',
+      '流动性充足',
+      '长期投资需求'
+    ],
+    risks: [
+      '市场波动',
+      '利率变化',
+      '经济衰退风险',
+      '估值过高',
+      '地缘政治影响'
+    ]
+  },
+  GLDM: {
+    sector: 'Financial Services',
+    industry: 'ETF',
+    subsector: 'Commodity',
+    marketCap: '5B',
+    description: 'SPDR Gold MiniShares Trust追踪黄金价格，为投资者提供对黄金的投资敞口，是投资贵金属的主要工具。',
+    competitors: [
+      { symbol: 'GLD', name: 'SPDR Gold Shares', marketCap: '60B', change: 0 },
+      { symbol: 'IAU', name: 'iShares Gold Trust', marketCap: '30B', change: 0 },
+      { symbol: 'SGOL', name: 'abrdn Physical Gold Shares ETF', marketCap: '2B', change: 0 },
+      { symbol: 'OUNZ', name: 'VanEck Merk Gold Trust', marketCap: '1B', change: 0 }
+    ],
+    marketShare: 3,
+    growthRate: 8.0,
+    peRatio: 0,
+    sectorTrend: 'neutral',
+    keyDrivers: [
+      '通胀对冲需求',
+      '避险需求增长',
+      '央行购金',
+      '地缘政治紧张',
+      '美元走弱'
+    ],
+    risks: [
+      '利率上升',
+      '美元走强',
+      '市场风险偏好变化',
+      '央行政策变化',
+      '供应增加'
+    ]
   }
 };
 
@@ -1470,6 +1594,98 @@ export const NEWS_DATA: Record<string, NewsData[]> = {
       publishedAt: "2025-10-21T18:30:00Z",
       source: "Raffles Interior官方"
     }
+  ],
+  DJT: [
+    {
+      title: "Trump Media & Technology Group股价在大选日波动剧烈",
+      summary: "DJT股票在美国大选日经历了剧烈波动，早盘上涨至40.74美元，随后下跌，触发了纽约证券交易所的自动停牌机制。股价与特朗普的政治前景密切相关。",
+      url: "https://www.axios.com/2024/11/05/trump-truth-social-election-day-stock",
+      publishedAt: "2025-10-23T09:00:00Z",
+      source: "Axios"
+    },
+    {
+      title: "Truth Social用户增长放缓，面临竞争压力",
+      summary: "Trump Media & Technology Group旗下Truth Social平台用户增长放缓，面临来自传统社交媒体平台的竞争压力。公司正在寻求新的增长策略。",
+      url: "https://www.reuters.com/business/",
+      publishedAt: "2025-10-22T14:30:00Z",
+      source: "路透社"
+    },
+    {
+      title: "DJT面临监管审查，股价承压",
+      summary: "Trump Media & Technology Group面临监管审查，股价承压。分析师认为公司需要证明其商业模式的可持续性，而不仅仅依赖政治因素。",
+      url: "https://www.bloomberg.com/news/",
+      publishedAt: "2025-10-21T11:15:00Z",
+      source: "彭博社"
+    }
+  ],
+  EWJ: [
+    {
+      title: "日本股市表现强劲，EWJ ETF受益于日元走弱",
+      summary: "日本股市在2025年第三季度表现强劲，iShares MSCI Japan ETF受益于日元走弱和日本央行宽松政策。投资者对日本经济复苏保持乐观。",
+      url: "https://www.bloomberg.com/news/",
+      publishedAt: "2025-10-23T10:00:00Z",
+      source: "彭博社"
+    },
+    {
+      title: "EWJ ETF资金流入创新高，投资者看好日本市场",
+      summary: "iShares MSCI Japan ETF资金流入创新高，2025年第三季度净流入超过50亿美元。投资者看好日本企业治理改革和经济复苏前景。",
+      url: "https://www.reuters.com/business/",
+      publishedAt: "2025-10-22T15:30:00Z",
+      source: "路透社"
+    },
+    {
+      title: "日本央行维持宽松政策，EWJ ETF持续受益",
+      summary: "日本央行维持宽松货币政策，继续支持经济增长。EWJ ETF持续受益于宽松政策环境，日本股市估值相对合理。",
+      url: "https://www.marketwatch.com/investing/",
+      publishedAt: "2025-10-21T12:15:00Z",
+      source: "MarketWatch"
+    }
+  ],
+  VOO: [
+    {
+      title: "VOO ETF受益于美股强劲表现，资金流入持续增长",
+      summary: "Vanguard S&P 500 ETF受益于美股强劲表现，2025年第三季度资金流入持续增长。投资者对美国经济和企业盈利保持乐观。",
+      url: "https://www.bloomberg.com/news/",
+      publishedAt: "2025-10-23T11:00:00Z",
+      source: "彭博社"
+    },
+    {
+      title: "标普500指数创新高，VOO ETF表现优异",
+      summary: "标普500指数在2025年第三季度创新高，VOO ETF表现优异，年化收益率超过15%。科技股和金融股表现突出。",
+      url: "https://www.reuters.com/business/",
+      publishedAt: "2025-10-22T16:30:00Z",
+      source: "路透社"
+    },
+    {
+      title: "VOO ETF管理资产突破4000亿美元大关",
+      summary: "Vanguard S&P 500 ETF管理资产突破4000亿美元大关，成为全球最大的ETF之一。投资者对美股长期前景保持信心。",
+      url: "https://www.marketwatch.com/investing/",
+      publishedAt: "2025-10-21T13:45:00Z",
+      source: "MarketWatch"
+    }
+  ],
+  GLDM: [
+    {
+      title: "黄金价格企稳回升，GLDM ETF受益于避险需求",
+      summary: "黄金价格在2025年第三季度企稳回升，SPDR Gold MiniShares Trust受益于避险需求和通胀担忧。投资者对贵金属投资兴趣增加。",
+      url: "https://www.bloomberg.com/news/",
+      publishedAt: "2025-10-23T12:00:00Z",
+      source: "彭博社"
+    },
+    {
+      title: "GLDM ETF资金流入增长，投资者寻求避险资产",
+      summary: "SPDR Gold MiniShares Trust资金流入增长，投资者寻求避险资产。全球地缘政治紧张局势推动黄金需求上升。",
+      url: "https://www.reuters.com/business/",
+      publishedAt: "2025-10-22T17:00:00Z",
+      source: "路透社"
+    },
+    {
+      title: "美联储政策预期推动黄金ETF需求",
+      summary: "美联储政策预期推动黄金ETF需求，GLDM ETF受益于利率环境变化。投资者对通胀对冲需求增加。",
+      url: "https://www.marketwatch.com/investing/",
+      publishedAt: "2025-10-21T14:30:00Z",
+      source: "MarketWatch"
+    }
   ]
 };
 
@@ -1586,6 +1802,34 @@ export const ANALYST_RATINGS: Record<string, AnalystRating[]> = {
     { rating: 'Buy', targetPrice: 2.0, analyst: 'JP Morgan', date: '2025-10-21' },
     { rating: 'Buy', targetPrice: 1.9, analyst: 'Credit Suisse', date: '2025-10-20' },
     { rating: 'Hold', targetPrice: 1.6, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  DJT: [
+    { rating: 'Hold', targetPrice: 12, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Hold', targetPrice: 10, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Sell', targetPrice: 8, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Hold', targetPrice: 15, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Hold', targetPrice: 11, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  EWJ: [
+    { rating: 'Buy', targetPrice: 85, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Hold', targetPrice: 82, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Buy', targetPrice: 88, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 90, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Hold', targetPrice: 80, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  VOO: [
+    { rating: 'Buy', targetPrice: 620, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Buy', targetPrice: 615, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Buy', targetPrice: 625, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 630, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Buy', targetPrice: 610, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  GLDM: [
+    { rating: 'Buy', targetPrice: 85, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Hold', targetPrice: 80, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Buy', targetPrice: 88, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 90, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Hold', targetPrice: 78, analyst: 'Bank of America', date: '2025-10-19' }
   ]
 };
 
@@ -2412,6 +2656,206 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
       sector: 'Industrials',
       correlation: 0.45,
       reason: '基础设施和建筑工程竞争',
+      rating: 'Buy'
+    }
+  ],
+  DJT: [
+    {
+      symbol: 'META',
+      name: 'Meta Platforms Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '800B',
+      sector: 'Technology',
+      correlation: 0.75,
+      reason: '社交媒体平台直接竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'TWTR',
+      name: 'Twitter Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '40B',
+      sector: 'Technology',
+      correlation: 0.80,
+      reason: '社交媒体平台直接竞争',
+      rating: 'Hold'
+    },
+    {
+      symbol: 'SNAP',
+      name: 'Snap Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '20B',
+      sector: 'Technology',
+      correlation: 0.70,
+      reason: '社交媒体平台竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'PINS',
+      name: 'Pinterest Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '15B',
+      sector: 'Technology',
+      correlation: 0.65,
+      reason: '社交媒体平台竞争',
+      rating: 'Buy'
+    }
+  ],
+  EWJ: [
+    {
+      symbol: 'VTI',
+      name: 'Vanguard Total Stock Market ETF',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '300B',
+      sector: 'Financial Services',
+      correlation: 0.60,
+      reason: 'ETF产品竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'SPY',
+      name: 'SPDR S&P 500 ETF',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '400B',
+      sector: 'Financial Services',
+      correlation: 0.55,
+      reason: '大盘ETF竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'QQQ',
+      name: 'Invesco QQQ Trust',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '200B',
+      sector: 'Financial Services',
+      correlation: 0.50,
+      reason: '科技股ETF竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'IEFA',
+      name: 'iShares Core MSCI EAFE ETF',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '80B',
+      sector: 'Financial Services',
+      correlation: 0.70,
+      reason: '国际股票ETF竞争',
+      rating: 'Buy'
+    }
+  ],
+  VOO: [
+    {
+      symbol: 'SPY',
+      name: 'SPDR S&P 500 ETF',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '400B',
+      sector: 'Financial Services',
+      correlation: 0.95,
+      reason: '标普500ETF直接竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'IVV',
+      name: 'iShares Core S&P 500 ETF',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '300B',
+      sector: 'Financial Services',
+      correlation: 0.90,
+      reason: '标普500ETF直接竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'QQQ',
+      name: 'Invesco QQQ Trust',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '200B',
+      sector: 'Financial Services',
+      correlation: 0.70,
+      reason: '科技股ETF竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'VTI',
+      name: 'Vanguard Total Stock Market ETF',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '300B',
+      sector: 'Financial Services',
+      correlation: 0.85,
+      reason: '全市场ETF竞争',
+      rating: 'Buy'
+    }
+  ],
+  GLDM: [
+    {
+      symbol: 'GLD',
+      name: 'SPDR Gold Shares',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '60B',
+      sector: 'Financial Services',
+      correlation: 0.95,
+      reason: '黄金ETF直接竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'IAU',
+      name: 'iShares Gold Trust',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '30B',
+      sector: 'Financial Services',
+      correlation: 0.90,
+      reason: '黄金ETF直接竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'SGOL',
+      name: 'abrdn Physical Gold Shares ETF',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '2B',
+      sector: 'Financial Services',
+      correlation: 0.85,
+      reason: '黄金ETF竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'OUNZ',
+      name: 'VanEck Merk Gold Trust',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '1B',
+      sector: 'Financial Services',
+      correlation: 0.80,
+      reason: '黄金ETF竞争',
       rating: 'Buy'
     }
   ]
