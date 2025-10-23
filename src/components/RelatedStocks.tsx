@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Row, Col, Typography, Tag, List, Avatar, Button, Space } from 'antd';
 import { LinkOutlined, RiseOutlined, FallOutlined, TeamOutlined } from '@ant-design/icons';
+import { getRelatedStocks } from '../data/stocksData';
 
 const { Title, Text } = Typography;
 
@@ -22,9 +23,8 @@ interface RelatedStock {
 }
 
 const RelatedStocks: React.FC<RelatedStocksProps> = ({ symbol }) => {
-  // 由于Yahoo Finance API不提供关联股票数据，我们返回空数组
-  // 在实际应用中，可以集成其他提供关联股票分析的API
-  const relatedStocks: RelatedStock[] = [];
+  // 从静态数据中获取关联股票信息
+  const relatedStocks: RelatedStock[] = getRelatedStocks(symbol);
 
   const getRatingColor = (rating: string) => {
     switch (rating) {
