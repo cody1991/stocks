@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Statistic, Spin, Alert, Progress, Typography, Table, Tag } from 'antd';
-import { DollarOutlined, TrophyOutlined, BarChartOutlined, PieChartOutlined } from '@ant-design/icons';
+import { DollarOutlined, TrophyOutlined } from '@ant-design/icons';
 import stockApi, { FinancialData } from '../services/stockApi';
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 interface FundamentalAnalysisProps {
   symbol: string;

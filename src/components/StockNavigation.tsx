@@ -1,6 +1,5 @@
 import React from 'react';
 import { Menu, Avatar } from 'antd';
-import { StockOutlined } from '@ant-design/icons';
 import { getAllStockSymbols, getStockData } from '../data/stocksData';
 
 interface StockNavigationProps {

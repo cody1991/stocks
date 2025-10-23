@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Row, Col, Select, Spin, Alert, Typography, Statistic, Tag } from 'antd';
+import { Card, Row, Col, Select, Spin, Alert, Typography, Statistic } from 'antd';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
-import { RiseOutlined, FallOutlined, BarChartOutlined } from '@ant-design/icons';
+import { BarChartOutlined } from '@ant-design/icons';
 import stockApi, { PriceData } from '../services/stockApi';
 
 const { Title, Text } = Typography;

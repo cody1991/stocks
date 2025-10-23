@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Row, Col, Typography, Tag, Progress, List, Avatar, Statistic, Alert } from 'antd';
-import { BankOutlined, TeamOutlined, TrophyOutlined, RiseOutlined, FallOutlined } from '@ant-design/icons';
+import { BankOutlined, TrophyOutlined, RiseOutlined, FallOutlined } from '@ant-design/icons';
 import { getSectorData } from '../data/stocksData';
 
 const { Title, Text, Paragraph } = Typography;
