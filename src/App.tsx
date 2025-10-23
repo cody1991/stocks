@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Layout, Menu, Typography } from 'antd';
 import { StockOutlined, BarChartOutlined } from '@ant-design/icons';
-import { BrowserRouter as Router, Routes, Route, useNavigate, useParams, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useNavigate, useParams, Navigate } from 'react-router-dom';
 import StockNavigation from './components/StockNavigation';
 import StockInfo from './components/StockInfo';
 import NewsPanel from './components/NewsPanel';
@@ -64,12 +64,12 @@ const AppLayout: React.FC = () => {
 
   // 处理股票选择
   const handleStockChange = (newSymbol: string) => {
-    navigate(`/stocks/${newSymbol}/${page}`);
+    navigate(`/${newSymbol}/${page}`);
   };
 
   // 处理菜单选择
   const handleMenuClick = ({ key }: { key: string }) => {
-    navigate(`/stocks/${symbol}/${key}`);
+    navigate(`/${symbol}/${key}`);
   };
 
   // 获取当前页面的标题
@@ -169,12 +169,12 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         {/* 默认重定向到NVDA概览 */}
-        <Route path="/" element={<Navigate to="/stocks/NVDA/overview" replace />} />
+        <Route path="/" element={<Navigate to="/NVDA/overview" replace />} />
         {/* 所有股票页面 */}
-        <Route path="/stocks/:symbol/:page" element={<AppLayout />} />
-        <Route path="/stocks/:symbol" element={<AppLayout />} />
+        <Route path="/:symbol/:page" element={<AppLayout />} />
+        <Route path="/:symbol" element={<AppLayout />} />
         {/* 404重定向 */}
-        <Route path="*" element={<Navigate to="/stocks/NVDA/overview" replace />} />
+        <Route path="*" element={<Navigate to="/NVDA/overview" replace />} />
       </Routes>
     </Router>
   );
