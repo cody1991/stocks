@@ -21,7 +21,7 @@ const AppLayout: React.FC = () => {
   const stockSymbols = getAllStockSymbols();
   const navigate = useNavigate();
   const { symbol = stockSymbols[0] || 'NVDA', page = 'overview' } = useParams<{ symbol: string; page: string }>();
-  
+
   const [collapsed, setCollapsed] = useState(false);
 
   const menuItems = [
@@ -78,6 +78,28 @@ const AppLayout: React.FC = () => {
     return menuItem ? menuItem.label : '股票概览';
   };
 
+  // 渲染内容组件
+  const renderContent = () => {
+    switch (page) {
+      case 'overview':
+        return <StockInfo symbol={symbol} />;
+      case 'news':
+        return <NewsPanel symbol={symbol} />;
+      case 'analysis':
+        return <FundamentalAnalysis symbol={symbol} />;
+      case 'sector':
+        return <SectorInfo symbol={symbol} />;
+      case 'advice':
+        return <InvestmentAdvice symbol={symbol} />;
+      case 'related':
+        return <RelatedStocks symbol={symbol} />;
+      case 'api-test':
+        return <ApiTestComponent symbol={symbol} />;
+      default:
+        return <StockInfo symbol={symbol} />;
+    }
+  };
+
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider
@@ -120,9 +142,9 @@ const AppLayout: React.FC = () => {
           alignItems: 'center',
           justifyContent: 'space-between'
         }}>
-              <Title level={3} style={{ margin: 0 }}>
-                {symbol} - {getPageTitle()}
-              </Title>
+          <Title level={3} style={{ margin: 0 }}>
+            {symbol} - {getPageTitle()}
+          </Title>
         </Header>
 
             <Content style={{
@@ -134,16 +156,7 @@ const AppLayout: React.FC = () => {
               minHeight: 'calc(100vh - 112px)',
               overflow: 'auto'
             }}>
-              <Routes>
-                <Route path="/stock/:symbol/overview" element={<StockInfo symbol={symbol} />} />
-                <Route path="/stock/:symbol/news" element={<NewsPanel symbol={symbol} />} />
-                <Route path="/stock/:symbol/analysis" element={<FundamentalAnalysis symbol={symbol} />} />
-                <Route path="/stock/:symbol/sector" element={<SectorInfo symbol={symbol} />} />
-                <Route path="/stock/:symbol/advice" element={<InvestmentAdvice symbol={symbol} />} />
-                <Route path="/stock/:symbol/related" element={<RelatedStocks symbol={symbol} />} />
-                <Route path="/stock/:symbol/api-test" element={<ApiTestComponent symbol={symbol} />} />
-                <Route path="/stock/:symbol" element={<StockInfo symbol={symbol} />} />
-              </Routes>
+              {renderContent()}
             </Content>
       </Layout>
     </Layout>
