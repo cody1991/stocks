@@ -147,17 +147,17 @@ const AppLayout: React.FC = () => {
           </Title>
         </Header>
 
-            <Content style={{
-              margin: '24px',
-              padding: '24px',
-              background: '#fff',
-              borderRadius: '8px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-              minHeight: 'calc(100vh - 112px)',
-              overflow: 'auto'
-            }}>
-              {renderContent()}
-            </Content>
+        <Content style={{
+          margin: '24px',
+          padding: '24px',
+          background: '#fff',
+          borderRadius: '8px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+          minHeight: 'calc(100vh - 112px)',
+          overflow: 'auto'
+        }}>
+          {renderContent()}
+        </Content>
       </Layout>
     </Layout>
   );
