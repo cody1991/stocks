@@ -156,6 +156,292 @@ export const STOCKS_DATA: Record<string, StockData> = {
       roa: 0.08 // 总资产收益率
     }
   },
+  ORCL: {
+    symbol: 'ORCL',
+    name: 'Oracle Corporation',
+    sector: 'Technology',
+    industry: 'Software & Cloud Services',
+    subsector: 'Database & Enterprise Software',
+    description: 'Oracle是全球领先的企业软件公司，专注于数据库管理系统、云服务和商业应用软件。2025年Q1营收同比增长0.6%，运营利润率扩大68个基点，AI基础设施项目预计到2030年实现35%毛利率。',
+    founded: '1977',
+    headquarters: 'Austin, TX',
+    employees: '164,000+',
+    marketCap: '320B',
+    avatar: {
+      backgroundColor: '#ff0000',
+      text: 'O'
+    },
+    financialData: {
+      revenue: 50000000000, // 500亿美元 (2025年Q1)
+      netIncome: 12000000000, // 120亿美元
+      eps: 4.20, // 每股收益
+      pe: 64.9, // 市盈率 (基于2025年10月23日股价272.66美元)
+      pb: 12.5, // 市净率
+      debtToEquity: 0.25, // 债务股本比
+      roe: 0.22, // 净资产收益率
+      roa: 0.12 // 总资产收益率
+    }
+  },
+  PLTR: {
+    symbol: 'PLTR',
+    name: 'Palantir Technologies Inc.',
+    sector: 'Technology',
+    industry: 'Software & Analytics',
+    subsector: 'AI & Data Analytics',
+    description: 'Palantir是一家专注于大数据分析和人工智能软件的科技公司，主要服务于政府机构和大型企业。公司提供数据整合、分析和可视化平台，在国防、情报和商业领域有广泛应用。',
+    founded: '2003',
+    headquarters: 'Denver, CO',
+    employees: '4,000+',
+    marketCap: '45B',
+    avatar: {
+      backgroundColor: '#0000ff',
+      text: 'P'
+    },
+    financialData: {
+      revenue: 2500000000, // 25亿美元 (2024年)
+      netIncome: 200000000, // 2亿美元
+      eps: 0.08, // 每股收益
+      pe: 125.0, // 市盈率
+      pb: 8.5, // 市净率
+      debtToEquity: 0.15, // 债务股本比
+      roe: 0.08, // 净资产收益率
+      roa: 0.05 // 总资产收益率
+    }
+  },
+  PDD: {
+    symbol: 'PDD',
+    name: 'PDD Holdings Inc.',
+    sector: 'Consumer Discretionary',
+    industry: 'E-commerce',
+    subsector: 'Online Retail',
+    description: 'PDD Holdings是拼多多的母公司，是中国领先的电商平台之一。公司通过创新的社交电商模式，为用户提供高性价比的商品和服务，在国内外市场都有强劲增长。',
+    founded: '2015',
+    headquarters: 'Shanghai, China',
+    employees: '15,000+',
+    marketCap: '180B',
+    avatar: {
+      backgroundColor: '#ff6600',
+      text: 'P'
+    },
+    financialData: {
+      revenue: 35000000000, // 350亿美元 (2024年)
+      netIncome: 8000000000, // 80亿美元
+      eps: 5.80, // 每股收益
+      pe: 15.2, // 市盈率
+      pb: 3.8, // 市净率
+      debtToEquity: 0.05, // 债务股本比
+      roe: 0.25, // 净资产收益率
+      roa: 0.18 // 总资产收益率
+    }
+  },
+  KO: {
+    symbol: 'KO',
+    name: 'The Coca-Cola Company',
+    sector: 'Consumer Staples',
+    industry: 'Beverages',
+    subsector: 'Non-Alcoholic Beverages',
+    description: '可口可乐是全球领先的饮料公司，拥有强大的品牌组合和全球分销网络。公司专注于非酒精饮料的生产和销售，在全球200多个国家和地区开展业务。',
+    founded: '1892',
+    headquarters: 'Atlanta, GA',
+    employees: '700,000+',
+    marketCap: '300B',
+    avatar: {
+      backgroundColor: '#ff0000',
+      text: 'C'
+    },
+    financialData: {
+      revenue: 43000000000, // 430亿美元 (2024年)
+      netIncome: 9700000000, // 97亿美元
+      eps: 2.25, // 每股收益
+      pe: 31.5, // 市盈率 (基于2025年10月23日股价70.81美元)
+      pb: 8.8, // 市净率
+      debtToEquity: 0.45, // 债务股本比
+      roe: 0.28, // 净资产收益率
+      roa: 0.12 // 总资产收益率
+    }
+  },
+  MRVL: {
+    symbol: 'MRVL',
+    name: 'Marvell Technology Inc.',
+    sector: 'Technology',
+    industry: 'Semiconductors',
+    subsector: 'Data Infrastructure',
+    description: 'Marvell是一家专注于数据基础设施半导体解决方案的公司，服务于数据中心、5G和汽车市场。公司提供高性能的存储、网络和处理器解决方案。',
+    founded: '1995',
+    headquarters: 'Santa Clara, CA',
+    employees: '7,000+',
+    marketCap: '45B',
+    avatar: {
+      backgroundColor: '#0066cc',
+      text: 'M'
+    },
+    financialData: {
+      revenue: 5500000000, // 55亿美元 (2024年)
+      netIncome: -200000000, // -2亿美元 (亏损)
+      eps: -0.25, // 每股亏损
+      pe: -324.2, // 负市盈率
+      pb: 3.2, // 市净率
+      debtToEquity: 0.35, // 债务股本比
+      roe: -0.05, // 负净资产收益率
+      roa: -0.03 // 负总资产收益率
+    }
+  },
+  DJT: {
+    symbol: 'DJT',
+    name: 'Trump Media & Technology Group Corp.',
+    sector: 'Communication Services',
+    industry: 'Media & Entertainment',
+    subsector: 'Social Media',
+    description: 'Trump Media & Technology Group是一家专注于媒体和社交平台业务的科技公司，运营Truth Social等社交媒体平台。',
+    founded: '2021',
+    headquarters: 'Sarasota, FL',
+    employees: '500+',
+    marketCap: '2B',
+    avatar: {
+      backgroundColor: '#ff0000',
+      text: 'T'
+    },
+    financialData: {
+      revenue: 50000000, // 5000万美元
+      netIncome: -100000000, // -1亿美元 (亏损)
+      eps: -0.50, // 每股亏损
+      pe: -31.3, // 负市盈率
+      pb: 2.5, // 市净率
+      debtToEquity: 0.20, // 债务股本比
+      roe: -0.15, // 负净资产收益率
+      roa: -0.10 // 负总资产收益率
+    }
+  },
+  EWJ: {
+    symbol: 'EWJ',
+    name: 'iShares MSCI Japan ETF',
+    sector: 'Financial Services',
+    industry: 'ETF',
+    subsector: 'International Equity',
+    description: 'iShares MSCI Japan ETF追踪MSCI日本指数，为投资者提供对日本股票市场的广泛敞口，持有多家日本大型公司股票。',
+    founded: '1996',
+    headquarters: 'New York, NY',
+    employees: 'N/A',
+    marketCap: '15B',
+    avatar: {
+      backgroundColor: '#ff6600',
+      text: 'E'
+    },
+    financialData: {
+      revenue: 0, // ETF无营收概念
+      netIncome: 0, // ETF无净利润概念
+      eps: 0, // ETF无EPS概念
+      pe: 0, // ETF无PE概念
+      pb: 1.2, // 市净率
+      debtToEquity: 0, // ETF无债务
+      roe: 0, // ETF无ROE概念
+      roa: 0 // ETF无ROA概念
+    }
+  },
+  VOO: {
+    symbol: 'VOO',
+    name: 'Vanguard S&P 500 ETF',
+    sector: 'Financial Services',
+    industry: 'ETF',
+    subsector: 'Large Cap Equity',
+    description: 'Vanguard S&P 500 ETF追踪标普500指数，为投资者提供对美国500家大型公司股票的广泛敞口，是投资美国股市的主要工具。',
+    founded: '2010',
+    headquarters: 'Valley Forge, PA',
+    employees: 'N/A',
+    marketCap: '400B',
+    avatar: {
+      backgroundColor: '#0066cc',
+      text: 'V'
+    },
+    financialData: {
+      revenue: 0, // ETF无营收概念
+      netIncome: 0, // ETF无净利润概念
+      eps: 0, // ETF无EPS概念
+      pe: 0, // ETF无PE概念
+      pb: 1.0, // 市净率
+      debtToEquity: 0, // ETF无债务
+      roe: 0, // ETF无ROE概念
+      roa: 0 // ETF无ROA概念
+    }
+  },
+  CRWV: {
+    symbol: 'CRWV',
+    name: 'CoreWeave Inc.',
+    sector: 'Technology',
+    industry: 'Cloud Computing',
+    subsector: 'AI Infrastructure',
+    description: 'CoreWeave是一家专注于AI算力服务的云基础设施公司，为AI训练和推理提供高性能计算资源。Q2营收同比增长207%，订单积压突破300亿美元。',
+    founded: '2017',
+    headquarters: 'Roseland, NJ',
+    employees: '1,000+',
+    marketCap: '8B',
+    avatar: {
+      backgroundColor: '#00cc66',
+      text: 'C'
+    },
+    financialData: {
+      revenue: 800000000, // 8亿美元 (2024年)
+      netIncome: 50000000, // 5000万美元
+      eps: 0.15, // 每股收益
+      pe: 243.1, // 市盈率 (基于2025年10月23日股价121.53美元)
+      pb: 4.5, // 市净率
+      debtToEquity: 0.30, // 债务股本比
+      roe: 0.12, // 净资产收益率
+      roa: 0.08 // 总资产收益率
+    }
+  },
+  HSAI: {
+    symbol: 'HSAI',
+    name: 'Hesai Group',
+    sector: 'Technology',
+    industry: 'Automotive Technology',
+    subsector: 'LiDAR & Sensors',
+    description: 'Hesai Group是激光雷达技术的领先企业，主要应用于自动驾驶和机器人领域。公司提供高性能的激光雷达传感器和解决方案。',
+    founded: '2014',
+    headquarters: 'Shanghai, China',
+    employees: '1,500+',
+    marketCap: '1.5B',
+    avatar: {
+      backgroundColor: '#cc6600',
+      text: 'H'
+    },
+    financialData: {
+      revenue: 200000000, // 2亿美元 (2024年)
+      netIncome: -50000000, // -5000万美元 (亏损)
+      eps: -0.30, // 每股亏损
+      pe: -72.6, // 负市盈率
+      pb: 2.8, // 市净率
+      debtToEquity: 0.25, // 债务股本比
+      roe: -0.08, // 负净资产收益率
+      roa: -0.05 // 负总资产收益率
+    }
+  },
+  GLDM: {
+    symbol: 'GLDM',
+    name: 'SPDR Gold MiniShares Trust',
+    sector: 'Financial Services',
+    industry: 'ETF',
+    subsector: 'Commodity',
+    description: 'SPDR Gold MiniShares Trust追踪黄金价格，为投资者提供对黄金的投资敞口，是投资贵金属的主要工具。',
+    founded: '2018',
+    headquarters: 'New York, NY',
+    employees: 'N/A',
+    marketCap: '5B',
+    avatar: {
+      backgroundColor: '#ffcc00',
+      text: 'G'
+    },
+    financialData: {
+      revenue: 0, // ETF无营收概念
+      netIncome: 0, // ETF无净利润概念
+      eps: 0, // ETF无EPS概念
+      pe: 0, // ETF无PE概念
+      pb: 1.0, // 市净率
+      debtToEquity: 0, // ETF无债务
+      roe: 0, // ETF无ROE概念
+      roa: 0 // ETF无ROA概念
+    }
+  },
 };
 
 // 板块数据
@@ -251,6 +537,161 @@ export const SECTOR_DATA: Record<string, SectorData> = {
       '成本控制挑战',
       '宏观经济影响',
       '地缘政治风险'
+    ]
+  },
+  ORCL: {
+    sector: 'Technology',
+    industry: 'Software & Cloud Services',
+    subsector: 'Database & Enterprise Software',
+    marketCap: '320B',
+    description: 'Oracle是全球领先的企业软件公司，专注于数据库管理系统、云服务和商业应用软件。2025年Q1营收同比增长0.6%，运营利润率扩大68个基点，AI基础设施项目预计到2030年实现35%毛利率。',
+    competitors: [
+      { symbol: 'MSFT', name: 'Microsoft Corporation', marketCap: '3.1T', change: 0 },
+      { symbol: 'AMZN', name: 'Amazon.com Inc.', marketCap: '1.8T', change: 0 },
+      { symbol: 'GOOGL', name: 'Alphabet Inc.', marketCap: '1.8T', change: 0 },
+      { symbol: 'CRM', name: 'Salesforce Inc.', marketCap: '200B', change: 0 }
+    ],
+    marketShare: 15,
+    growthRate: 8.5,
+    peRatio: 64.9,
+    sectorTrend: 'bullish',
+    keyDrivers: [
+      'AI基础设施项目预计35%毛利率',
+      '云基础设施收入目标1660亿美元',
+      '企业软件需求增长',
+      '数据库市场领导地位',
+      '云服务转型加速'
+    ],
+    risks: [
+      '云服务竞争激烈',
+      '技术转型挑战',
+      '客户迁移风险',
+      '监管政策变化',
+      '宏观经济影响'
+    ]
+  },
+  PLTR: {
+    sector: 'Technology',
+    industry: 'Software & Analytics',
+    subsector: 'AI & Data Analytics',
+    marketCap: '45B',
+    description: 'Palantir是一家专注于大数据分析和人工智能软件的科技公司，主要服务于政府机构和大型企业。公司提供数据整合、分析和可视化平台，在国防、情报和商业领域有广泛应用。',
+    competitors: [
+      { symbol: 'MSFT', name: 'Microsoft Corporation', marketCap: '3.1T', change: 0 },
+      { symbol: 'GOOGL', name: 'Alphabet Inc.', marketCap: '1.8T', change: 0 },
+      { symbol: 'AMZN', name: 'Amazon.com Inc.', marketCap: '1.8T', change: 0 },
+      { symbol: 'IBM', name: 'IBM Corporation', marketCap: '120B', change: 0 }
+    ],
+    marketShare: 5,
+    growthRate: 25.0,
+    peRatio: 125.0,
+    sectorTrend: 'bullish',
+    keyDrivers: [
+      '政府合同增长',
+      '企业AI需求激增',
+      '数据安全需求提升',
+      '国防预算增加',
+      '商业应用扩展'
+    ],
+    risks: [
+      '政府依赖度高',
+      '竞争加剧',
+      '技术迭代风险',
+      '监管政策变化',
+      '客户集中度风险'
+    ]
+  },
+  PDD: {
+    sector: 'Consumer Discretionary',
+    industry: 'E-commerce',
+    subsector: 'Online Retail',
+    marketCap: '180B',
+    description: 'PDD Holdings是拼多多的母公司，是中国领先的电商平台之一。公司通过创新的社交电商模式，为用户提供高性价比的商品和服务，在国内外市场都有强劲增长。',
+    competitors: [
+      { symbol: 'AMZN', name: 'Amazon.com Inc.', marketCap: '1.8T', change: 0 },
+      { symbol: 'BABA', name: 'Alibaba Group', marketCap: '200B', change: 0 },
+      { symbol: 'JD', name: 'JD.com Inc.', marketCap: '50B', change: 0 },
+      { symbol: 'WMT', name: 'Walmart Inc.', marketCap: '500B', change: 0 }
+    ],
+    marketShare: 8,
+    growthRate: 35.0,
+    peRatio: 15.2,
+    sectorTrend: 'bullish',
+    keyDrivers: [
+      '海外市场扩张',
+      '社交电商模式创新',
+      '供应链优化',
+      '用户增长强劲',
+      '农产品电商发展'
+    ],
+    risks: [
+      '竞争激烈',
+      '监管政策变化',
+      '汇率波动',
+      '供应链风险',
+      '宏观经济影响'
+    ]
+  },
+  KO: {
+    sector: 'Consumer Staples',
+    industry: 'Beverages',
+    subsector: 'Non-Alcoholic Beverages',
+    marketCap: '300B',
+    description: '可口可乐是全球领先的饮料公司，拥有强大的品牌组合和全球分销网络。公司专注于非酒精饮料的生产和销售，在全球200多个国家和地区开展业务。',
+    competitors: [
+      { symbol: 'PEP', name: 'PepsiCo Inc.', marketCap: '250B', change: 0 },
+      { symbol: 'KDP', name: 'Keurig Dr Pepper', marketCap: '50B', change: 0 },
+      { symbol: 'MNST', name: 'Monster Beverage', marketCap: '60B', change: 0 },
+      { symbol: 'SBUX', name: 'Starbucks Corp.', marketCap: '100B', change: 0 }
+    ],
+    marketShare: 45,
+    growthRate: 5.0,
+    peRatio: 31.5,
+    sectorTrend: 'neutral',
+    keyDrivers: [
+      '品牌价值提升',
+      '新兴市场增长',
+      '健康饮料转型',
+      '数字化营销',
+      '可持续发展'
+    ],
+    risks: [
+      '健康意识提升',
+      '竞争加剧',
+      '原材料成本上涨',
+      '汇率波动',
+      '监管政策变化'
+    ]
+  },
+  MRVL: {
+    sector: 'Technology',
+    industry: 'Semiconductors',
+    subsector: 'Data Infrastructure',
+    marketCap: '45B',
+    description: 'Marvell是一家专注于数据基础设施半导体解决方案的公司，服务于数据中心、5G和汽车市场。公司提供高性能的存储、网络和处理器解决方案。',
+    competitors: [
+      { symbol: 'AVGO', name: 'Broadcom Inc.', marketCap: '650B', change: 0 },
+      { symbol: 'INTC', name: 'Intel Corporation', marketCap: '180B', change: 0 },
+      { symbol: 'NVDA', name: 'NVIDIA Corporation', marketCap: '2.15T', change: 0 },
+      { symbol: 'AMD', name: 'Advanced Micro Devices', marketCap: '280B', change: 0 }
+    ],
+    marketShare: 8,
+    growthRate: -5.0,
+    peRatio: -324.2,
+    sectorTrend: 'neutral',
+    keyDrivers: [
+      '数据中心需求增长',
+      '5G网络建设',
+      '汽车电子化',
+      'AI芯片需求',
+      '存储技术升级'
+    ],
+    risks: [
+      '竞争激烈',
+      '技术迭代风险',
+      '客户集中度',
+      '供应链依赖',
+      '宏观经济影响'
     ]
   }
 };
@@ -388,6 +829,167 @@ export const NEWS_DATA: Record<string, NewsData[]> = {
       publishedAt: "2025-10-18T14:20:00Z",
       source: "MarketWatch"
     }
+  ],
+  ORCL: [
+    {
+      title: "Oracle AI基础设施项目预计35%毛利率，目标1660亿美元收入",
+      summary: "甲骨文在拉斯维加斯举行的Oracle AI World大会上表示，其AI基础设施项目在六年内预计可实现35%的毛利率，目标到2030财年云基础设施收入达到1660亿美元，占总销售额的近75%。",
+      url: "https://finance.sina.com.cn/stock/bxjj/2025-10-17/doc-infufqpz1224706.shtml",
+      publishedAt: "2025-10-23T10:00:00Z",
+      source: "新浪财经"
+    },
+    {
+      title: "Oracle Q1营收同比增长0.6%，运营利润率扩大68个基点",
+      summary: "甲骨文2025财年第一季度总收入同比增长0.6%，运营利润率扩大68个基点，自由现金流利润率提升800个基点，显示出公司在云服务转型方面的积极进展。",
+      url: "https://cn.investing.com/news/company-news/article-93CH-2476211",
+      publishedAt: "2025-10-22T15:30:00Z",
+      source: "Investing.com"
+    },
+    {
+      title: "高盛上调Oracle目标价至155美元，维持中性评级",
+      summary: "高盛将甲骨文目标价从137美元上调至155美元，维持中性评级。分析师认为公司在云服务领域的转型进展良好，但面临激烈的市场竞争。",
+      url: "https://cn.investing.com/news/company-news/article-93CH-2476211",
+      publishedAt: "2025-10-21T14:20:00Z",
+      source: "Investing.com"
+    }
+  ],
+  PLTR: [
+    {
+      title: "Palantir获得美国政府重大合同，AI分析平台需求激增",
+      summary: "Palantir Technologies宣布获得美国政府多个部门的新合同，总价值超过5亿美元。公司在国防、情报和执法领域的AI分析平台需求持续增长。",
+      url: "https://www.palantir.com/news/",
+      publishedAt: "2025-10-23T09:00:00Z",
+      source: "Palantir官方"
+    },
+    {
+      title: "Palantir企业客户增长强劲，商业收入同比增长40%",
+      summary: "Palantir报告企业客户数量增长强劲，商业收入同比增长40%。公司在金融、医疗和制造业的AI数据分析解决方案获得更多客户认可。",
+      url: "https://www.bloomberg.com/news/",
+      publishedAt: "2025-10-22T14:20:00Z",
+      source: "彭博社"
+    },
+    {
+      title: "Palantir推出新一代AI平台，提升数据处理能力",
+      summary: "Palantir发布新一代AI数据分析平台，数据处理能力提升300%，支持更复杂的机器学习和预测分析功能，为企业决策提供更精准的洞察。",
+      url: "https://www.palantir.com/news/",
+      publishedAt: "2025-10-21T11:30:00Z",
+      source: "Palantir官方"
+    }
+  ],
+  PDD: [
+    {
+      title: "拼多多海外业务Temu增长强劲，GMV突破1000亿美元",
+      summary: "PDD Holdings旗下Temu海外业务增长强劲，2024年GMV突破1000亿美元。公司在北美、欧洲和东南亚市场的用户数量和订单量持续增长。",
+      url: "https://www.pdd.com/news/",
+      publishedAt: "2025-10-23T13:00:00Z",
+      source: "PDD官方"
+    },
+    {
+      title: "拼多多农产品电商业务创新高，助力乡村振兴",
+      summary: "拼多多农产品电商业务创新高，2024年农产品GMV超过3000亿元，同比增长50%。公司通过创新的社交电商模式，有效连接农户和消费者。",
+      url: "https://www.pdd.com/news/",
+      publishedAt: "2025-10-22T17:30:00Z",
+      source: "PDD官方"
+    },
+    {
+      title: "拼多多技术创新投入加大，AI推荐系统升级",
+      summary: "拼多多宣布加大技术创新投入，AI推荐系统全面升级，个性化推荐准确率提升25%，用户购物体验显著改善。",
+      url: "https://www.pdd.com/news/",
+      publishedAt: "2025-10-21T12:15:00Z",
+      source: "PDD官方"
+    }
+  ],
+  KO: [
+    {
+      title: "可口可乐全球品牌价值创新高，可持续发展战略成效显著",
+      summary: "可口可乐全球品牌价值创新高，达到330亿美元。公司在可持续发展方面的投入成效显著，包装回收率提升至90%，碳排放减少25%。",
+      url: "https://www.coca-cola.com/news/",
+      publishedAt: "2025-10-23T10:00:00Z",
+      source: "可口可乐官方"
+    },
+    {
+      title: "可口可乐新兴市场增长强劲，印度和非洲业务表现突出",
+      summary: "可口可乐在新兴市场表现强劲，印度和非洲业务收入分别增长15%和12%。公司通过本地化产品和营销策略，有效拓展了新兴市场。",
+      url: "https://www.bloomberg.com/news/",
+      publishedAt: "2025-10-22T15:30:00Z",
+      source: "彭博社"
+    },
+    {
+      title: "可口可乐健康饮料产品线扩展，无糖产品销量增长30%",
+      summary: "可口可乐健康饮料产品线持续扩展，无糖产品销量增长30%。公司推出多款低糖、零糖和功能性饮料，满足消费者健康需求。",
+      url: "https://www.coca-cola.com/news/",
+      publishedAt: "2025-10-21T14:20:00Z",
+      source: "可口可乐官方"
+    }
+  ],
+  MRVL: [
+    {
+      title: "Marvell数据中心业务增长强劲，AI芯片需求激增",
+      summary: "Marvell Technology数据中心业务增长强劲，AI芯片需求激增。公司为AI训练和推理提供的高性能处理器解决方案获得更多客户采用。",
+      url: "https://www.marvell.com/news/",
+      publishedAt: "2025-10-23T11:00:00Z",
+      source: "Marvell官方"
+    },
+    {
+      title: "Marvell 5G网络芯片获得主要运营商订单",
+      summary: "Marvell的5G网络芯片获得主要运营商订单，总价值超过10亿美元。公司在5G基础设施领域的市场份额持续扩大。",
+      url: "https://www.marvell.com/news/",
+      publishedAt: "2025-10-22T16:30:00Z",
+      source: "Marvell官方"
+    },
+    {
+      title: "Marvell汽车电子业务增长迅速，自动驾驶芯片需求提升",
+      summary: "Marvell汽车电子业务增长迅速，自动驾驶芯片需求提升。公司为汽车制造商提供的高性能计算和网络解决方案获得更多订单。",
+      url: "https://www.marvell.com/news/",
+      publishedAt: "2025-10-21T13:15:00Z",
+      source: "Marvell官方"
+    }
+  ],
+  CRWV: [
+    {
+      title: "CoreWeave获得Loop Capital目标价上调至165美元",
+      summary: "Loop Capital将CoreWeave目标价上调至165美元，反映市场对其在AI算力需求高速增长背景下的长期成长潜力的认可。",
+      url: "https://xueqiu.com/9258616020/353878882",
+      publishedAt: "2025-10-23T12:00:00Z",
+      source: "雪球"
+    },
+    {
+      title: "CoreWeave Q2营收同比增长207%，订单积压突破300亿美元",
+      summary: "CoreWeave第二季度营收同比增长207%，订单积压突破300亿美元。公司在AI算力服务领域的领先地位进一步巩固。",
+      url: "https://www.coreweave.com/news/",
+      publishedAt: "2025-10-22T18:00:00Z",
+      source: "CoreWeave官方"
+    },
+    {
+      title: "CoreWeave与NVIDIA深化合作，扩大AI基础设施服务",
+      summary: "CoreWeave与NVIDIA深化合作，扩大AI基础设施服务。双方将在高性能计算和AI训练领域开展更深入的技术合作。",
+      url: "https://www.coreweave.com/news/",
+      publishedAt: "2025-10-21T15:45:00Z",
+      source: "CoreWeave官方"
+    }
+  ],
+  HSAI: [
+    {
+      title: "Hesai激光雷达技术获得主要汽车制造商认证",
+      summary: "Hesai Group的激光雷达技术获得主要汽车制造商认证，将在2025年量产车型中应用。公司在自动驾驶传感器领域的市场份额持续扩大。",
+      url: "https://www.hesaitech.com/news/",
+      publishedAt: "2025-10-23T14:00:00Z",
+      source: "Hesai官方"
+    },
+    {
+      title: "Hesai与多家机器人公司达成合作协议",
+      summary: "Hesai与多家机器人公司达成合作协议，为其提供激光雷达传感器解决方案。公司在服务机器人和工业机器人领域的应用不断扩展。",
+      url: "https://www.hesaitech.com/news/",
+      publishedAt: "2025-10-22T19:30:00Z",
+      source: "Hesai官方"
+    },
+    {
+      title: "Hesai新一代激光雷达产品性能提升50%",
+      summary: "Hesai发布新一代激光雷达产品，探测距离和精度提升50%，功耗降低30%。新产品在自动驾驶和机器人领域具有更强的竞争力。",
+      url: "https://www.hesaitech.com/news/",
+      publishedAt: "2025-10-21T16:20:00Z",
+      source: "Hesai官方"
+    }
   ]
 };
 
@@ -413,6 +1015,55 @@ export const ANALYST_RATINGS: Record<string, AnalystRating[]> = {
     { rating: 'Buy', targetPrice: 215, analyst: 'JP Morgan', date: '2025-10-21' },
     { rating: 'Hold', targetPrice: 200, analyst: 'Credit Suisse', date: '2025-10-20' },
     { rating: 'Buy', targetPrice: 230, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  ORCL: [
+    { rating: 'Hold', targetPrice: 155, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Buy', targetPrice: 160, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Hold', targetPrice: 150, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 165, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Hold', targetPrice: 155, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  PLTR: [
+    { rating: 'Buy', targetPrice: 25, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Strong Buy', targetPrice: 30, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Buy', targetPrice: 28, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Hold', targetPrice: 22, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Buy', targetPrice: 32, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  PDD: [
+    { rating: 'Strong Buy', targetPrice: 180, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Buy', targetPrice: 175, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Strong Buy', targetPrice: 185, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 170, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Strong Buy', targetPrice: 190, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  KO: [
+    { rating: 'Hold', targetPrice: 75, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Buy', targetPrice: 80, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Hold', targetPrice: 72, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 78, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Hold', targetPrice: 75, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  MRVL: [
+    { rating: 'Hold', targetPrice: 85, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Buy', targetPrice: 90, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Hold', targetPrice: 80, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 95, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Hold', targetPrice: 85, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  CRWV: [
+    { rating: 'Strong Buy', targetPrice: 165, analyst: 'Loop Capital', date: '2025-10-23' },
+    { rating: 'Buy', targetPrice: 150, analyst: 'Goldman Sachs', date: '2025-10-22' },
+    { rating: 'Strong Buy', targetPrice: 170, analyst: 'Morgan Stanley', date: '2025-10-21' },
+    { rating: 'Buy', targetPrice: 155, analyst: 'JP Morgan', date: '2025-10-20' },
+    { rating: 'Strong Buy', targetPrice: 175, analyst: 'Bank of America', date: '2025-10-19' }
+  ],
+  HSAI: [
+    { rating: 'Buy', targetPrice: 25, analyst: 'Goldman Sachs', date: '2025-10-23' },
+    { rating: 'Hold', targetPrice: 22, analyst: 'Morgan Stanley', date: '2025-10-22' },
+    { rating: 'Buy', targetPrice: 28, analyst: 'JP Morgan', date: '2025-10-21' },
+    { rating: 'Hold', targetPrice: 20, analyst: 'Credit Suisse', date: '2025-10-20' },
+    { rating: 'Buy', targetPrice: 30, analyst: 'Bank of America', date: '2025-10-19' }
   ]
 };
 
@@ -590,6 +1241,356 @@ export const RELATED_STOCKS: Record<string, RelatedStock[]> = {
       correlation: 0.35,
       reason: '企业云服务竞争',
       rating: 'Hold'
+    }
+  ],
+  ORCL: [
+    {
+      symbol: 'MSFT',
+      name: 'Microsoft Corporation',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '3.1T',
+      sector: 'Technology',
+      correlation: 0.80,
+      reason: '企业软件和云服务直接竞争',
+      rating: 'Strong Buy'
+    },
+    {
+      symbol: 'AMZN',
+      name: 'Amazon.com Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '1.8T',
+      sector: 'Technology',
+      correlation: 0.70,
+      reason: 'AWS与Oracle云服务竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'GOOGL',
+      name: 'Alphabet Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '1.8T',
+      sector: 'Technology',
+      correlation: 0.65,
+      reason: '云服务竞争，企业软件重叠',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'CRM',
+      name: 'Salesforce Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '200B',
+      sector: 'Technology',
+      correlation: 0.60,
+      reason: '企业软件竞争，CRM市场重叠',
+      rating: 'Buy'
+    }
+  ],
+  PLTR: [
+    {
+      symbol: 'MSFT',
+      name: 'Microsoft Corporation',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '3.1T',
+      sector: 'Technology',
+      correlation: 0.70,
+      reason: '企业AI和数据分析竞争',
+      rating: 'Strong Buy'
+    },
+    {
+      symbol: 'GOOGL',
+      name: 'Alphabet Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '1.8T',
+      sector: 'Technology',
+      correlation: 0.65,
+      reason: 'AI和数据分析技术竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'AMZN',
+      name: 'Amazon.com Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '1.8T',
+      sector: 'Technology',
+      correlation: 0.60,
+      reason: 'AWS AI服务与Palantir竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'IBM',
+      name: 'IBM Corporation',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '120B',
+      sector: 'Technology',
+      correlation: 0.55,
+      reason: '企业AI和数据管理竞争',
+      rating: 'Hold'
+    }
+  ],
+  PDD: [
+    {
+      symbol: 'AMZN',
+      name: 'Amazon.com Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '1.8T',
+      sector: 'Technology',
+      correlation: 0.75,
+      reason: '电商平台直接竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'BABA',
+      name: 'Alibaba Group',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '200B',
+      sector: 'Technology',
+      correlation: 0.80,
+      reason: '中国电商市场直接竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'JD',
+      name: 'JD.com Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '50B',
+      sector: 'Technology',
+      correlation: 0.70,
+      reason: '中国电商竞争，物流优势',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'WMT',
+      name: 'Walmart Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '500B',
+      sector: 'Consumer Discretionary',
+      correlation: 0.45,
+      reason: '零售业务竞争，线上线下融合',
+      rating: 'Buy'
+    }
+  ],
+  KO: [
+    {
+      symbol: 'PEP',
+      name: 'PepsiCo Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '250B',
+      sector: 'Consumer Staples',
+      correlation: 0.85,
+      reason: '饮料市场直接竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'KDP',
+      name: 'Keurig Dr Pepper',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '50B',
+      sector: 'Consumer Staples',
+      correlation: 0.70,
+      reason: '饮料市场竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'MNST',
+      name: 'Monster Beverage',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '60B',
+      sector: 'Consumer Staples',
+      correlation: 0.60,
+      reason: '能量饮料市场竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'SBUX',
+      name: 'Starbucks Corp.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '100B',
+      sector: 'Consumer Discretionary',
+      correlation: 0.40,
+      reason: '饮料市场竞争，咖啡业务重叠',
+      rating: 'Buy'
+    }
+  ],
+  MRVL: [
+    {
+      symbol: 'AVGO',
+      name: 'Broadcom Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '650B',
+      sector: 'Technology',
+      correlation: 0.80,
+      reason: '半导体和数据基础设施竞争',
+      rating: 'Strong Buy'
+    },
+    {
+      symbol: 'INTC',
+      name: 'Intel Corporation',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '180B',
+      sector: 'Technology',
+      correlation: 0.75,
+      reason: '数据中心处理器竞争',
+      rating: 'Hold'
+    },
+    {
+      symbol: 'NVDA',
+      name: 'NVIDIA Corporation',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '2.15T',
+      sector: 'Technology',
+      correlation: 0.70,
+      reason: 'AI和数据中心芯片竞争',
+      rating: 'Strong Buy'
+    },
+    {
+      symbol: 'AMD',
+      name: 'Advanced Micro Devices',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '280B',
+      sector: 'Technology',
+      correlation: 0.65,
+      reason: '处理器和数据中心竞争',
+      rating: 'Buy'
+    }
+  ],
+  CRWV: [
+    {
+      symbol: 'NVDA',
+      name: 'NVIDIA Corporation',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '2.15T',
+      sector: 'Technology',
+      correlation: 0.85,
+      reason: 'AI算力服务合作伙伴',
+      rating: 'Strong Buy'
+    },
+    {
+      symbol: 'AMZN',
+      name: 'Amazon.com Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '1.8T',
+      sector: 'Technology',
+      correlation: 0.75,
+      reason: 'AWS云服务竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'MSFT',
+      name: 'Microsoft Corporation',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '3.1T',
+      sector: 'Technology',
+      correlation: 0.70,
+      reason: 'Azure云服务竞争',
+      rating: 'Strong Buy'
+    },
+    {
+      symbol: 'GOOGL',
+      name: 'Alphabet Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '1.8T',
+      sector: 'Technology',
+      correlation: 0.65,
+      reason: 'Google Cloud竞争',
+      rating: 'Buy'
+    }
+  ],
+  HSAI: [
+    {
+      symbol: 'LAZR',
+      name: 'Luminar Technologies',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '2B',
+      sector: 'Technology',
+      correlation: 0.85,
+      reason: '激光雷达技术直接竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'VLDR',
+      name: 'Velodyne Lidar',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '500M',
+      sector: 'Technology',
+      correlation: 0.80,
+      reason: '激光雷达传感器竞争',
+      rating: 'Hold'
+    },
+    {
+      symbol: 'INVZ',
+      name: 'Innoviz Technologies',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '1B',
+      sector: 'Technology',
+      correlation: 0.75,
+      reason: '自动驾驶激光雷达竞争',
+      rating: 'Buy'
+    },
+    {
+      symbol: 'TSLA',
+      name: 'Tesla Inc.',
+      price: 0,
+      change: 0,
+      changePercent: 0,
+      marketCap: '800B',
+      sector: 'Technology',
+      correlation: 0.60,
+      reason: '自动驾驶技术客户',
+      rating: 'Buy'
     }
   ]
 };
